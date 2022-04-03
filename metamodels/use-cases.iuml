@@ -1,0 +1,24 @@
+@startuml Use Cases
+!scenarios = "rectangle"
+'
+!unquoted procedure uses($actor, $case)
+$actor -- $case
+!endprocedure
+'
+!unquoted procedure uses($actor, $case, $direction)
+$actor -$direction- $case
+!endprocedure
+'
+!unquoted procedure include($case, $included)
+$case ..> $included : <<include>>
+!endprocedure
+'
+!unquoted procedure include($case, $included, $direction)
+$case .$direction.> $included : <<include>>
+!endprocedure
+'
+!unquoted procedure extend($case, $extension)
+$case <.. $extension : <<extend>>
+!endprocedure
+'
+@enduml
