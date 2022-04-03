@@ -15,6 +15,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
           ref: refs/heads/${{ github.head_ref }}
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
       - name: Embed Markdown with code
         uses: tokusumi/markdown-embed-code@v1.0.0
         with:
