@@ -18,7 +18,7 @@ jobs:
       - name: Embed Markdown with code
         uses: tokusumi/markdown-embed-code@main
         with:
-          markdown: "*.md"
+          markdown: "domain-analysis/example.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           message: "Synchronizing Readme"
           silent: true
