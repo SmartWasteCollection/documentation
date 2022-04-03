@@ -2,4 +2,4 @@
 
 ---
 
-In this part we will analyze the domain.
+In this part we will analyze the domain. 
