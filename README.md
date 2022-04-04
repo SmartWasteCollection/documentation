@@ -9,4 +9,4 @@ You can consult the relative GitHub Pages [here](https://smartwastecollection.gi
 #### Automatic deploy status:
 [![Update GitHub Pages](https://github.com/smartwastecollection/documentation/actions/workflows/gh-pages.yml/badge.svg?branch=main)](https://github.com/smartwastecollection/documentation/actions/workflows/gh-pages.yml)
 
-<--![Diagram Image Link](./domain-analysis/app-use-case.puml)-->
+<!--![Diagram Image Link](./domain-analysis/app-use-case.puml)-->
