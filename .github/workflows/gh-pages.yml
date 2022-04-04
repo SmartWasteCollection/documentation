@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Embed code in markdown
-        uses: alessandro-marcantoni/markdown-embedded-code@v0.1
+        uses: alessandro-marcantoni/markdown-embedded-code@v0.1.1
       - name: Generate markdown documentation
         uses: ldeluigi/markdown-docs@v0
         with:
