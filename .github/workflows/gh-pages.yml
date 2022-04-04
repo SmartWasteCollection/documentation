@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16'
+      - name: Init node
+        run: npm init -y
       - name: Add plantuml for markdown
         run: npm i -g puml-for-markdown
       - name: Embed plantuml in markdown
