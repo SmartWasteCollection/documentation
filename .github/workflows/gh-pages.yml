@@ -14,8 +14,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Embed code in markdown
-        uses: alessandro-marcantoni/markdown-embedded-code@v0.1.1
+      - name: Setting up node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - name: Add plantuml for markdown
+        run: npm i -g puml-for-markdown
+      - name: Embed plantuml in markdown
+        run: puml-for-markdown
       - name: Generate markdown documentation
         uses: ldeluigi/markdown-docs@v0
         with:
