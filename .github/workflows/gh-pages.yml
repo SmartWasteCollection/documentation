@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Embed plantuml in markdown
-        uses: alessandro-marcantoni/puml-markdown@v0.1.0
+        uses: alessandro-marcantoni/puml-markdown@v0.1.1
       - name: Generate markdown documentation
         uses: ldeluigi/markdown-docs@v0
         with:
