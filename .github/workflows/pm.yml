@@ -30,4 +30,18 @@ jobs:
           commit_msg: "docs(uml): update uml diagrams"
           user_name: "SimoneRomagnoli"
           user_email: "simone.romagnoli10@studio.unibo.it"
+          
+      - name: Commit & Push diagrams
+        if: github.actor == 'alessandro-marcantoni'
+        uses: SimoneRomagnoli/copy-files-action@v1.0.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.AM_API_TOKEN_GITHUB }}
+        with:
+          pattern: "*.pm.puml"
+          dst_repo: "SmartWasteCollection/project-management"
+          dst_dir: "uml"
+          dst_branch: "main"
+          commit_msg: "docs(uml): update uml diagrams"
+          user_name: "alessandro-marcantoni"
+          user_email: "alessandr.marcanton2@studio.unibo.it"
 
