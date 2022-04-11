@@ -14,18 +14,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Setting up node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - name: Current dir
-        run: pwd
-      - name: Init node
-        run: npm init -y
-      - name: Add plantuml for markdown
-        run: npm i -g puml-for-markdown
       - name: Embed plantuml in markdown
-        run: puml-for-markdown
+        uses: alessandro-marcantoni/puml-markdown@v0.1.1
       - name: Generate markdown documentation
         uses: ldeluigi/markdown-docs@v0
         with:
