@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Commit & Push diagrams
-        if: github.actor == SimoneRomagnoli
+        if: github.actor == 'SimoneRomagnoli'
         uses: SimoneRomagnoli/copy-files-action@v1.0.0
         env:
           API_TOKEN_GITHUB: ${{ secrets.SR_API_TOKEN_GITHUB }}
