@@ -14,8 +14,6 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-      
-      - run: echo ${{ github.actor }}
 
       - name: Commit & Push diagrams
         if: github.actor == 'SimoneRomagnoli'
@@ -40,6 +38,34 @@ jobs:
           pattern: "*.pm.puml"
           dst_repo: "SmartWasteCollection/project-management"
           dst_dir: "uml"
+          dst_branch: "main"
+          commit_msg: "docs(uml): update uml diagrams"
+          user_name: "alessandro-marcantoni"
+          user_email: "alessandr.marcanton2@studio.unibo.it"
+
+      - name: Commit & Push metamodels
+        if: github.actor == 'SimoneRomagnoli'
+        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SR_API_TOKEN_GITHUB }}
+        with:
+          pattern: "*.iuml"
+          dst_repo: "SmartWasteCollection/project-management"
+          dst_dir: "metamodels"
+          dst_branch: "main"
+          commit_msg: "docs(uml): update uml diagrams"
+          user_name: "SimoneRomagnoli"
+          user_email: "simone.romagnoli10@studio.unibo.it"
+
+      - name: Commit & Push metamodels
+        if: github.actor == 'alessandro-marcantoni'
+        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.AM_API_TOKEN_GITHUB }}
+        with:
+          pattern: "*.iuml"
+          dst_repo: "SmartWasteCollection/project-management"
+          dst_dir: "metamodels"
           dst_branch: "main"
           commit_msg: "docs(uml): update uml diagrams"
           user_name: "alessandro-marcantoni"
