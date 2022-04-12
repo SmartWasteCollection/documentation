@@ -16,4 +16,4 @@ We aim to optimize the waste collection process using smart technologies.
 * Simone Romagnoli, simone.romagnoli10@studio.unibo.it
 * Marta Spadoni, marta.spadoni2@studio.unibo.it
 
-[![Diagram Image Link](https://tinyurl.com/y8t34qzm)](https://tinyurl.com/y8t34qzm)<!--![Diagram Image Link](./domain-analysis/app-use-case.puml)-->
+[![Diagram Image Link](https://tinyurl.com/y8t34qzm)](https://tinyurl.com/y8t34qzm)<!--![Diagram Image Link](./domain-analysis/app-use-case.pm.puml)-->
