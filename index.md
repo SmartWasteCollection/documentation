@@ -27,4 +27,4 @@ The set of sensors on a dumpster provides information about the state of the dum
 * Simone Romagnoli, simone.romagnoli10@studio.unibo.it
 * Marta Spadoni, marta.spadoni2@studio.unibo.it
 
-[![Diagram Image Link](https://tinyurl.com/y8t34qzm)](https://tinyurl.com/y8t34qzm)<!--![Diagram Image Link](./domain-analysis/app-use-case.pm.puml)-->
+[![Diagram Image Link](https://tinyurl.com/y4zfsk36)](https://tinyurl.com/y4zfsk36)<!--![Diagram Image Link](./domain-analysis/app-use-case.pm.puml)-->
