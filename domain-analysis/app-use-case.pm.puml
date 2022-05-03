@@ -1,4 +1,4 @@
-@startuml App Use Cases
+@startuml
 !include ../metamodels/use-cases.iuml
 
 actor "User" as u
