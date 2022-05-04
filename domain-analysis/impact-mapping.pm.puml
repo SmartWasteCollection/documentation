@@ -21,7 +21,7 @@ actor("Citizens")
     impact("Extraordinary Waste\nAt-Home Collection")
         deliverable("Extraordinary Waste\nBooking Application")
 
-legend right
+legend left
     Level 1 = Goal
     Level 2 = Actors
     Level 3 = Impacts
