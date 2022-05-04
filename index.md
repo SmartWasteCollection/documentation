@@ -26,5 +26,3 @@ This sensors provide information about the state of the dumpster itself, not onl
 * Alessandro Marcantoni, alessandr.marcanton2@studio.unibo.it
 * Simone Romagnoli, simone.romagnoli10@studio.unibo.it
 * Marta Spadoni, marta.spadoni2@studio.unibo.it
-
-<!--![Diagram Image Link](./domain-analysis/app-use-case.pm.puml)-->
