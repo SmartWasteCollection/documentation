@@ -13,7 +13,7 @@
     
     
       
-        <title>Impact Mapping - SmartWasteCollection/documentation</title>
+        <title>DevOps Techniques - SmartWasteCollection/documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#impact-mapping" class="md-skip">
+        <a href="#devops-techniques" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Impact Mapping
+              DevOps Techniques
             
           </span>
         </div>
@@ -250,14 +250,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -280,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="business-problem-analysis.html" class="md-nav__link">
+      <a href="../domain-analysis/business-problem-analysis.html" class="md-nav__link">
         Problem Analysis
       </a>
     </li>
@@ -292,21 +290,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="impact-mapping.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../domain-analysis/impact-mapping.html" class="md-nav__link">
         Impact Mapping
       </a>
-      
     </li>
   
 
@@ -324,11 +312,147 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../devops/devops.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DevOps Techniques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="devops.html" class="md-nav__link md-nav__link--active">
         DevOps Techniques
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dvcs-strategy" class="md-nav__link">
+    DVCS Strategy
+  </a>
+  
+    <nav class="md-nav" aria-label="DVCS Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventional-commit" class="md-nav__link">
+    Conventional Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-lint-check" class="md-nav__link">
+    Commit Lint Check
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration" class="md-nav__link">
+    Continuous Integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    GitHub Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-quality-control" class="md-nav__link">
+    Code Quality Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-dependency-update" class="md-nav__link">
+    Automatic Dependency Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-delivery" class="md-nav__link">
+    Continuous Delivery
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-versioning-and-releasing" class="md-nav__link">
+    Semantic Versioning and Releasing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    Licenses
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -368,6 +492,116 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dvcs-strategy" class="md-nav__link">
+    DVCS Strategy
+  </a>
+  
+    <nav class="md-nav" aria-label="DVCS Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventional-commit" class="md-nav__link">
+    Conventional Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-lint-check" class="md-nav__link">
+    Commit Lint Check
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration" class="md-nav__link">
+    Continuous Integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    GitHub Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-quality-control" class="md-nav__link">
+    Code Quality Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-dependency-update" class="md-nav__link">
+    Automatic Dependency Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-delivery" class="md-nav__link">
+    Continuous Delivery
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-versioning-and-releasing" class="md-nav__link">
+    Semantic Versioning and Releasing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    Licenses
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -379,29 +613,41 @@
               
   
                 
-<a href="https://github.com/SmartWasteCollection/documentation/edit/main/domain-analysis/impact-mapping.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/SmartWasteCollection/documentation/edit/main/devops/devops.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="impact-mapping">Impact Mapping</h1>
-<p>The following impact map has derived from the analysis of the business problem. It allows to underline the main aspects 
-of the problem, starting from the <strong>goal</strong> of the project. The goal is pursued by each <strong>actor</strong> in the system and the 
-diagram helps to identify which <strong>deliverables</strong> will have the greater <strong>impacts</strong>. In fact, it can be seen as a first 
-draft of the requirements. </p>
-<p><a href="https://tinyurl.com/y52x7kyr"><img alt="Diagram Image Link" src="https://tinyurl.com/y52x7kyr" /></a><!--<img alt="Diagram Image Link" src="./impact-mapping.pm.puml" />--></p>
+<h1 id="devops-techniques">DevOps Techniques</h1>
+<p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers 
+and information technologies' workers. This set of techniques respond to interdependencies between software development and
+relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
+<p>The following paragraphs describe which DevOps techniques have been used in the making of the system, focusing on the 
+advantages that each procedure has brought.</p>
+<h2 id="dvcs-strategy">DVCS Strategy</h2>
+<h3 id="workflow">Workflow</h3>
+<h3 id="conventional-commit">Conventional Commit</h3>
+<h3 id="commit-lint-check">Commit Lint Check</h3>
+<h2 id="continuous-integration">Continuous Integration</h2>
+<h3 id="github-actions">GitHub Actions</h3>
+<h3 id="code-quality-control">Code Quality Control</h3>
+<h3 id="tests">Tests</h3>
+<h3 id="automatic-dependency-update">Automatic Dependency Update</h3>
+<h2 id="continuous-delivery">Continuous Delivery</h2>
+<h3 id="semantic-versioning-and-releasing">Semantic Versioning and Releasing</h3>
+<h2 id="licenses">Licenses</h2>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 4, 2022 11:47:32</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 4, 2022 13:52:11</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 4, 2022 11:46:58</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 4, 2022 13:52:11</span>
       
     
   </small>
@@ -412,7 +658,7 @@ draft of the requirements. </p>
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:simone.romagnoli10@studio.unibo.it'>Simone Romagnoli</a> (83.33%), <a href='mailto:not.committed.yet'>Not Committed Yet</a> (16.67%)</span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:simone.romagnoli10@studio.unibo.it'>Simone Romagnoli</a></span>
       </small>
     </div>
   
@@ -428,7 +674,7 @@ draft of the requirements. </p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="business-problem-analysis.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Problem Analysis" rel="prev">
+        <a href="../domain-analysis/impact-mapping.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Impact Mapping" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -437,26 +683,11 @@ draft of the requirements. </p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Problem Analysis
+              Impact Mapping
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../devops/devops.html" class="md-footer__link md-footer__link--next" aria-label="Next: DevOps Techniques" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              DevOps Techniques
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
