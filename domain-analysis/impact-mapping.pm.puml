@@ -1,0 +1,30 @@
+@startmindmap
+!include ../metamodels/mindmaps.iuml
+
+goal("Optimize Waste Collection")
+
+actor("Dumpsters")
+    impact("Track Amount of Waste")
+        deliverable("Volume and Weight Sensors")
+    impact("Track Citizens' Accesses")
+        deliverable("Smart-Card Reader")
+
+actor("Trucks")
+    impact("Track Their Real-Time Position")
+        deliverable("Geolocalization")
+    impact("Ad-Hoc Routes\n(Call By Need)")
+        deliverable("Routing System")
+
+actor("Citizens")
+    impact("Open Dumpsters With Smart-Card")
+        deliverable("Smart-Cards")
+    impact("Extraordinary Waste\nAt-Home Collection")
+        deliverable("Extraordinary Waste\nBooking Application")
+
+legend left
+    Level 1 = Goal
+    Level 2 = Actors
+    Level 3 = Impacts
+    Level 4 = Deliverables
+endlegend
+@endmindmap

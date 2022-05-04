@@ -1,0 +1,37 @@
+@startuml
+<style>
+mindmapDiagram {
+    .goals .actors .impacts .deliverables {
+        LineColor #000000
+        Shadowing 0.0
+    }
+    .goals {
+        BackgroundColor #42C2FF
+    }
+    .actors {
+        BackgroundColor #85F4FF
+    }
+    .impacts {
+        BackgroundColor #B8FFF9
+    }
+    .deliverables {
+        BackgroundColor #EFFFFD
+    }
+}
+</style>
+!procedure goal($s)
+* $s <<goals>>
+!endprocedure
+'
+!procedure actor($s)
+** $s <<actors>>
+!endprocedure
+'
+!procedure impact($s)
+*** $s <<impacts>>
+!endprocedure
+'
+!procedure deliverable($s)
+**** $s <<deliverables>>
+!endprocedure
+@enduml
