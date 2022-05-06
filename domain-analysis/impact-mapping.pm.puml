@@ -5,7 +5,7 @@ goal("Optimize Waste Collection")
 
 actor("Dumpsters")
     impact("Track Amount of Waste")
-        deliverable("Volume and Weight Sensors")
+        deliverable("Volume Sensors")
     impact("Track Citizens' Accesses")
         deliverable("Smart-Card Reader")
 
