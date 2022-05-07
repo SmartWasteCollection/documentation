@@ -1,0 +1,32 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+actor "Truck Rider" as tr
+actor Citizen as c
+
+scenarios "Common Waste" {
+    ' Citizens
+    usecase "Dispose Of the Garbage" as dispose
+    usecase "Open the Dumpster with the Smartcard" as smartcard
+    usecase "Throw Out the Garbage" as throwout
+    include(dispose, smartcard, up)
+    include(dispose, throwout)
+
+    uses(c, dispose, right)
+    uses(c, smartcard, right)
+    uses(c, throwout, right)
+
+    ' Truck Riders
+    usecase "Start a Mission" as mission
+    usecase "Stop at a Collection Point" as collection
+    usecase "Empty a Dumpster" as empty
+    extend(empty, dispose)
+    include(empty, collection)
+    include(collection, mission)
+
+    uses(tr, mission)
+    uses(tr, collection, left)
+    uses(tr, empty)
+}
+
+
+@enduml
