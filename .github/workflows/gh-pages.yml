@@ -21,6 +21,7 @@ jobs:
         with:
           src: .
           dst: ./gh-pages
+          icon: truck-check
       - name: Deploy GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
