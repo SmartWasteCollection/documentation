@@ -18,7 +18,11 @@ $case .$direction.> $included : <<include>>
 !endprocedure
 '
 !unquoted procedure extend($case, $extension)
-$case <.. $extension : <<extend>>
+$case ..> $extension : <<extend>>
+!endprocedure
+'
+!unquoted procedure extend($case, $extension, $direction)
+$case .$direction.> $extension : <<extend>>
 !endprocedure
 '
 @enduml
