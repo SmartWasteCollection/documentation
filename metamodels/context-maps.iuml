@@ -1,0 +1,7 @@
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+!procedure subdomain($name, $alias)
+rectangle "$name Subdomain" as $alias
+!endprocedure
+@enduml
