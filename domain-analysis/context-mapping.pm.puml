@@ -1,0 +1,12 @@
+@startuml
+!include ../metamodels/context-maps.iuml
+subdomain("Citizens", citizens) {
+    context("SmartCard", card)
+}
+
+subdomain("Dumpster", dumpster_sub) {
+    context_supplier("Dumpster Opening", opening, right)
+}
+
+generic_downstream(card, opening)
+@enduml
