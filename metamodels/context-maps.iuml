@@ -1,7 +1,103 @@
-@startuml
-skinparam BackgroundColor transparent
-skinparam componentStyle rectangle
+@startuml Context Mapping
+!subdomain = "rectangle"
+'
+!context = "storage"
+'
+!acl = "card"
+'
 !procedure subdomain($name, $alias)
-rectangle "$name Subdomain" as $alias
+subdomain "$name Subdomain" as $alias
 !endprocedure
+'
+!procedure context($name, $alias)
+context "$name Context" as $alias
+!endprocedure
+'
+!procedure context_supplier($name, $alias)
+context($name, $alias + "_context")
+upstream($alias+"_context", $name + " API", $alias)
+!endprocedure
+'
+!procedure context_supplier($name, $alias, $direction)
+context($name, $alias + "_context")
+upstream($alias + "_context", $name + " API", $alias, $direction)
+!endprocedure
+'
+!procedure acl($name, $alias)
+acl "$name Anti-Corruption Layer" as $alias
+!endprocedure
+'
+' A partnership describes a common symmetric relationship between two bounded contexts
+!procedure partnership($context1, $context2)
+$context1 - $context2 : Partnership
+!endprocedure
+'
+!procedure partnership($context1, $context2, $direction)
+$context1 -$direction- $context2 : Partnership
+!endprocedure
+'
+' An upstream/downstream relationship describes a common asymmetric relationship between two bounded contexts
+!procedure upstream_downstream($upstream, $downstream)
+$upstream "U" - "D" $downstream
+!endprocedure
+'
+!procedure upstream_downstream($upstream, $downstream, $direction)
+$upstream "U" -$direction$- "D" $downstream
+!endprocedure
+'
+!procedure interface($upstream, $role, $name, $alias)
+interface "$name" as $alias
+$alias - "$role" $upstream
+!endprocedure
+'
+!procedure interface($upstream, $role, $name, $alias, $direction)
+interface "$name" as $alias
+!if ($direction == right)
+    $upstream "$role" - $alias
+!endif
+!if ($direction == left)
+    $alias - "$role" $upstream
+!endif
+!endprocedure
+'
+!procedure upstream($upstream, $name, $alias)
+interface($upstream, "U", $name, $alias)
+!endprocedure
+'
+!procedure upstream($upstream, $name, $alias, $direction)
+interface($upstream, "U", $name, $alias, $direction)
+!endprocedure
+'
+!procedure downstream($downstream, $role, $upstream)
+$downstream "$role" -( $upstream
+!endprocedure
+'
+!procedure downstream($downstream, $role, $upstream, $direction)
+$downstream "$role" -$direction-( $upstream
+!endprocedure
+'
+!procedure generic_downstream($downstream, $upstream)
+downstream($downstream, "D", $upstream)
+!endprocedure
+'
+!procedure generic_downstream($downstream, $upstream, $direction)
+downstream($downstream, "D", $upstream, $direction)
+!endprocedure
+' A customer-supplier relationship describes an upstream/downstream relationship in which the customer's priorities factor into the supplier's planning.
+!procedure customer_supplier($customer, $supplier)
+$supplier "S" -0)- "C" $customer
+!endprocedure
+'
+!procedure customer_supplier($customer, $supplier, $direction)
+$supplier "S" -0)-$direction- "C" $customer
+!endprocedure
+'
+!procedure customer($downstream, $upstream)
+downstream($downstream, "C", $upstream)
+!endprocedure
+'
+!procedure customer($downstream, $upstream, $direction)
+downstream($downstream, "C", $upstream, $direction)
+!endprocedure
+'
 @enduml
