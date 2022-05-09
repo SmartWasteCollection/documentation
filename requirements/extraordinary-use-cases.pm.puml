@@ -1,6 +1,6 @@
 @startuml
 !include ../metamodels/use-cases.iuml
-actor "Truck Rider" as tr
+actor "Truck" as tr
 actor Citizen as c
 
 scenarios "Extraordinary Waste" {
@@ -13,9 +13,9 @@ scenarios "Extraordinary Waste" {
     usecase "Go at Citizen's House" as go
     usecase "PickUp Extraordinary Waste" as pickup
     usecase "Come Back at the Disposal Point" as disposal
-    include(pickup, go, up)
-    include(disposal, pickup, up)
-    extend(go, booking, left)
+    include(go, pickup, down)
+    include(pickup, disposal, down)
+    include(go, booking, left)
 
     uses(tr, go, right)
     uses(tr, pickup, right)
