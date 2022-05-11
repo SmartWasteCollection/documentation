@@ -15,6 +15,7 @@ The team agreed on working with the Git Flow workflow inside the implementation 
 
 ### Conventional Commit
 The team worked with the [conventional-commit](https://www.conventionalcommits.org/en/v1.0.0/) convention. This strategy provides an easy set of rules for creating an explicit commit history. The team agreed on an extension of the standard convention, using the following set of commit types:
+
 * **feat**: identifies a feature, increasing the minor version number.
 * **feat!**: identifies a breaking change feature, increasing the major version number.
 * **fix**: identifies a patch change, increasing the patch version number.
@@ -27,6 +28,7 @@ The team worked with the [conventional-commit](https://www.conventionalcommits.o
 ## Continuous Integration
 ### GitHub Actions
 The team decided to use the GitHub Actions service. The team developed the following set of GitHub Actions for the project:
+
 * [conventionalcommit-semantic-releasing](https://github.com/anitvam/conventionalcommit-semantic-releasing): performs automatic releases of the project following the conventional-commit convention for version numbers.
 * [puml-markdown](https://github.com/alessandro-marcantoni/puml-markdown): embeds PlantUML code into markdown files.
 * [copy-files-action](https://github.com/SimoneRomagnoli/copy-files-action): copies files with names that match a specific pattern into another repository.
