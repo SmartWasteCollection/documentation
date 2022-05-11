@@ -34,12 +34,12 @@ The table below represents the ubiquitous language derived from domain analysis.
 | Occupied Volume  |           The amount of waste (in liters) that a single dumpster is currently storing.           |                  |                    |
 
 ## Trucks
-|          Term           | Description | Associations (?) | Related Subdomains |
-|:-----------------------:|:-----------:|:----------------:|:------------------:|
-|      Garbage Truck      |             |                  |                    |
-|        Capacity         |             |                  |                    |
-|     Occupied Volume     |             |                  |                    |
-|        Position         |             |                  |                    |
+|          Term           |                                     Description                                     | Associations (?) | Related Subdomains |
+|:-----------------------:|:-----------------------------------------------------------------------------------:|:----------------:|:------------------:|
+|      Garbage Truck      | A truck specially designed to collect waste and transport it to the disposal point. |                  |                    |
+|        Capacity         |        The total amount of waste (in liters) that a garbage truck can store.        |                  |                    |
+|     Occupied Volume     |     The amount of waste (in liters) that a garbage truck is currently storing.      |                  |                    |
+|        Position         |                      The current position of a garbage truck.                       |                  |                    |
 
 ## Collection
 |           Term            | Description | Associations (?) | Related Subdomains |
