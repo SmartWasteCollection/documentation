@@ -509,94 +509,79 @@
 <tr>
 <th align="center">Term</th>
 <th align="center">Description</th>
-<th align="center">Associations (?)</th>
-<th align="center">Related Subdomains</th>
+<th align="center">Associations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><strong>Waste</strong></td>
-<td align="center">Unwanted matter of material of any type, that people want to get rid of.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><p name="waste"><strong>Waste</strong></p></td>
+<td align="center">Unwanted matter of material of any type, that citizens want to get rid of.</td>
+<td align="center">Type of Waste, Citizen</td>
 </tr>
 <tr>
 <td align="center"><strong>Type of Waste</strong></td>
 <td align="center">Classification of the material of the waste.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><a href="#waste">Waste</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Ordinary Waste</strong></td>
 <td align="center">Set of types of waste that are daily produced by citizens.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Type of Waste, Citizen</td>
 </tr>
 <tr>
 <td align="center"><strong>Extraordinary Waste</strong></td>
 <td align="center">Set of types of waste that are difficult to collect. This may be due to their dimension or composition.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Type of Waste, Collect</td>
 </tr>
 <tr>
 <td align="center"><strong>Unsorted Waste</strong></td>
 <td align="center">Ordinary waste that is not recyclable.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Ordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Plastic/Aluminium</strong></td>
 <td align="center">Ordinary waste composed by plastic or aluminium.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Ordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Organic</strong></td>
 <td align="center">Ordinary waste that is compostable over time.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Ordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Glass</strong></td>
-<td align="center">Common waste composed by glass.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Ordinary waste composed by glass.</td>
+<td align="center">Waste, Ordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Twigs</strong></td>
 <td align="center">Extraordinary waste composed by pruning of trees or other bushes.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Waste Oil</strong></td>
 <td align="center">Extraordinary waste composed by exhausted oil.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Iron</strong></td>
 <td align="center">Extraordinary waste composed by iron.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Electronics</strong></td>
 <td align="center">Extraordinary waste composed by electronic components.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Clothes</strong></td>
 <td align="center">Extraordinary waste composed by old clothes.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 <tr>
 <td align="center"><strong>Other Extraordinary Waste</strong></td>
 <td align="center">Every other type that was not described previously.</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Waste, Extraordinary Waste</td>
 </tr>
 </tbody>
 </table>
@@ -606,69 +591,58 @@
 <tr>
 <th align="center">Term</th>
 <th align="center">Description</th>
-<th align="center">Associations (?)</th>
-<th align="center">Related Subdomains</th>
+<th align="center">Associations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Dumpster</td>
-<td align="center">A container for waste</td>
-<td align="center"></td>
+<td align="center"><strong>Dumpster</strong></td>
+<td align="center">A container for waste.</td>
+<td align="center"><a href="#waste">Waste</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Type of Dumpster</strong></td>
+<td align="center">Configuration of dumpster features.</td>
+<td align="center">Dumpster, Dumpster Feature</td>
+</tr>
+<tr>
+<td align="center"><strong>Features</strong></td>
+<td align="center">Set of characteristics that describe a dumpster.</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Type of Dumpster</td>
-<td align="center">Configuration of dumpster features</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Features</td>
-<td align="center">Set of characteristics that describe a dumpster</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Size</td>
+<td align="center"><strong>Size</strong></td>
 <td align="center">Feature that represents dumpster's physical measure. It could be <strong>large</strong> or <strong>small</strong>.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Large Size</td>
+<td align="center"><strong>Large Size</strong></td>
 <td align="center">Type of dumpster that can be opened using a foot lever. It can store up to 1000 liters.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Small Size</td>
+<td align="center"><strong>Small Size</strong></td>
 <td align="center">Type of dumpster that can be opened by hand. It can store up to 250 liters.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Color</td>
+<td align="center"><strong>Color</strong></td>
 <td align="center">Feature of dumpsters that shows the type of waste they collect.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Opening</td>
+<td align="center"><strong>Opening</strong></td>
 <td align="center">It defines the way dumpsters are opened. This can be done either using a foot lever or by hands.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Capacity</td>
+<td align="center"><strong>Capacity</strong></td>
 <td align="center">The maximum amount of waste (in liters) that a single dumpster can store.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Occupied Volume</td>
+<td align="center"><strong>Occupied Volume</strong></td>
 <td align="center">The amount of waste (in liters) that a single dumpster is currently storing.</td>
-<td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -679,33 +653,28 @@
 <tr>
 <th align="center">Term</th>
 <th align="center">Description</th>
-<th align="center">Associations (?)</th>
-<th align="center">Related Subdomains</th>
+<th align="center">Associations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Garbage Truck</td>
+<td align="center"><strong>Garbage Truck</strong></td>
 <td align="center">A truck specially designed to collect waste and transport it to the disposal point.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Capacity</td>
+<td align="center"><strong>Capacity</strong></td>
 <td align="center">The total amount of waste (in liters) that a garbage truck can store.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Occupied Volume</td>
+<td align="center"><strong>Occupied Volume</strong></td>
 <td align="center">The amount of waste (in liters) that a garbage truck is currently storing.</td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 <tr>
-<td align="center">Position</td>
+<td align="center"><strong>Position</strong></td>
 <td align="center">The current position of a garbage truck.</td>
-<td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -716,69 +685,58 @@
 <tr>
 <th align="center">Term</th>
 <th align="center">Description</th>
-<th align="center">Associations (?)</th>
-<th align="center">Related Subdomains</th>
+<th align="center">Associations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Collect</td>
+<td align="center"><strong>Collect</strong></td>
+<td align="center">The action of picking up waste.</td>
 <td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Waste Collection</strong></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Waste Collection</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">"At Home" Collection</td>
-<td align="center"></td>
+<td align="center"><strong>"At Home" Collection</strong></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Province</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Residential Area</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><strong>Collection Point</strong></td>
+<td align="center">A group of dumpsters for a residential area.</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Disposal Point</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Mission Area</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><strong>Province</strong></td>
+<td align="center">A geopolitical area that a country is divided into.</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Mission</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Disposal Chain</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><strong>Residential Area</strong></td>
+<td align="center">A small zone that groups a set of domiciles in a city. Each residential area has its own collection point.</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Collection Point</td>
+<td align="center"><strong>Mission</strong></td>
+<td align="center">A garbage truck's activity of collecting a specific type of waste from a set of collection points.</td>
 <td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Mission Area</strong></td>
+<td align="center">The set of residential area covered by a garbage truck's mission.</td>
 <td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Disposal Point</strong></td>
+<td align="center">A complex of buildings with many disposal chains used for waste disposal. Garbage trucks may start and finish their missions here.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Disposal Chain</strong></td>
+<td align="center">A sequence of machinery that treat a specific type of waste.</td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -789,20 +747,17 @@
 <tr>
 <th align="center">Term</th>
 <th align="center">Description</th>
-<th align="center">Associations (?)</th>
-<th align="center">Related Subdomains</th>
+<th align="center">Associations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Citizen</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center"><strong>Citizen</strong></td>
+<td align="center">An inhabitant of a city.</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Smart Card</td>
-<td align="center"></td>
+<td align="center"><strong>Smart Card</strong></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
@@ -814,7 +769,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 11, 2022 10:02:53</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 11, 2022 12:14:46</span>
       
         <br>
         Created:
@@ -829,7 +784,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:martina.baiardi4@studio.unibo.it'>Martina Baiardi</a></span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:simone.romagnoli10@studio.unibo.it'>Simone Romagnoli</a> (87.72%), <a href='mailto:martina.baiardi4@studio.unibo.it'>Martina Baiardi</a> (12.28%)</span>
       </small>
     </div>
   
