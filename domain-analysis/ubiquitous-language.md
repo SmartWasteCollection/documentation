@@ -2,22 +2,22 @@
 The table below represents the ubiquitous language derived from domain analysis.
 
 ## Waste
-|           Term            | Description | Associations (?) | Related Subdomains |
-|:-------------------------:|:-----------:|:----------------:|:------------------:|
-|           Waste           |             |                  |                    |
-|      Types of Waste       |             |                  |                    |
-|       Common Waste        |             |                  |                    |
-|    Extraordinary Waste    |             |                  |                    |
-|      Unsorted Waste       |             |                  |                    |
-|     Plastic/Aluminium     |             |                  |                    |
-|          Organic          |             |                  |                    |
-|           Glass           |             |                  |                    |
-|           Twigs           |             |                  |                    |
-|         Waste Oil         |             |                  |                    |
-|           Iron            |             |                  |                    |
-|        Electronics        |             |                  |                    |
-|          Clothes          |             |                  |                    |
-| Other Extraordinary Waste |             |                  |                    |
+|             Term              |                                               Description                                               | Associations (?) | Related Subdomains |
+|:-----------------------------:|:-------------------------------------------------------------------------------------------------------:|:----------------:|:------------------:|
+|           **Waste**           |                Unwanted matter of material of any type, that people want to get rid of.                 |                  |                    |
+|       **Type of Waste**       |                              Classification of the material of the waste.                               |                  |                    |
+|      **Ordinary Waste**       |                       Set of types of waste that are daily produced by citizens.                        |                  |                    |
+|    **Extraordinary Waste**    | Set of types of waste that are difficult to collect. This may be due to their dimension or composition. |                  |                    |
+|      **Unsorted Waste**       |                                 Ordinary waste that is not recyclable.                                  |                  |                    |
+|     **Plastic/Aluminium**     |                            Ordinary waste composed by plastic or aluminium.                             |                  |                    |
+|          **Organic**          |                              Ordinary waste that is compostable over time.                              |                  |                    |
+|           **Glass**           |                                     Common waste composed by glass.                                     |                  |                    |
+|           **Twigs**           |                    Extraordinary waste composed by pruning of trees or other bushes.                    |                  |                    |
+|         **Waste Oil**         |                             Extraordinary waste composed by exhausted oil.                              |                  |                    |
+|           **Iron**            |                                  Extraordinary waste composed by iron.                                  |                  |                    |
+|        **Electronics**        |                         Extraordinary waste composed by electronic components.                          |                  |                    |
+|          **Clothes**          |                              Extraordinary waste composed by old clothes.                               |                  |                    |
+| **Other Extraordinary Waste** |                           Every other type that was not described previously.                           |                  |                    |
 
 ## Dumpster
 |       Term       |                                           Description                                            | Associations (?) | Related Subdomains |
