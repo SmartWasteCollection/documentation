@@ -7,7 +7,7 @@ In this section we have interviewed the company's manager with the aim of improv
 > We would like to optimise the waste collection process in order for citizens to always be able to dispose of their waste in the nearest collection point.
 
 2. **How many dumpsters are there in each collection point?**
-> Depending on the amount of people that live in the area where the collection point is located, there may be one or several dumpsters for each type of common waste. For instance, a collection point may have two dumpsters for plastic, two for paper and one for each other type of waste.
+> Depending on the amount of people that live in the area where the collection point is located, there may be one or several dumpsters for each type of ordinary waste. For instance, a collection point may have two dumpsters for plastic, two for paper and one for each other type of waste.
 
 3. **Which types of dumpsters are there in each collection point?**
 > The waste types that are collected in every collection point are _unsorted_, _organic_, _plastic/aluminium_, _paper_ and _glass_. We are also thinking about introducing further kinds of waste. 
@@ -17,9 +17,10 @@ In this section we have interviewed the company's manager with the aim of improv
 > At the moment, the larger dumpsters can be opened using a foot lever while the smaller ones are opened with hands. However, we would like citizens to be able to open all of them using a smart card.
 
 4. **Which types of waste are you willing to collect? How?**
-> We would like to be able to collect common waste directly at collection points. On the other hand, we would like to provide an "at home" collection on demand for extraordinary waste.
+> We would like to be able to collect ordinary waste directly at collection points. On the other hand, we would like to provide an "at home" collection on demand for extraordinary waste.
 > 
-> Common waste includes:
+> Ordinary waste includes:
+> 
 > - paper
 > - plastic/aluminium
 > - glass
@@ -27,6 +28,7 @@ In this section we have interviewed the company's manager with the aim of improv
 > - organic waste
 > 
 > Extraordinary waste includes:
+> 
 > - twigs
 > - waste oil
 > - iron
@@ -42,6 +44,7 @@ In this section we have interviewed the company's manager with the aim of improv
 
 6. **Which information do you want to store about a single dumpster?**
 > For each dumpster we would like to know:
+> 
 > - its occupied volume
 > - whether it is open or closed
 > - whether it is working or not
@@ -57,6 +60,7 @@ In this section we have interviewed the company's manager with the aim of improv
 
 9. **Which information do you want to store about a single garbage truck?**
 > We would like to store:
+> 
 > - its total capacity
 > - current occupied volume
 > - the type of waste that is currently being collected
