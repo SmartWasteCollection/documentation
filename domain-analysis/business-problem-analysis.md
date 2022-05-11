@@ -20,6 +20,7 @@ In this section we have interviewed the company's manager with the aim of improv
 > We would like to be able to collect common waste directly at collection points. On the other hand, we would like to provide an "at home" collection on demand for extraordinary waste.
 > 
 > Common waste includes:
+> 
 > - paper
 > - plastic/aluminium
 > - glass
@@ -27,6 +28,7 @@ In this section we have interviewed the company's manager with the aim of improv
 > - organic waste
 > 
 > Extraordinary waste includes:
+> 
 > - twigs
 > - waste oil
 > - iron
@@ -42,6 +44,7 @@ In this section we have interviewed the company's manager with the aim of improv
 
 6. **Which information do you want to store about a single dumpster?**
 > For each dumpster we would like to know:
+> 
 > - its occupied volume
 > - whether it is open or closed
 > - whether it is working or not
@@ -57,6 +60,7 @@ In this section we have interviewed the company's manager with the aim of improv
 
 9. **Which information do you want to store about a single garbage truck?**
 > We would like to store:
+> 
 > - its total capacity
 > - current occupied volume
 > - the type of waste that is currently being collected
