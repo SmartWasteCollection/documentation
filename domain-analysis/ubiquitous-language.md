@@ -1,5 +1,5 @@
 # Ubiquitous Language
-The table below represents the ubiquitous language derived from domain analysis.
+The tables below represent the ubiquitous language derived from domain analysis. Each table describes terms related to the same topic.
 
 ## Waste
 |             Term              |                                               Description                                               |                           Associations                           |
@@ -42,21 +42,20 @@ The table below represents the ubiquitous language derived from domain analysis.
 |    **Position**     |                      The current position of a garbage truck.                       |                        [Garbage Truck](#truck)                         |
 
 ## Collection
-|           Term           |                                                            Description                                                             |                                          Associations                                           |
-|:------------------------:|:----------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
-|       **Collect**        |                                                  The action of picking up waste.                                                   |                                         [Waste](#waste)                                         |
-|   **Waste Collection**   |                                                                                                                                    |                                                                                                 |
-| **"At Home" Collection** |                                                                                                                                    |                                                                                                 |
-|   **Collection Point**   |                                            A group of dumpsters for a residential area.                                            |                                      [Dumpster](#dumpster)                                      |
-|       **Province**       |                                        A geopolitical area that a country is divided into.                                         |                                                                                                 |
-|   **Residential Area**   |             A small zone that groups a set of domiciles in a city. Each residential area has its own collection point.             |                                 [Collection Point](#collection)                                 |
-|       **Mission**        |                 A garbage truck's activity of collecting a specific type of waste from a set of collection points.                 |        [Garbage Truck](#truck), [Type of Waste](#waste), [Collection Point](#collection)        |
-|     **Mission Area**     |                                 The set of residential area covered by a garbage truck's mission.                                  |        [Residential Area](#collection), [Garbage Truck](#truck), [Mission](#collection)         |
-|    **Disposal Point**    | A complex of buildings with many disposal chains used for waste disposal. Garbage trucks may start and finish their missions here. | [Disposal Chain](#collection), [Waste](#waste), [Garbage Truck](#truck), [Mission](#collection) |
-|    **Disposal Chain**    |                                    A sequence of machinery that treat a specific type of waste.                                    |                                     [Type of Waste](#waste)                                     |
+|           Term           |                                                          Description                                                          |                                          Associations                                           |
+|:------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
+|   **Waste Collection**   |                                                The action of picking up waste.                                                |                                         [Waste](#waste)                                         |
+| **"At Home" Collection** |             The service that the company is willing to offer to collect extraordinary waste at citizens' houses.              |                       [Extraordinary Waste](#waste), [Citizen](#citizen)                        |
+|   **Collection Point**   |                                         The group of dumpsters in a residential area.                                         |                     [Dumpster](#dumpster), [Residential Area](#collection)                      |
+|       **Province**       |                   A geopolitical area a country is divided into. Each province has its own disposal point.                    |                                  [Disposal Point](#collection)                                  |
+|   **Residential Area**   |                        A partition of a province. Each residential area has its own collection point.                         |                    [Province](#collection), [Collection Point](#collection)                     |
+|       **Mission**        |     The trip that a garbage truck performs stopping at multiple collection points and collecting a single type of waste.      |        [Garbage Truck](#truck), [Type of Waste](#waste), [Collection Point](#collection)        |
+|     **Mission Area**     |                              The set of residential areas covered by a garbage truck's mission.                               |        [Residential Area](#collection), [Garbage Truck](#truck), [Mission](#collection)         |
+|    **Disposal Point**    |  A set of buildings with many disposal chains used for waste disposal. Garbage trucks start and finish their missions here.   | [Disposal Chain](#collection), [Waste](#waste), [Garbage Truck](#truck), [Mission](#collection) |
+|    **Disposal Chain**    |                                 A sequence of machinery that treat a specific type of waste.                                  |                                     [Type of Waste](#waste)                                     |
 
 ## Citizen
-|      Term      |       Description        | Associations |
-|:--------------:|:------------------------:|:------------:|
-|  **Citizen**   | An inhabitant of a city. |              |
-| **Smart Card** |                          |              |
+|      Term      |                                    Description                                    |          Associations           |
+|:--------------:|:---------------------------------------------------------------------------------:|:-------------------------------:|
+|  **Citizen**   |                       An inhabitant of a residential area.                        | [Residential Area](#collection) |
+| **Smart Card** | A plastic card with a built-in microprocessor. It will be used to open dumpsters. |      [Dumpster](#dumpster)      |
