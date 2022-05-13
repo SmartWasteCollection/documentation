@@ -660,7 +660,7 @@ of the problem, starting from the <strong>goal</strong> of the project. The goal
 diagram helps to identify which <strong>deliverables</strong> will have the greater <strong>impacts</strong>. In fact, it can be seen as a first 
 draft of the requirements. </p>
 <p><a href="https://tinyurl.com/yxoaj7hh"><img alt="Diagram Image Link" src="https://tinyurl.com/yxoaj7hh" /></a><!--<img alt="Diagram Image Link" src="domain-analysis/impact-mapping.pm.puml" />--></p></section><section class="print-page" id="domain-analysis-ubiquitous-language"><h1 id="domain-analysis-ubiquitous-language-ubiquitous-language">Ubiquitous Language</h1>
-<p>The table below represents the ubiquitous language derived from domain analysis.</p>
+<p>The tables below represent the ubiquitous language derived from domain analysis. Each table describes terms related to the same topic.</p>
 <h2 id="domain-analysis-ubiquitous-language-waste">Waste</h2>
 <table>
 <thead>
@@ -848,48 +848,43 @@ draft of the requirements. </p>
 </thead>
 <tbody>
 <tr>
-<td align="center"><strong>Collect</strong></td>
+<td align="center"><strong>Waste Collection</strong></td>
 <td align="center">The action of picking up waste.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a></td>
 </tr>
 <tr>
-<td align="center"><strong>Waste Collection</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
 <td align="center"><strong>"At Home" Collection</strong></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">The service that the company is willing to offer to collect extraordinary waste at citizens' houses.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Collection Point</strong></td>
-<td align="center">A group of dumpsters for a residential area.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
+<td align="center">The group of dumpsters in a residential area.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a>, <a href="#domain-analysis-ubiquitous-language-collection">Residential Area</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Province</strong></td>
-<td align="center">A geopolitical area that a country is divided into.</td>
-<td align="center"></td>
+<td align="center">A geopolitical area a country is divided into. Each province has its own disposal point.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Disposal Point</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Residential Area</strong></td>
-<td align="center">A small zone that groups a set of domiciles in a city. Each residential area has its own collection point.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Collection Point</a></td>
+<td align="center">A partition of a province. Each residential area has its own collection point.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Province</a>, <a href="#domain-analysis-ubiquitous-language-collection">Collection Point</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Mission</strong></td>
-<td align="center">A garbage truck's activity of collecting a specific type of waste from a set of collection points.</td>
+<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single type of waste.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-waste">Type of Waste</a>, <a href="#domain-analysis-ubiquitous-language-collection">Collection Point</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Mission Area</strong></td>
-<td align="center">The set of residential area covered by a garbage truck's mission.</td>
+<td align="center">The set of residential areas covered by a garbage truck's mission.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Residential Area</a>, <a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-collection">Mission</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Disposal Point</strong></td>
-<td align="center">A complex of buildings with many disposal chains used for waste disposal. Garbage trucks may start and finish their missions here.</td>
+<td align="center">A set of buildings with many disposal chains used for waste disposal. Garbage trucks start and finish their missions here.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Disposal Chain</a>, <a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-collection">Mission</a></td>
 </tr>
 <tr>
@@ -911,13 +906,13 @@ draft of the requirements. </p>
 <tbody>
 <tr>
 <td align="center"><strong>Citizen</strong></td>
-<td align="center">An inhabitant of a city.</td>
-<td align="center"></td>
+<td align="center">An inhabitant of a residential area.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Residential Area</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Smart Card</strong></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">A plastic card with a built-in microprocessor. It will be used to open dumpsters.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
 </tr>
 </tbody>
 </table></section><h1 class='nav-section-title-end'>Ended: Domain Analysis</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
