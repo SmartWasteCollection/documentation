@@ -663,14 +663,19 @@
 <td align="center"><a href="#collection">Collect</a>, <a href="#waste">Waste</a>, <a href="#collection">Disposal Point</a></td>
 </tr>
 <tr>
+<td align="center"><strong>Truck Driver</strong></td>
+<td align="center">A company's employee that drives garbage trucks.</td>
+<td align="center"><a href="#truck">Garbage Trucks</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Capacity</strong></td>
 <td align="center">The total amount of waste (in liters) that a garbage truck can store.</td>
-<td align="center"><a href="#truck">Garbage Truck</a></td>
+<td align="center"><a href="#waste">Waste</a>, <a href="#truck">Garbage Truck</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Occupied Volume</strong></td>
 <td align="center">The amount of waste (in liters) that a garbage truck is currently storing.</td>
-<td align="center"><a href="#truck">Garbage Truck</a></td>
+<td align="center"><a href="#waste">Waste</a>, <a href="#truck">Garbage Truck</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Position</strong></td>
@@ -716,8 +721,13 @@
 </tr>
 <tr>
 <td align="center"><strong>Mission</strong></td>
-<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single type of waste.</td>
-<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#waste">Type of Waste</a>, <a href="#collection">Collection Point</a></td>
+<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste.</td>
+<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#waste">Ordinary Waste</a>, <a href="#collection">Collection Point</a></td>
+</tr>
+<tr>
+<td align="center"><strong>"At Home" Mission</strong></td>
+<td align="center">The trip that a garbage truck performs stopping at multiple citizens' houses and collecting a single extraordinary type of waste.</td>
+<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#waste">Extraordinary Waste</a>, <a href="#collection">Collection Point</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Mission Area</strong></td>
@@ -756,6 +766,11 @@
 <td align="center">A plastic card with a built-in microprocessor. It will be used to open dumpsters.</td>
 <td align="center"><a href="#dumpster">Dumpster</a></td>
 </tr>
+<tr>
+<td align="center"><strong>Complaint</strong></td>
+<td align="center">A message that notifies an issue. It may be sent by citizens, truck drivers and dumpsters themselves.</td>
+<td align="center"><a href="#citizen">Citizen</a>, <a href="#truck">Truck Driver</a>, <a href="#dumpster">Dumpster</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -764,7 +779,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 13, 2022 14:24:11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 13, 2022 17:57:39</span>
       
         <br>
         Created:
@@ -779,7 +794,7 @@
   
     <div class="md-source-date">
       <small>
-          Authors: <span class='git-page-authors git-authors'><a href='mailto:simone.romagnoli10@studio.unibo.it'>Simone Romagnoli</a> (92.86%), <a href='mailto:martina.baiardi4@studio.unibo.it'>Martina Baiardi</a> (7.14%)</span>
+          Authors: <span class='git-page-authors git-authors'><a href='mailto:simone.romagnoli10@studio.unibo.it'>Simone Romagnoli</a> (93.22%), <a href='mailto:martina.baiardi4@studio.unibo.it'>Martina Baiardi</a> (6.78%)</span>
       </small>
     </div>
   
