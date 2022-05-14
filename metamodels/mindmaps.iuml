@@ -17,8 +17,19 @@ mindmapDiagram {
     .deliverables {
         BackgroundColor #EFFFFD
     }
+    .benefits {
+        BackgroundColor #CAC5FF
+    }
 }
 </style>
+!function node($dir)
+!if $dir == left
+    !return "-"
+!else
+    !return "+"
+!endif
+!endfunction
+'
 !procedure goal($s)
 * $s <<goals>>
 !endprocedure
@@ -27,11 +38,32 @@ mindmapDiagram {
 ** $s <<actors>>
 !endprocedure
 '
+!procedure actor($s, $dir)
+node($dir)node($dir) $s <<actors>>
+!endprocedure
+'
 !procedure impact($s)
 *** $s <<impacts>>
+!endprocedure
+'
+!procedure impact($s, $dir)
+node($dir)node($dir)node($dir) $s <<impacts>>
 !endprocedure
 '
 !procedure deliverable($s)
 **** $s <<deliverables>>
 !endprocedure
+'
+!procedure deliverable($s, $dir)
+node($dir)node($dir)node($dir)node($dir) $s <<deliverables>>
+!endprocedure
+'
+!procedure benefit($s)
+**** $s <<benefits>>
+!endprocedure
+'
+!procedure benefit($s, $dir)
+node($dir)node($dir)node($dir)node($dir) $s <<benefits>>
+!endprocedure
+'
 @enduml

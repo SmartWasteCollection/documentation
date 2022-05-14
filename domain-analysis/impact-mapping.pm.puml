@@ -21,6 +21,45 @@ actor("Citizens")
     impact("Extraordinary Waste\nAt-Home Collection")
         deliverable("Extraordinary Waste\nBooking Application")
 
+actor("Managers", left)
+impact("Track real-time position of trucks", left)
+benefit("Monitor active missions", left)
+
+impact("See list of complaints", left)
+benefit("Fix issues", left)
+
+impact("Observe collection points\nand dumpster's status", left)
+benefit("Check that the system is working", left)
+
+impact("See disposal points position", left)
+benefit("See their position on the map", left)
+
+impact("Create smart cards for specific citizens", left)
+benefit("Citizens can open dumpsters", left)
+
+actor("Citizen", left)
+impact("Open dumpsters with smart card", left)
+benefit("Dispose waste without touching the dumpster", left)
+
+impact("Book an 'at home' collection", left)
+benefit("They don't have to go to disposal points", left)
+
+impact("Observe collection points' status", left)
+benefit("See if and where I can dispose of my waste", left)
+
+impact("Report issues", left)
+benefit("Improve the service", left)
+
+actor("Truck Driver", left)
+impact("Automatically receive missions", left)
+benefit("Know which disposal points and type of waste to collect", left)
+
+impact("Automatically receive 'at home' missions", left)
+benefit("Know which extraordinary waste collection requests I have to satisfy", left)
+
+impact("Report issues", left)
+benefit("Notify managers about possible problems", left)
+
 legend left
     Level 1 = Goal
     Level 2 = Actors
