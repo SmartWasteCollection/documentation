@@ -9,4 +9,5 @@ subdomain("Dumpster", dumpster_sub) {
 }
 
 generic_downstream(card, opening)
+
 @enduml
