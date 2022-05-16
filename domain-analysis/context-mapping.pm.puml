@@ -4,7 +4,7 @@ subdomain("Citizens", citizens) {
     context("SmartCard", card)
 }
 
-subdomain("Dumpster", dumpster_sub) {
+subdomain("Dumpster", dumpster) {
     context_supplier("Dumpster Opening", opening, right)
 }
 
