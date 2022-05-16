@@ -1,4 +1,4 @@
-@startuml
+@startuml Mind Maps
 <style>
 mindmapDiagram {
     .goals .actors .impacts .deliverables {

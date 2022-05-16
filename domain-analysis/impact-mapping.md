@@ -5,4 +5,4 @@ of the problem, starting from the **goal** of the project. The goal is pursued b
 diagram helps to identify which **deliverables** will have the greater **impacts**. In fact, it can be seen as a first 
 draft of the requirements. 
 
-[![Diagram Image Link](https://tinyurl.com/yyd4ewp5)](https://tinyurl.com/yyd4ewp5)<!--![Diagram Image Link](./impact-mapping.pm.puml)-->
+[![Diagram Image Link](https://tinyurl.com/y44jkh4q)](https://tinyurl.com/y44jkh4q)<!--![Diagram Image Link](./impact-mapping.pm.puml)-->
