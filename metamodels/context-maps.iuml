@@ -1,16 +1,10 @@
 @startuml Context Mapping
-!subdomain = "rectangle"
-'
-!context = "storage"
-'
-!acl = "card"
-'
 !procedure subdomain($name, $alias)
-subdomain "$name Subdomain" as $alias
+rectangle "$name Subdomain" as $alias
 !endprocedure
 '
 !procedure context($name, $alias)
-context "$name Context" as $alias
+storage "$name Context" as $alias
 !endprocedure
 '
 !procedure context_supplier($name, $alias)
@@ -24,7 +18,7 @@ upstream($alias + "_context", $name + " API", $alias, $direction)
 !endprocedure
 '
 !procedure acl($name, $alias)
-acl "$name Anti-Corruption Layer" as $alias
+card "$name Anti-Corruption Layer" as $alias
 !endprocedure
 '
 ' A partnership describes a common symmetric relationship between two bounded contexts
