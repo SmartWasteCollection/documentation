@@ -19,13 +19,13 @@ Regarding ordinary waste collection, the main actors are citizens, trucks and du
 
 Regarding ordinary waste collection, the main actors are trucks and dumpsters. In this scenario, trucks and truck drivers play the same role.
 
-<!--![Ordinary Collection](./ordinary-collection-use-cases.pm.puml)-->
+<!--![Diagram Image Link](./ordinary-collection-use-cases.pm.puml)-->
 
 ## Extraordinary Waste Management
 
 Regarding extraordinary waste collection, the main actors are citizens and trucks. In this scenario, trucks and truck drivers play the same role.
 
-<!--![Diagram Image Link](./extraordinary-collection-use-cases.pm.puml)-->
+<!--![Diagram Image Link](./extraordinary-management-use-cases.pm.puml)-->
 
 ## Dashboard
 
