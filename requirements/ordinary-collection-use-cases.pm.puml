@@ -28,6 +28,9 @@ scenarios "Ordinary Waste Collection" {
     usecase "Share real-time position" as position
     uses(t, position, left)
     include(mission, position, up)
+
+    usecase "Update mission state" as state
+    include(mission, state, up)
 }
 
 
