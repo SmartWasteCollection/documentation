@@ -1,0 +1,30 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+actor Dumpster as d
+actor Truck as t
+
+scenarios "Ordinary Waste Collection" {
+    usecase "Notification of full dumpster" as full
+    uses(d, full, right)
+
+    usecase "Conduct mission" as mission
+    uses(t, mission, left)
+
+    extend(mission, full, left)
+
+    usecase "Empty dumpster" as empty
+    uses(t, empty, left)
+    include(mission, empty)
+
+    usecase "Update dumpster's\noccupied volume" as volumed
+    uses(d, volumed, right)
+
+    usecase "Update truck's\noccupied volume" as volumet
+    uses(t, volumet, left)
+
+    include(empty, volumed, left)
+    include(empty, volumet, down)
+}
+
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+actor Citizen as c
+actor Dumpster as d
+
+scenarios "Ordinary Waste Disposal" {
+    ' Citizens
+    usecase "Dispose of the waste" as dispose
+    uses(c, dispose, right)
+
+    usecase "Authenticate\nwith smart card" as auth
+    uses(c, auth, right)
+
+    include(dispose, auth)
+
+    usecase "Open dumpster" as open
+    uses(d, open, right)
+    extend(auth, open)
+
+    usecase "Close dumpster" as close
+    uses(d, close, right)
+    include(dispose, close)
+
+    usecase "Update occupied volume" as update
+    uses(d, update, left)
+    include(dispose, update, right)
+}
+
+
+@enduml
