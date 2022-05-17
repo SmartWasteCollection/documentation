@@ -1,0 +1,18 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+actor Citizen as c
+actor Dumpster as d
+actor Manager as m
+actor "Truck Driver" as t
+
+scenarios "Complaints Management" {
+    usecase "Submit complaint" as complain
+    uses(c, complain, right)
+    uses(d, complain, up)
+    uses(t, complain, up)
+
+    usecase "Monitor complaints" as monitor
+    uses(m, monitor, up)
+}
+
+@enduml
