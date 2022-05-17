@@ -20,10 +20,14 @@ scenarios "Ordinary Waste Collection" {
     uses(d, volumed, right)
 
     usecase "Update truck's\noccupied volume" as volumet
-    uses(t, volumet, left)
+    uses(t, volumet)
 
     include(empty, volumed, left)
     include(empty, volumet, down)
+
+    usecase "Share real-time position" as position
+    uses(t, position, left)
+    include(mission, position, up)
 }
 
 
