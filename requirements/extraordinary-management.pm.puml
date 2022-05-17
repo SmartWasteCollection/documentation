@@ -1,0 +1,24 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+actor Truck as t
+actor Citizen as c
+
+scenarios "Extraordinary Waste Management" {
+    ' Citizens
+    usecase "Book an extraordinary\nwaste collection" as booking
+
+    uses(c, booking, right)
+
+    ' Truck
+    usecase "Pick up waste at citizen's house" as go
+    usecase "Conduct mission" as mission
+    usecase "Update mission state" as state
+    extend(mission, booking, left)
+    include(mission, state, down)
+    include(mission, go, up)
+
+    uses(t, go)
+    uses(t, mission, left)
+}
+
+@enduml

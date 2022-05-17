@@ -1,0 +1,26 @@
+@startuml
+!include ../metamodels/use-cases.iuml
+left to right direction
+actor Citizen as c
+actor Manager as m
+
+scenarios "Dashboard" {
+    usecase "Visualize collection points\nand dumpsters' state" as dumpsters
+    uses(c, dumpsters)
+    uses(m, dumpsters, right)
+
+    usecase "Visualize 'at home' collection requests" as requests
+    uses(m, requests, left)
+    uses(c, requests)
+
+    usecase "Visualize complaints" as complaints
+    uses(m, complaints, left)
+
+    usecase "Visualize trucks' real-time position" as position
+    uses(m, position, up)
+
+    usecase "Visualize disposal points' position" as disposal
+    uses(m, disposal, up)
+}
+
+@enduml
