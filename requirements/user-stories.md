@@ -31,3 +31,8 @@ The following user stories describe the requirements of the required system.
 
 > ... *I want to* report issues *so that* I can notify managers about possible problems.
  
+## Benefit Mapping
+
+The following benefit map has derived from the above user stories. It maps impacts and purposes to the actor who will benefit the most from them.
+
+[![Benefit Mapping](https://tinyurl.com/y4pxabpj)](https://tinyurl.com/y4pxabpj)<!--![Benefit Mapping](./benefit-mapping.pm.puml)-->

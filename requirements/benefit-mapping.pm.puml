@@ -1,0 +1,52 @@
+@startmindmap
+!include ../metamodels/mindmaps.iuml
+
+goal("Optimize Waste Collection")
+
+actor("Managers")
+impact("Track real-time position of trucks")
+benefit("Monitor active missions")
+
+impact("See list of complaints")
+benefit("Fix issues")
+
+impact("Observe collection points\nand dumpster's status")
+benefit("Check that the system is working")
+
+impact("See disposal points position")
+benefit("See their position on the map")
+
+impact("Create smart cards for specific citizens")
+benefit("Citizens can open dumpsters")
+
+actor("Citizen")
+impact("Open dumpsters with smart card")
+benefit("Dispose waste without touching the dumpster")
+
+impact("Book an 'at home' collection")
+benefit("They don't have to go to disposal points")
+
+impact("Observe collection points' status")
+benefit("See if and where I can dispose of my waste")
+
+impact("Report issues")
+benefit("Improve the service")
+
+actor("Truck Driver")
+impact("Automatically receive missions")
+benefit("Know which disposal points and type of waste to collect")
+
+impact("Automatically receive 'at home' missions")
+benefit("Know which extraordinary waste collection requests I have to satisfy")
+
+impact("Report issues")
+benefit("Notify managers about possible problems")
+
+legend left
+    Level 1 = Goal
+    Level 2 = Actors
+    Level 3 = Impacts
+    Level 4 = Benefits
+endlegend
+
+@endmindmap

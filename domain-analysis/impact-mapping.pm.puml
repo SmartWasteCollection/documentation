@@ -4,77 +4,33 @@
 goal("Optimize Waste Collection")
 
 actor("Dumpsters")
-    impact("Track Amount of Waste")
-        deliverable("Volume Sensors")
+    impact("Track amount of waste")
+        deliverable("Volume sensors")
     impact("Notify if broken")
         deliverable("Sensors and actuators for opening")
-    impact("Track Citizens' Accesses")
-        deliverable("Smart-Card Reader")
+    impact("Track citizens' accesses")
+        deliverable("Smart card reader")
 
 actor("Trucks")
-    impact("Track Their Real-Time Position")
+    impact("Track their real-time position")
         deliverable("Geolocalization")
-    impact("Ad-Hoc Routes\n(Call By Need)")
-        deliverable("Routing System")
+    impact("Ad-hoc routes\n(call by need)")
+        deliverable("Routing system")
     impact("Notify issues")
-        deliverable("Mobile Application")
+        deliverable("Mobile application")
 
 actor("Citizens")
-    impact("Open Dumpsters With Smart-Card")
-        deliverable("Smart-Cards")
-    impact("Extraordinary Waste\nAt-Home Collection")
-        deliverable("Extraordinary Waste\nBooking Application")
+    impact("Open dumpsters with smart card")
+        deliverable("Smart cards")
+    impact("Extraordinary waste\nat-home collection")
+        deliverable("Extraordinary waste\nbooking application")
     impact("Notify complaints")
-        deliverable("Mobile Application")
+        deliverable("Mobile application")
 
-actor("Managers", left)
-impact("Track real-time position of trucks", left)
-benefit("Monitor active missions", left)
-
-impact("See list of complaints", left)
-benefit("Fix issues", left)
-
-impact("Observe collection points\nand dumpster's status", left)
-benefit("Check that the system is working", left)
-
-impact("See disposal points position", left)
-benefit("See their position on the map", left)
-
-impact("Create smart cards for specific citizens", left)
-benefit("Citizens can open dumpsters", left)
-
-actor("Citizen", left)
-impact("Open dumpsters with smart card", left)
-benefit("Dispose waste without touching the dumpster", left)
-
-impact("Book an 'at home' collection", left)
-benefit("They don't have to go to disposal points", left)
-
-impact("Observe collection points' status", left)
-benefit("See if and where I can dispose of my waste", left)
-
-impact("Report issues", left)
-benefit("Improve the service", left)
-
-actor("Truck Driver", left)
-impact("Automatically receive missions", left)
-benefit("Know which disposal points and type of waste to collect", left)
-
-impact("Automatically receive 'at home' missions", left)
-benefit("Know which extraordinary waste collection requests I have to satisfy", left)
-
-impact("Report issues", left)
-benefit("Notify managers about possible problems", left)
-
-legend right
+legend left
     Level 1 = Goal
     Level 2 = Actors
     Level 3 = Impacts
-
-    Right part:
     Level 4 = Deliverables
-
-    Left part:
-    Level 4 = Benefits
 endlegend
 @endmindmap
