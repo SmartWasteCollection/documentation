@@ -17,7 +17,7 @@ jobs:
 
       - name: Commit & Push diagrams
         if: github.actor == 'SimoneRomagnoli'
-        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        uses: SimoneRomagnoli/copy-files-action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.SR_API_TOKEN_GITHUB }}
         with:
@@ -31,7 +31,7 @@ jobs:
           
       - name: Commit & Push diagrams
         if: github.actor == 'alessandro-marcantoni'
-        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        uses: SimoneRomagnoli/copy-files-action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.AM_API_TOKEN_GITHUB }}
         with:
@@ -45,7 +45,7 @@ jobs:
 
       - name: Commit & Push metamodels
         if: github.actor == 'SimoneRomagnoli'
-        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        uses: SimoneRomagnoli/copy-files-action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.SR_API_TOKEN_GITHUB }}
         with:
@@ -59,7 +59,7 @@ jobs:
 
       - name: Commit & Push metamodels
         if: github.actor == 'alessandro-marcantoni'
-        uses: SimoneRomagnoli/copy-files-action@v1.0.4
+        uses: SimoneRomagnoli/copy-files-action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.AM_API_TOKEN_GITHUB }}
         with:
