@@ -9,12 +9,12 @@ storage "$name Context" as $alias
 '
 !procedure context_supplier($name, $alias)
 context($name, $alias + "_context")
-upstream($alias+"_context", $name + " API", $alias)
+upstream($alias+"_context", " ", $alias)
 !endprocedure
 '
 !procedure context_supplier($name, $alias, $direction)
 context($name, $alias + "_context")
-upstream($alias + "_context", $name + " API", $alias, $direction)
+upstream($alias + "_context", " ", $alias, $direction)
 !endprocedure
 '
 !procedure acl($name, $alias)
@@ -28,15 +28,6 @@ $context1 - $context2 : Partnership
 '
 !procedure partnership($context1, $context2, $direction)
 $context1 -$direction- $context2 : Partnership
-!endprocedure
-'
-' An upstream/downstream relationship describes a common asymmetric relationship between two bounded contexts
-!procedure upstream_downstream($upstream, $downstream)
-$upstream "U" - "D" $downstream
-!endprocedure
-'
-!procedure upstream_downstream($upstream, $downstream, $direction)
-$upstream "U" -$direction$- "D" $downstream
 !endprocedure
 '
 !procedure interface($upstream, $role, $name, $alias)
