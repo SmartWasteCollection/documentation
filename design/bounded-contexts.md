@@ -1,10 +1,12 @@
-# Bounded Contexts
+# Subdomain & Bounded Contexts
 
 As the final part of the domain analysis, the team focused on the identification of subdomains and bounded contexts within it. The team identified bounded contexts starting from the user stories.
 
 ## Disposal Subdomain
 
 *Core Subdomain*
+
+This core subdomain manages the logic of all the components that make it possible to dispose of waste.
 
 ### Dumpster's Monitoring & Control Context
 
@@ -22,6 +24,8 @@ As the final part of the domain analysis, the team focused on the identification
 
 *Core Subdomain*
 
+This core subdomain manages the logic of all the components that allow the company to collect waste. It's also responsible for creating missions and assigning those to trucks.
+
 ### Truck's Monitoring Context 
 
 > It allows to continuously monitor and store information about the truck's state. For instance, it provides the position, the occupied volume, the carried waste type, whether it is involved in a mission and other useful information.
@@ -38,6 +42,8 @@ As the final part of the domain analysis, the team focused on the identification
 
 *Supporting Subdomain*
 
+This supporting subdomain provides the functionalities that make it possible to notify, handle and close complaints.
+
 ### Complaint Context
 
 > It provides functionalities to notify issues, read and manage them.
@@ -46,6 +52,8 @@ As the final part of the domain analysis, the team focused on the identification
 ## User Subdomain
 
 *Generic Subdomain*
+
+This generic subdomain contains the logic that manages all the entities that use the system.
 
 ### Smart Card Context
 
