@@ -1219,10 +1219,11 @@ draft of the requirements. </p>
                         <h1 class='nav-section-title' id='section-design'>
                             Design <a class='headerlink' href='#section-design' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="design-bounded-contexts"><h1 id="design-bounded-contexts-bounded-contexts">Bounded Contexts</h1>
+                        <section class="print-page" id="design-bounded-contexts"><h1 id="design-bounded-contexts-subdomain-bounded-contexts">Subdomain &amp; Bounded Contexts</h1>
 <p>As the final part of the domain analysis, the team focused on the identification of subdomains and bounded contexts within it. The team identified bounded contexts starting from the user stories.</p>
 <h2 id="design-bounded-contexts-disposal-subdomain">Disposal Subdomain</h2>
 <p><em>Core Subdomain</em></p>
+<p>This core subdomain manages the logic of all the components that make it possible to dispose of waste.</p>
 <h3 id="design-bounded-contexts-dumpsters-monitoring-control-context">Dumpster's Monitoring &amp; Control Context</h3>
 <blockquote>
 <p>It allows to continuously monitor and store information about the dumpster's state. For instance, it provides the position, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.</p>
@@ -1237,6 +1238,7 @@ draft of the requirements. </p>
 </blockquote>
 <h2 id="design-bounded-contexts-collection-subdomain">Collection Subdomain</h2>
 <p><em>Core Subdomain</em></p>
+<p>This core subdomain manages the logic of all the components that allow the company to collect waste. It's also responsible for creating missions and assigning those to trucks.</p>
 <h3 id="design-bounded-contexts-trucks-monitoring-context">Truck's Monitoring Context</h3>
 <blockquote>
 <p>It allows to continuously monitor and store information about the truck's state. For instance, it provides the position, the occupied volume, the carried waste type, whether it is involved in a mission and other useful information.</p>
@@ -1251,12 +1253,14 @@ draft of the requirements. </p>
 </blockquote>
 <h2 id="design-bounded-contexts-complaint-subdomain">Complaint Subdomain</h2>
 <p><em>Supporting Subdomain</em></p>
+<p>This supporting subdomain provides the functionalities that make it possible to notify, handle and close complaints.</p>
 <h3 id="design-bounded-contexts-complaint-context">Complaint Context</h3>
 <blockquote>
 <p>It provides functionalities to notify issues, read and manage them.</p>
 </blockquote>
 <h2 id="design-bounded-contexts-user-subdomain">User Subdomain</h2>
 <p><em>Generic Subdomain</em></p>
+<p>This generic subdomain contains the logic that manages all the entities that use the system.</p>
 <h3 id="design-bounded-contexts-smart-card-context">Smart Card Context</h3>
 <blockquote>
 <p>It is the context that allows to create smart cards and to authenticate them.</p>
@@ -1265,7 +1269,12 @@ draft of the requirements. </p>
 <blockquote>
 <p>It is responsible for authenticating citizens and managers.</p>
 </blockquote></section><section class="print-page" id="design-context-mapping"><h1 id="design-context-mapping-context-mapping">Context Mapping</h1>
-<p><a href="https://tinyurl.com/2qwlc5xu"><img alt="Diagram Image Link" src="https://tinyurl.com/2qwlc5xu" /></a><!--<img alt="Diagram Image Link" src="design/context-mapping.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
+<p>The following context mapping diagram represents relationships among subdomains and bounded contexts. The identified relationships are:</p>
+<ul>
+<li>partnership, a common symmetric relationship between two bounded contexts;</li>
+<li>upstream-downstream, an asymmetric relationship between two bounded contexts, where the downstream context adapts to the upstream one.</li>
+</ul>
+<!-- ![Diagram Image Link](./context-mapping.puml) --></section><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
 <p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers 
 and information technologies' workers. This set of techniques respond to interdependencies between software development and
 relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
