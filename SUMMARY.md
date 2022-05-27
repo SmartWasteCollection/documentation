@@ -1,4 +1,5 @@
 * [Introduction](README.md)
 * [Domain Analysis](domain-analysis/)
 * [Requirements](requirements/)
+* [Design](design/)
 * [DevOps Techniques](devops/devops.md)

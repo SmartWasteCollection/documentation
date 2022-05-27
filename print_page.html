@@ -395,6 +395,68 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="design/bounded-contexts.html" class="md-nav__link">
+        Bounded Contexts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="design/context-mapping.html" class="md-nav__link">
+        Context Mapping
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="devops/devops.html" class="md-nav__link">
         DevOps Techniques
@@ -500,6 +562,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#section-design" class="md-nav__link">
+    Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-bounded-contexts" class="md-nav__link">
+    Bounded Contexts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-context-mapping" class="md-nav__link">
+    Context Mapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#devops-devops" class="md-nav__link">
     DevOps Techniques
   </a>
@@ -590,6 +679,33 @@
           <li class="md-nav__item">
   <a href="#requirements-use-cases" class="md-nav__link">
     Use Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-design" class="md-nav__link">
+    Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-bounded-contexts" class="md-nav__link">
+    Bounded Contexts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-context-mapping" class="md-nav__link">
+    Context Mapping
   </a>
   
 </li>
@@ -1056,6 +1172,7 @@ draft of the requirements. </p>
 <blockquote>
 <p>... <em>I want to</em> observe the real-time position of garbage trucks and the type of waste they are carrying <em>so that</em> I can monitor active missions.  </p>
 <p>... <em>I want to</em> observe the list of complaints received from citizens and dumpsters <em>so that</em> I can fix possible issues.</p>
+<p>... <em>I want to</em> manage collection points, adding, removing and moving dumpsters or their location <em>so that</em> I can handle changes in cities. </p>
 <p>... <em>I want to</em> observe collection points and dumpsters' status <em>so that</em> I can check whether the system is working or not.  </p>
 <p>... <em>I want to</em> observe disposal points' position <em>so that</em> I can have a visual representation of their location.</p>
 <p>... <em>I want to</em> observe the list of "at home" collection requests <em>so that</em> I can verify the usefulness of the service. </p>
@@ -1098,7 +1215,56 @@ draft of the requirements. </p>
 <p><a href="https://tinyurl.com/y24dwrnp"><img alt="Diagram Image Link" src="https://tinyurl.com/y24dwrnp" /></a><!--<img alt="Diagram Image Link" src="requirements/dashboard-use-cases.pm.puml" />--></p>
 <h2 id="requirements-use-cases-complaints-management">Complaints Management</h2>
 <p>Citizens and truck drivers can submit complaints. Complaints can be also submitted by dumpsters when they detect a problem. On the other hand, managers can monitor complaints.</p>
-<p><a href="https://tinyurl.com/y2b9beuh"><img alt="Diagram Image Link" src="https://tinyurl.com/y2b9beuh" /></a><!--<img alt="Diagram Image Link" src="requirements/complaints-use-cases.pm.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Requirements</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
+<p><a href="https://tinyurl.com/y2b9beuh"><img alt="Diagram Image Link" src="https://tinyurl.com/y2b9beuh" /></a><!--<img alt="Diagram Image Link" src="requirements/complaints-use-cases.pm.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Requirements</h1>
+                        <h1 class='nav-section-title' id='section-design'>
+                            Design <a class='headerlink' href='#section-design' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="design-bounded-contexts"><h1 id="design-bounded-contexts-bounded-contexts">Bounded Contexts</h1>
+<p>As the final part of the domain analysis, the team focused on the identification of subdomains and bounded contexts within it. The team identified bounded contexts starting from the user stories.</p>
+<h2 id="design-bounded-contexts-disposal-subdomain">Disposal Subdomain</h2>
+<p><em>Core Subdomain</em></p>
+<h3 id="design-bounded-contexts-dumpsters-monitoring-control-context">Dumpster's Monitoring &amp; Control Context</h3>
+<blockquote>
+<p>It allows to continuously monitor and store information about the dumpster's state. For instance, it provides the position, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.</p>
+</blockquote>
+<h3 id="design-bounded-contexts-collection-point-management-context">Collection Point Management Context</h3>
+<blockquote>
+<p>It is responsible for updating information about collection point's state, such as the insertion of a new dumpster and other functionalities. Moreover, it allows to access all the information about the collection point's state.</p>
+</blockquote>
+<h3 id="design-bounded-contexts-disposal-point-context">Disposal Point Context</h3>
+<blockquote>
+<p>It stores information about disposal points.</p>
+</blockquote>
+<h2 id="design-bounded-contexts-collection-subdomain">Collection Subdomain</h2>
+<p><em>Core Subdomain</em></p>
+<h3 id="design-bounded-contexts-trucks-monitoring-context">Truck's Monitoring Context</h3>
+<blockquote>
+<p>It allows to continuously monitor and store information about the truck's state. For instance, it provides the position, the occupied volume, the carried waste type, whether it is involved in a mission and other useful information.</p>
+</blockquote>
+<h3 id="design-bounded-contexts-mission-context">Mission Context</h3>
+<blockquote>
+<p>It is responsible for the generation of missions. Moreover, it assigns missions to available trucks.</p>
+</blockquote>
+<h3 id="design-bounded-contexts-booking-context">Booking Context</h3>
+<blockquote>
+<p>It provides operations to create "at home" collection requests, to update and visualize them.</p>
+</blockquote>
+<h2 id="design-bounded-contexts-complaint-subdomain">Complaint Subdomain</h2>
+<p><em>Supporting Subdomain</em></p>
+<h3 id="design-bounded-contexts-complaint-context">Complaint Context</h3>
+<blockquote>
+<p>It provides functionalities to notify issues, read and manage them.</p>
+</blockquote>
+<h2 id="design-bounded-contexts-user-subdomain">User Subdomain</h2>
+<p><em>Generic Subdomain</em></p>
+<h3 id="design-bounded-contexts-smart-card-context">Smart Card Context</h3>
+<blockquote>
+<p>It is the context that allows to create smart cards and to authenticate them.</p>
+</blockquote>
+<h3 id="design-bounded-contexts-authentication-context">Authentication Context</h3>
+<blockquote>
+<p>It is responsible for authenticating citizens and managers.</p>
+</blockquote></section><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
 <p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers 
 and information technologies' workers. This set of techniques respond to interdependencies between software development and
 relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
