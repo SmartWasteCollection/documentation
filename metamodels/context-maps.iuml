@@ -8,13 +8,13 @@ storage "$name Context" as $alias
 !endprocedure
 '
 !procedure context_supplier($name, $alias)
-context($name, $alias + "_context")
-upstream($alias+"_context", " ", $alias)
+context($name, $alias)
+upstream($alias, " ", $alias+"_api")
 !endprocedure
 '
 !procedure context_supplier($name, $alias, $direction)
-context($name, $alias + "_context")
-upstream($alias + "_context", " ", $alias, $direction)
+context($name, $alias)
+upstream($alias, " ", $alias+"_api", $direction)
 !endprocedure
 '
 !procedure partnership($context1, $context2)
@@ -57,11 +57,11 @@ $downstream "$role" -$direction-( $upstream
 !endprocedure
 '
 !procedure generic_downstream($downstream, $upstream)
-downstream($downstream, "D", $upstream)
+downstream($downstream, "D", $upstream+"_api")
 !endprocedure
 '
 !procedure generic_downstream($downstream, $upstream, $direction)
-downstream($downstream, "D", $upstream, $direction)
+downstream($downstream, "D", $upstream+"_api", $direction)
 !endprocedure
 '
 @enduml

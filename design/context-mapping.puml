@@ -23,7 +23,7 @@ subdomain(Complaint, complaint_subdomain) {
 }
 
 generic_downstream(smartcard, dumpster, up)
-partnership(dumpster_context, mission, down)
+partnership(dumpster, mission, down)
 generic_downstream(mission, truck, down)
 partnership(mission, booking, left)
 generic_downstream(mission, disposal_point)
