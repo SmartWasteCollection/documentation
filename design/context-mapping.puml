@@ -22,13 +22,13 @@ subdomain(Complaint, complaint_subdomain) {
     context("Complaint", complaint)
 }
 
-downstream(smartcard, "D", dumpster, up)
+generic_downstream(smartcard, dumpster, up)
 partnership(dumpster_context, mission, down)
-downstream(mission, "D", truck, down)
+generic_downstream(mission, truck, down)
 partnership(mission, booking, left)
-downstream(mission, "D", disposal_point)
-downstream(booking, "D", authn, right)
-downstream(complaint, "D", authn, up)
-downstream(collection_point, "D", dumpster, down)
+generic_downstream(mission, disposal_point)
+generic_downstream(booking, authn, right)
+generic_downstream(complaint, authn, up)
+generic_downstream(collection_point, dumpster, down)
 
 @enduml
