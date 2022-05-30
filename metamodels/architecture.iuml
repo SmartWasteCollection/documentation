@@ -10,7 +10,9 @@
 '
 !service = "card"
 '
-!unquoted procedure subdomain($name, $alias)
+!functionality = "storage"
+'
+!procedure subdomain($name, $alias)
 subdomain $name as $alias
 !endprocedure
 '
@@ -26,7 +28,7 @@ thing $name as $alias
 twin $name as $alias
 !endprocedure
 '
-!unquoted procedure service($name, $alias)
-service $name Microservice as $alias
+!unquoted procedure service($name)
+service $name
 !endprocedure
 @enduml
