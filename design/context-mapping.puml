@@ -9,7 +9,7 @@ subdomain(Disposal, disposal_subdomain) {
 
 subdomain(Collection, collection_subdomain) {
     context("Mission", mission)
-    context_supplier("Truck's Monitoring\n", truck, right)
+    context_supplier("Truck's Monitoring\n & Control", truck, right)
     context("Booking", booking)
 }
 
