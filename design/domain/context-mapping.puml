@@ -1,5 +1,5 @@
 @startuml
-!include ../metamodels/context-maps.iuml
+!include ../../metamodels/context-maps.iuml
 
 subdomain(Disposal, disposal_subdomain) {
     context_supplier("Dumpster's Monitoring\n& Control", dumpster, left)
