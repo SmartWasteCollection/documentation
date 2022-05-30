@@ -1,0 +1,34 @@
+@startuml Architecture
+'
+!subdomain = "rectangle"
+'
+!context = "card"
+'
+!thing = "actor"
+'
+!twin = "cloud"
+'
+!service = "card"
+'
+!functionality = "storage"
+'
+!procedure subdomain($name, $alias)
+subdomain $name as $alias
+!endprocedure
+'
+!unquoted procedure context($name, $alias)
+context $name as $alias
+!endprocedure
+'
+!unquoted procedure thing($name, $alias)
+thing $name as $alias
+!endprocedure
+'
+!unquoted procedure twin($name, $alias)
+twin $name as $alias
+!endprocedure
+'
+!unquoted procedure service($name)
+service $name
+!endprocedure
+@enduml

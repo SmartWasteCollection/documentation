@@ -1,2 +1,2 @@
-* [Bounded Contexts](bounded-contexts.md)
-* [Context Mapping](context-mapping.md)
+* [Domain Design](domain)
+* [Architectural Design](architecture)

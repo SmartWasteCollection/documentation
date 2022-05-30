@@ -1,5 +1,5 @@
 @startuml
-!include ../metamodels/context-maps.iuml
+!include ../../metamodels/context-maps.iuml
 
 subdomain(Disposal, disposal_subdomain) {
     context_supplier("Dumpster's Monitoring\n& Control", dumpster, left)
@@ -9,7 +9,7 @@ subdomain(Disposal, disposal_subdomain) {
 
 subdomain(Collection, collection_subdomain) {
     context("Mission", mission)
-    context_supplier("Truck's Monitoring\n", truck, right)
+    context_supplier("Truck's Monitoring\n & Control", truck, right)
     context("Booking", booking)
 }
 
@@ -22,13 +22,13 @@ subdomain(Complaint, complaint_subdomain) {
     context("Complaint", complaint)
 }
 
-downstream(smartcard, "D", dumpster, up)
-partnership(dumpster_context, mission, down)
-downstream(mission, "D", truck, down)
+generic_downstream(smartcard, dumpster, up)
+partnership(dumpster, mission, down)
+generic_downstream(mission, truck, down)
 partnership(mission, booking, left)
-downstream(mission, "D", disposal_point)
-downstream(booking, "D", authn, right)
-downstream(complaint, "D", authn, up)
-downstream(collection_point, "D", dumpster, down)
+generic_downstream(mission, disposal_point)
+generic_downstream(booking, authn, right)
+generic_downstream(complaint, authn, up)
+generic_downstream(collection_point, dumpster, down)
 
 @enduml

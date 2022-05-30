@@ -8,20 +8,15 @@ storage "$name Context" as $alias
 !endprocedure
 '
 !procedure context_supplier($name, $alias)
-context($name, $alias + "_context")
-upstream($alias+"_context", " ", $alias)
+context($name, $alias)
+upstream($alias, " ", $alias+"_api")
 !endprocedure
 '
 !procedure context_supplier($name, $alias, $direction)
-context($name, $alias + "_context")
-upstream($alias + "_context", " ", $alias, $direction)
+context($name, $alias)
+upstream($alias, " ", $alias+"_api", $direction)
 !endprocedure
 '
-!procedure acl($name, $alias)
-card "$name Anti-Corruption Layer" as $alias
-!endprocedure
-'
-' A partnership describes a common symmetric relationship between two bounded contexts
 !procedure partnership($context1, $context2)
 $context1 - $context2 : Partnership
 !endprocedure
@@ -62,27 +57,11 @@ $downstream "$role" -$direction-( $upstream
 !endprocedure
 '
 !procedure generic_downstream($downstream, $upstream)
-downstream($downstream, "D", $upstream)
+downstream($downstream, "D", $upstream+"_api")
 !endprocedure
 '
 !procedure generic_downstream($downstream, $upstream, $direction)
-downstream($downstream, "D", $upstream, $direction)
-!endprocedure
-' A customer-supplier relationship describes an upstream/downstream relationship in which the customer's priorities factor into the supplier's planning.
-!procedure customer_supplier($customer, $supplier)
-$supplier "S" -0)- "C" $customer
-!endprocedure
-'
-!procedure customer_supplier($customer, $supplier, $direction)
-$supplier "S" -0)-$direction- "C" $customer
-!endprocedure
-'
-!procedure customer($downstream, $upstream)
-downstream($downstream, "C", $upstream)
-!endprocedure
-'
-!procedure customer($downstream, $upstream, $direction)
-downstream($downstream, "C", $upstream, $direction)
+downstream($downstream, "D", $upstream+"_api", $direction)
 !endprocedure
 '
 @enduml

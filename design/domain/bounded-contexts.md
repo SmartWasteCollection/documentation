@@ -26,7 +26,7 @@ This core subdomain manages the logic of all the components that make it possibl
 
 This core subdomain manages the logic of all the components that allow the company to collect waste. It's also responsible for creating missions and assigning those to trucks.
 
-### Truck's Monitoring Context 
+### Truck's Monitoring & Control Context 
 
 > It allows to continuously monitor and store information about the truck's state. For instance, it provides the position, the occupied volume, the carried waste type, whether it is involved in a mission and other useful information.
 
