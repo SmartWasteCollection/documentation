@@ -1,0 +1,17 @@
+@startuml
+!include ../../metamodels/architecture.iuml
+left to right direction
+
+subdomain "User Subdomain" {
+
+    service "Authentication Microservice" as authn {
+        functionality "Account Management"
+        functionality "SmartCard Management"
+    }
+
+    database "Authentication Database" as db
+
+    authn -> db
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+!include ../../metamodels/architecture.iuml
+left to right direction
+
+subdomain "Disposal Subdomain" {
+
+    service "Collection Point Microservice" as cp_micro {
+        functionality "Dumpster Control" as control
+        functionality "Disposal Point Management"
+        functionality "Collection Point Management" as cp_management
+    }
+
+    twin "Dumpster's Digital Twin" as d_twin
+
+    thing "Physical Dumpster" as d_thing
+
+    database Database as db
+
+    cp_micro --> db
+
+    d_thing -right-> d_twin
+
+    cp_management ..> d_twin
+
+    'control --> d_thing
+}
+
+@enduml
