@@ -1,2 +1,2 @@
-* [Domain Design](domain)
-* [Architectural Design](architecture)
+* [Domain Design](domain/)
+* [Architectural Design](architecture/)

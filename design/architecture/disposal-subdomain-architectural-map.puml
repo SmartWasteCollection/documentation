@@ -18,11 +18,11 @@ subdomain "Disposal Subdomain" {
 
     cp_micro --> db
 
-    d_thing -right-> d_twin
+    d_thing <-right-> d_twin
+
+    control --> d_twin
 
     cp_management ..> d_twin
-
-    'control --> d_thing
 }
 
 @enduml

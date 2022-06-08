@@ -34,9 +34,9 @@ subdomain "Collection Subdomain" {
 
     extra ..> booking
 
-    t_thing --> t_twin
+    t_thing <--> t_twin
 
-    t_thing -up-> mission_management
+    t_twin -up-> mission_management
 
     truck_management ..> t_twin
 

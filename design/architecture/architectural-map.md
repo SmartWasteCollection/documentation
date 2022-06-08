@@ -9,7 +9,7 @@ The following diagrams present:
 
 ## Disposal Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2qtn27pe)](https://tinyurl.com/2qtn27pe)<!--![Diagram Image Link](./disposal-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/294tsz5y)](https://tinyurl.com/294tsz5y)<!--![Diagram Image Link](./disposal-subdomain-architectural-map.puml)-->
 
 This diagram describes the main interactions among functionalities inside the Disposal Subdomain. 
 
@@ -17,7 +17,7 @@ The **Collection Point Microservice** is the abstraction that covers all the ide
 
 ## Collection Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2mxgqbf4)](https://tinyurl.com/2mxgqbf4)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2yw8nujd)](https://tinyurl.com/2yw8nujd)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
 
 ## Complaint Subdomain
 
