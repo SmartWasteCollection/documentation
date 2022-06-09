@@ -1,0 +1,23 @@
+@startuml
+hide empty methods
+hide circle
+skinparam classAttributeIconSize 0
+'
+!aggregate = "rectangle"
+'
+!unquoted procedure class($name)
+class $name
+!endprocedure
+'
+!unquoted procedure class($name, $tbbRole)
+class $name <<  $tbbRole  >>
+!endprocedure
+'
+!unquoted procedure association($entity1, $entity2)
+$entity1 -- $entity2
+!endprocedure
+'
+!unquoted procedure association($entity1, $entity2, $direction)
+$entity1 -$direction- $entity2
+!endprocedure
+@enduml
