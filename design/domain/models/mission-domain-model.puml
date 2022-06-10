@@ -1,6 +1,5 @@
 @startuml
 !include ../../../metamodels/domain-models.iuml
-left to right direction
 
 aggregate "Mission Aggregate" {
 
