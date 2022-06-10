@@ -13,11 +13,11 @@ The *Collection Point Aggregate* is very important as it contains information ab
 The *Dumpster Aggregate* deals with the following events:
 
 * **Citizen Disposal Event**: generated when a citizen disposes of some waste.
-* **Volume Update Event**: generated when the volume sensor detects a disposal.
+* **Dumpster Volume Update Event**: generated when the volume sensor detects a disposal.
+* **Dumpster Availability Update Event**: generated when the dumpster becomes available or unavailable.
 * **Opening Event**: generated when the dumpster is opened.
 * **Closure Event**: generated when the dumpster is closed.
 * **Mission Request Event**: generated when the dumpster's occupied volume exceeds its threshold.
-* **Availability Update Event**: generated when the dumpster becomes available or unavailable.
 
 ## Domain Factories
 
