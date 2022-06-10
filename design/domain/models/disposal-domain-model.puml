@@ -55,5 +55,22 @@ aggregate "Dumpster Aggregate" {
     association(TypeOfOrdinaryWaste, Color)
 }
 
+aggregate "Collection Point Aggregate" {
+
+    class(CollectionPoint, Entity - Aggregate Root) {
+        + id: string
+        + position: Position
+    }
+
+    class(Position, ValueObject) {
+        + latitude: long
+        + longitude: long
+    }
+
+    association(CollectionPoint, Position)
+}
+
+association(Dumpster, CollectionPoint)
+
 
 @enduml
