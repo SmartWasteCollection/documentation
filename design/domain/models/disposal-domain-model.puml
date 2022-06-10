@@ -16,7 +16,7 @@ aggregate "Dumpster Aggregate" {
 
     class(Volume, ValueObject) {
         + value: double
-        + getOccupiedPercantage(): double
+        + getOccupiedPercentage(): double
     }
 
     class(TypeOfDumpster, ValueObject) {
