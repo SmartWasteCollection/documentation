@@ -1,0 +1,29 @@
+@startuml
+!include ../../../metamodels/domain-models.iuml
+left to right direction
+
+aggregate "Truck Aggregate" {
+    class(Truck, Entity - Aggregate Root) {
+        + id: string
+        + position: Position
+        + occupiedVolume: Volume
+        + capacity: double
+        + isInMission: boolean
+    }
+
+    class(Volume, ValueObject) {
+        + value: double
+        + getOccupiedPercentage(): double
+    }
+
+    class(Position, ValueObject) {
+        + latitude: long
+        + longitude: long
+    }
+
+    association(Truck, Volume)
+    association(Truck, Position)
+
+}
+
+@enduml
