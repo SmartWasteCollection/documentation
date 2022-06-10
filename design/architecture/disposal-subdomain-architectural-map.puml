@@ -4,7 +4,7 @@ left to right direction
 
 subdomain "Disposal Subdomain" {
 
-    service "Collection Point Microservice" as cp_micro {
+    service "Dumpster Microservice" as cp_micro {
         functionality "Dumpster Control" as control
         functionality "Disposal Point Management"
         functionality "Collection Point Management" as cp_management
