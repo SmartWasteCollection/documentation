@@ -1399,7 +1399,70 @@ draft of the requirements. </p>
                         <h3 class='nav-section-title' id='section-domain-models'>
                             Domain Models <a class='headerlink' href='#section-domain-models' title='Permanent link'>↵</a>
                         </h3>
-                        <section class="print-page" id="design-domain-models-disposal-domain-model"><h1 id="design-domain-models-disposal-domain-model-disposal-domain-model">Disposal Domain Model</h1></section><section class="print-page" id="design-domain-models-truck-domain-model"><h1 id="design-domain-models-truck-domain-model-truck-domain-model">Truck Domain Model</h1></section><section class="print-page" id="design-domain-models-mission-domain-model"><h1 id="design-domain-models-mission-domain-model-mission-domain-model">Mission Domain Model</h1></section><h1 class='nav-section-title-end'>Ended: Domain Models</h1><h1 class='nav-section-title-end'>Ended: Domain Design</h1>
+                        <section class="print-page" id="design-domain-models-disposal-domain-model"><h1 id="design-domain-models-disposal-domain-model-disposal-domain-model">Disposal Domain Model</h1>
+<h2 id="design-domain-models-disposal-domain-model-model-diagram">Model Diagram</h2>
+<p>The following diagram shows the aggregates of the disposal subdomain.</p>
+<p><a href="https://tinyurl.com/27muysv7"><img alt="Diagram Image Link" src="https://tinyurl.com/27muysv7" /></a><!--<img alt="Diagram Image Link" src="design/domain/models/disposal-domain-model.puml" />--></p>
+<p>The <em>Collection Point Aggregate</em> is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.</p>
+<h2 id="design-domain-models-disposal-domain-model-domain-events">Domain Events</h2>
+<p>The <em>Dumpster Aggregate</em> deals with the following events:</p>
+<ul>
+<li><strong>Citizen Disposal Event</strong>: generated when a citizen disposes of some waste.</li>
+<li><strong>Dumpster Volume Update Event</strong>: generated when the volume sensor detects a disposal.</li>
+<li><strong>Dumpster Availability Update Event</strong>: generated when the dumpster becomes available or unavailable.</li>
+<li><strong>Opening Event</strong>: generated when the dumpster is opened.</li>
+<li><strong>Closure Event</strong>: generated when the dumpster is closed.</li>
+<li><strong>Mission Request Event</strong>: generated when the dumpster's occupied volume exceeds its threshold.</li>
+</ul>
+<h2 id="design-domain-models-disposal-domain-model-domain-factories">Domain Factories</h2>
+<ul>
+<li><strong>Dumpster Static Factory</strong>: generates dumpsters defining their <em>TypeOfDumpster</em>.</li>
+</ul>
+<h2 id="design-domain-models-disposal-domain-model-domain-invariants">Domain Invariants</h2>
+<ul>
+<li><em>TIMEOUT</em> = 30 seconds.</li>
+<li><em>OCCUPIED_VOLUME_THRESHOLD</em> = 75%.</li>
+<li><em>occupiedVolume &lt; capacity</em>.</li>
+<li><em>Citizen Disposal Events</em> are accepted <em>iff isAvailable == true</em>.</li>
+<li><em>Opening Events</em> are accepted <em>iff isAvailable == true</em>.</li>
+<li><em>isAvailable = (isWorking == true &amp;&amp; occupiedVolumePercentage &lt; 95%)</em>.</li>
+<li><em>TypesOfWaste</em> are mapped to one and one only <em>Color</em>, and vice versa.</li>
+</ul></section><section class="print-page" id="design-domain-models-truck-domain-model"><h1 id="design-domain-models-truck-domain-model-truck-domain-model">Truck Domain Model</h1>
+<h2 id="design-domain-models-truck-domain-model-model-diagram">Model Diagram</h2>
+<p>The following diagram shows the truck's aggregate. It is the only aggregate identified in the truck's monitoring and control context.</p>
+<p><a href="https://tinyurl.com/2dnr8kt6"><img alt="Diagram Image Link" src="https://tinyurl.com/2dnr8kt6" /></a><!--<img alt="Diagram Image Link" src="design/domain/models/truck-domain-model.puml" />--></p>
+<h2 id="design-domain-models-truck-domain-model-domain-events">Domain Events</h2>
+<p>The <em>Truck Aggregate</em> deals with the following events:</p>
+<ul>
+<li><strong>Mission Request Event</strong>: received when a dumpster's occupied volume exceeds its threshold.</li>
+<li><strong>Position Update Event</strong>: generated when the GPS sensor detects a new position.</li>
+<li><strong>Truck Volume Update Event</strong>: generated when the truck empties a dumpster.</li>
+<li><strong>Truck Availability Update Event</strong>:</li>
+<li><strong>Mission Step Event</strong>: generated when the truck leaves a collection point.</li>
+</ul>
+<h2 id="design-domain-models-truck-domain-model-domain-invariants">Domain Invariants</h2>
+<ul>
+<li>occupiedVolume &lt; capacity.</li>
+<li><em>Mission Request Event</em> are accepted <em>iff isInMission == false</em>.</li>
+</ul></section><section class="print-page" id="design-domain-models-mission-domain-model"><h1 id="design-domain-models-mission-domain-model-mission-domain-model">Mission Domain Model</h1>
+<h2 id="design-domain-models-mission-domain-model-model-diagram">Model Diagram</h2>
+<p>The following diagram shows the mission's aggregate. It is the only aggregate identified in the mission context.</p>
+<p><a href="https://tinyurl.com/27tpdg4w"><img alt="Diagram Image Link" src="https://tinyurl.com/27tpdg4w" /></a><!--<img alt="Diagram Image Link" src="design/domain/models/mission-domain-model.puml" />--></p>
+<h2 id="design-domain-models-mission-domain-model-domain-events">Domain Events</h2>
+<p>The <em>Mission Aggregate</em> deals with the following events:</p>
+<ul>
+<li><strong>Mission Step Event</strong>: received when a truck leaves a collection point.</li>
+<li><strong>Mission Request Event</strong>: received when a dumpster's occupied volume exceeds its threshold.</li>
+<li><strong>Ordinary Mission Event</strong>: ???</li>
+<li><strong>Extraordinary Mission Event</strong>: generated daily by the <em>Mission Manager Service</em>.</li>
+</ul>
+<h2 id="design-domain-models-mission-domain-model-domain-invariants">Domain Invariants</h2>
+<ul>
+<li>Empty dumpsters cannot be assigned to missions.</li>
+<li>Dumpsters can be assigned to a mission <em>iff it is not already in another mission (which is not completed).</em></li>
+<li>Unavailable trucks cannot be assigned to missions.</li>
+<li>Mission steps cannot be modified once the mission is created.</li>
+</ul></section><h1 class='nav-section-title-end'>Ended: Domain Models</h1><h1 class='nav-section-title-end'>Ended: Domain Design</h1>
                         <h2 class='nav-section-title' id='section-architectural-design'>
                             Architectural Design <a class='headerlink' href='#section-architectural-design' title='Permanent link'>↵</a>
                         </h2>

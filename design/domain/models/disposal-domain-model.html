@@ -513,9 +513,61 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Disposal Domain Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="disposal-domain-model.html" class="md-nav__link md-nav__link--active">
         Disposal Domain Model
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-diagram" class="md-nav__link">
+    Model Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-events" class="md-nav__link">
+    Domain Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-factories" class="md-nav__link">
+    Domain Factories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-invariants" class="md-nav__link">
+    Domain Invariants
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -667,6 +719,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-diagram" class="md-nav__link">
+    Model Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-events" class="md-nav__link">
+    Domain Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-factories" class="md-nav__link">
+    Domain Factories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-invariants" class="md-nav__link">
+    Domain Invariants
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -685,17 +773,45 @@
 
 
 <h1 id="disposal-domain-model">Disposal Domain Model</h1>
+<h2 id="model-diagram">Model Diagram</h2>
+<p>The following diagram shows the aggregates of the disposal subdomain.</p>
+<p><a href="https://tinyurl.com/27muysv7"><img alt="Diagram Image Link" src="https://tinyurl.com/27muysv7" /></a><!--<img alt="Diagram Image Link" src="./disposal-domain-model.puml" />--></p>
+<p>The <em>Collection Point Aggregate</em> is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.</p>
+<h2 id="domain-events">Domain Events</h2>
+<p>The <em>Dumpster Aggregate</em> deals with the following events:</p>
+<ul>
+<li><strong>Citizen Disposal Event</strong>: generated when a citizen disposes of some waste.</li>
+<li><strong>Dumpster Volume Update Event</strong>: generated when the volume sensor detects a disposal.</li>
+<li><strong>Dumpster Availability Update Event</strong>: generated when the dumpster becomes available or unavailable.</li>
+<li><strong>Opening Event</strong>: generated when the dumpster is opened.</li>
+<li><strong>Closure Event</strong>: generated when the dumpster is closed.</li>
+<li><strong>Mission Request Event</strong>: generated when the dumpster's occupied volume exceeds its threshold.</li>
+</ul>
+<h2 id="domain-factories">Domain Factories</h2>
+<ul>
+<li><strong>Dumpster Static Factory</strong>: generates dumpsters defining their <em>TypeOfDumpster</em>.</li>
+</ul>
+<h2 id="domain-invariants">Domain Invariants</h2>
+<ul>
+<li><em>TIMEOUT</em> = 30 seconds.</li>
+<li><em>OCCUPIED_VOLUME_THRESHOLD</em> = 75%.</li>
+<li><em>occupiedVolume &lt; capacity</em>.</li>
+<li><em>Citizen Disposal Events</em> are accepted <em>iff isAvailable == true</em>.</li>
+<li><em>Opening Events</em> are accepted <em>iff isAvailable == true</em>.</li>
+<li><em>isAvailable = (isWorking == true &amp;&amp; occupiedVolumePercentage &lt; 95%)</em>.</li>
+<li><em>TypesOfWaste</em> are mapped to one and one only <em>Color</em>, and vice versa.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 9, 2022 10:43:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 10, 2022 10:13:10</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 9, 2022 10:43:47</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 10, 2022 10:13:10</span>
       
     
   </small>

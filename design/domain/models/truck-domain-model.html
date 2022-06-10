@@ -527,9 +527,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Truck Domain Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="truck-domain-model.html" class="md-nav__link md-nav__link--active">
         Truck Domain Model
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-diagram" class="md-nav__link">
+    Model Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-events" class="md-nav__link">
+    Domain Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-invariants" class="md-nav__link">
+    Domain Invariants
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -667,6 +712,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-diagram" class="md-nav__link">
+    Model Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-events" class="md-nav__link">
+    Domain Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-invariants" class="md-nav__link">
+    Domain Invariants
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -685,17 +759,34 @@
 
 
 <h1 id="truck-domain-model">Truck Domain Model</h1>
+<h2 id="model-diagram">Model Diagram</h2>
+<p>The following diagram shows the truck's aggregate. It is the only aggregate identified in the truck's monitoring and control context.</p>
+<p><a href="https://tinyurl.com/2dnr8kt6"><img alt="Diagram Image Link" src="https://tinyurl.com/2dnr8kt6" /></a><!--<img alt="Diagram Image Link" src="./truck-domain-model.puml" />--></p>
+<h2 id="domain-events">Domain Events</h2>
+<p>The <em>Truck Aggregate</em> deals with the following events:</p>
+<ul>
+<li><strong>Mission Request Event</strong>: received when a dumpster's occupied volume exceeds its threshold.</li>
+<li><strong>Position Update Event</strong>: generated when the GPS sensor detects a new position.</li>
+<li><strong>Truck Volume Update Event</strong>: generated when the truck empties a dumpster.</li>
+<li><strong>Truck Availability Update Event</strong>:</li>
+<li><strong>Mission Step Event</strong>: generated when the truck leaves a collection point.</li>
+</ul>
+<h2 id="domain-invariants">Domain Invariants</h2>
+<ul>
+<li>occupiedVolume &lt; capacity.</li>
+<li><em>Mission Request Event</em> are accepted <em>iff isInMission == false</em>.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 9, 2022 10:43:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 10, 2022 10:13:10</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 9, 2022 10:43:47</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 10, 2022 10:13:10</span>
       
     
   </small>

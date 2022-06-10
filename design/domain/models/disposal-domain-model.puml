@@ -16,7 +16,7 @@ aggregate "Dumpster Aggregate" {
 
     class(Volume, ValueObject) {
         + value: double
-        + getOccupiedPercantage(): double
+        + getOccupiedPercentage(): double
     }
 
     class(TypeOfDumpster, ValueObject) {
@@ -54,6 +54,23 @@ aggregate "Dumpster Aggregate" {
     association(TypeOfOrdinaryWaste, WasteName)
     association(TypeOfOrdinaryWaste, Color)
 }
+
+aggregate "Collection Point Aggregate" {
+
+    class(CollectionPoint, Entity - Aggregate Root) {
+        + id: string
+        + position: Position
+    }
+
+    class(Position, ValueObject) {
+        + latitude: long
+        + longitude: long
+    }
+
+    association(CollectionPoint, Position)
+}
+
+association(Dumpster, CollectionPoint)
 
 
 @enduml
