@@ -4,7 +4,7 @@
 
 The following diagram shows the aggregates of the disposal subdomain.
 
-[![Diagram Image Link](https://tinyurl.com/27muysv7)](https://tinyurl.com/27muysv7)<!--![Diagram Image Link](./disposal-domain-model.puml)-->
+[![Diagram Image Link](https://tinyurl.com/24ruz2pk)](https://tinyurl.com/24ruz2pk)<!--![Diagram Image Link](./disposal-domain-model.puml)-->
 
 The *Collection Point Aggregate* is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.
 

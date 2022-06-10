@@ -1,6 +1,20 @@
 @startuml
 !include ../../../metamodels/domain-models.iuml
-left to right direction
+
+aggregate "Collection Point Aggregate" {
+
+    class(CollectionPoint, Entity - Aggregate Root) {
+        + id: string
+        + position: Position
+    }
+
+    class(Position, ValueObject) {
+        + latitude: long
+        + longitude: long
+    }
+
+    association(CollectionPoint, Position)
+}
 
 aggregate "Dumpster Aggregate" {
     class(Dumpster, Entity - Aggregate Root) {
@@ -39,38 +53,24 @@ aggregate "Dumpster Aggregate" {
     }
 
     class(Color, Enum) {
-        GREY, YELLOW, GREEN, BLUE, BROWN
+        GREY, YELLOW, GREEN,
+        BLUE, BROWN
     }
 
     class(WasteName, Enum) {
-        UNSORTED, PLASTICS/ALUMINIUM, ORGANIC, GLASS, PAPER
+        UNSORTED, PLASTICS/ALUMINIUM,
+        ORGANIC, GLASS, PAPER
     }
 
-    association(Dumpster, TypeOfDumpster)
+    association(Dumpster, TypeOfDumpster, left)
     association(Dumpster, Volume)
     association(TypeOfDumpster, Size)
     association(Size, Dimension)
-    association(TypeOfDumpster, TypeOfOrdinaryWaste)
+    association(TypeOfDumpster, TypeOfOrdinaryWaste, left)
     association(TypeOfOrdinaryWaste, WasteName)
     association(TypeOfOrdinaryWaste, Color)
 }
 
-aggregate "Collection Point Aggregate" {
-
-    class(CollectionPoint, Entity - Aggregate Root) {
-        + id: string
-        + position: Position
-    }
-
-    class(Position, ValueObject) {
-        + latitude: long
-        + longitude: long
-    }
-
-    association(CollectionPoint, Position)
-}
-
-association(Dumpster, CollectionPoint)
-
+association(Dumpster, CollectionPoint, right)
 
 @enduml

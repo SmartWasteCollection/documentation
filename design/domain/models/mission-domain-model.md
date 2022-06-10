@@ -4,7 +4,7 @@
 
 The following diagram shows the mission's aggregate. It is the only aggregate identified in the mission context.
 
-[![Diagram Image Link](https://tinyurl.com/27tpdg4w)](https://tinyurl.com/27tpdg4w)<!--![Diagram Image Link](./mission-domain-model.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2xwgbmtg)](https://tinyurl.com/2xwgbmtg)<!--![Diagram Image Link](./mission-domain-model.puml)-->
 
 ## Domain Events
 
