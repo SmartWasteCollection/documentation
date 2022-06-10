@@ -17,3 +17,6 @@ The *Truck Aggregate* deals with the following events:
 * **Mission Step Event**: generated when the truck leaves a collection point.
 
 ## Domain Invariants
+
+* occupiedVolume < capacity.
+* *Mission Request Event* are accepted *iff isInMission == false*.
