@@ -16,13 +16,10 @@ subdomain "Disposal Subdomain" {
 
     database Database as db
 
-    cp_micro --> db
-
-    d_thing <-right-> d_twin
-
-    control --> d_twin
-
-    cp_management ..> d_twin
+    interact(cp_micro, db)
+    bi_interact(d_thing, d_twin, right)
+    interact(control, d_twin)
+    interact(cp_management, d_twin)
 }
 
 @enduml

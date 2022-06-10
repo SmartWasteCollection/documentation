@@ -11,7 +11,7 @@ subdomain "User Subdomain" {
 
     database "Authentication Database" as db
 
-    authn -> db
+    interact(authn, db, left)
 }
 
 @enduml

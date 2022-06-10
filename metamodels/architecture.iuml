@@ -31,4 +31,20 @@ twin $name as $alias
 !unquoted procedure service($name)
 service $name
 !endprocedure
+'
+!unquoted procedure interact($a, $b)
+$a --> $b
+!endprocedure
+'
+!unquoted procedure interact($a, $b, $direction)
+$a -$direction-> $b
+!endprocedure
+'
+!unquoted procedure bi_interact($a, $b)
+$a <--> $b
+!endprocedure
+'
+!unquoted procedure bi_interact($a, $b, $direction)
+$a <-$direction-> $b
+!endprocedure
 @enduml

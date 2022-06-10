@@ -26,19 +26,15 @@ subdomain "Collection Subdomain" {
 
     database "Missions Database" as m_db
 
-    mission --> m_db
-
-    mission_management --> truck
-
-    booking --> r_db
-
-    extra ..> booking
-
-    t_thing <--> t_twin
-
-    t_twin -up-> mission_management
-
-    truck_management ..> t_twin
+    interact(mission, m_db, left)
+    interact(mission_management, truck)
+    interact(booking, r_db)
+    interact(extra, booking)
+    bi_interact(t_thing, t_twin)
+    interact(t_twin, mission_management, up)
+    interact(truck_management, t_twin)
+    interact(extra, mission_management, left)
+    interact(ordinary, mission_management, left)
 
 }
 
