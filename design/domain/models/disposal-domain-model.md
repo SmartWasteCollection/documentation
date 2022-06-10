@@ -30,5 +30,5 @@ The *Dumpster Aggregate* deals with the following events:
 * *occupiedVolume < capacity*.
 * *Citizen Disposal Events* are accepted *iff isAvailable == true*.
 * *Opening Events* are accepted *iff isAvailable == true*.
-* *isAvailable = false* only when *isWorking == false* or *occupiedVolumePercentage > 95%*.
+* *isAvailable = (isWorking == true && occupiedVolumePercentage < 95%)*.
 * *TypesOfWaste* are mapped to one and one only *Color*, and vice versa.
