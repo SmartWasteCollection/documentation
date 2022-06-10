@@ -10,7 +10,7 @@ The following diagrams present:
 
 ## Disposal Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/27slwnhu)](https://tinyurl.com/27slwnhu)<!--![Diagram Image Link](./disposal-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2cgrb8lv)](https://tinyurl.com/2cgrb8lv)<!--![Diagram Image Link](./disposal-subdomain-architectural-map.puml)-->
 
 This diagram describes the main interactions among functionalities inside the Disposal Subdomain. 
 
@@ -20,7 +20,7 @@ The **Dumpster Microservice** communicates with the digital twin of each dumpste
 
 ## Collection Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2yw8nujd)](https://tinyurl.com/2yw8nujd)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2b58yprh)](https://tinyurl.com/2b58yprh)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
 
 The diagram highlights the communications that take place among the three microservices identified within the Collection Subdomain: **Mission Microservice**, **Booking Microservice** and **Truck Microservice**.
 
@@ -35,7 +35,7 @@ The **Truck Microservice** takes care of the interaction with the digital twin w
 
 ## Complaint Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2jrg3dqm)](https://tinyurl.com/2jrg3dqm)<!--![Diagram Image Link](./complaint-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2355gnes)](https://tinyurl.com/2355gnes)<!--![Diagram Image Link](./complaint-subdomain-architectural-map.puml)-->
 
 This subdomain is represented with a single microservice that allows to expose an interface to the database that deals with complaints storage.
 
@@ -43,7 +43,7 @@ The **Complaint Microservice** takes care of complaints management, exposing met
 
 ## User Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2ok86gh3)](https://tinyurl.com/2ok86gh3)<!--![Diagram Image Link](./user-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2brhnxoo)](https://tinyurl.com/2brhnxoo)<!--![Diagram Image Link](./user-subdomain-architectural-map.puml)-->
 
 The **User Subdomain** is represented with a microservice that takes care of exhibiting two main functionalities: _Account Management_ and _Smart Card Management_.
 
@@ -52,3 +52,9 @@ The _Account Management functionality_ is used to manage and store the informati
 The _Smart Card Management functionality_ is necessary to let system operators generate new cards. They will be given to citizens in order to use them to open dumpsters.
 
 The **User Subdomain** will then interact with the database that will store this information.
+
+## Subdomains Interactions
+
+The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.
+
+[![Diagram Image Link](https://tinyurl.com/23pozz24)](https://tinyurl.com/23pozz24)<!--![Diagram Image Link](./global-architectural-map.puml)-->

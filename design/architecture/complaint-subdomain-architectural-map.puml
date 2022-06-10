@@ -9,7 +9,7 @@ subdomain "Complaint Subdomain" {
     }
     database "Complaint Database" as db
 
-    complaint -> db
+    interact(complaint, db, left)
 
 }
 

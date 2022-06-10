@@ -1475,12 +1475,12 @@ draft of the requirements. </p>
 <li><strong>Digital Twin</strong>: digital representation of physical entities. Components in the system are meant to fetch information directly from digital twins instead of physical devices.</li>
 </ul>
 <h2 id="design-architecture-architectural-map-disposal-subdomain">Disposal Subdomain</h2>
-<p><a href="https://tinyurl.com/27slwnhu"><img alt="Diagram Image Link" src="https://tinyurl.com/27slwnhu" /></a><!--<img alt="Diagram Image Link" src="design/architecture/disposal-subdomain-architectural-map.puml" />--></p>
+<p><a href="https://tinyurl.com/2cgrb8lv"><img alt="Diagram Image Link" src="https://tinyurl.com/2cgrb8lv" /></a><!--<img alt="Diagram Image Link" src="design/architecture/disposal-subdomain-architectural-map.puml" />--></p>
 <p>This diagram describes the main interactions among functionalities inside the Disposal Subdomain. </p>
 <p>The <strong>Dumpster Microservice</strong> is the abstraction that covers all the identified bounded contexts in this subdomain. In fact, the microservice presents peculiar functionalities for each bounded context such as <em>Dumpster Control</em>, <em>Disposal Point Management</em> and <em>Collection Point Management</em>. </p>
 <p>The <strong>Dumpster Microservice</strong> communicates with the digital twin of each dumpster in order to propagate the information to the concerned physical assets.</p>
 <h2 id="design-architecture-architectural-map-collection-subdomain">Collection Subdomain</h2>
-<p><a href="https://tinyurl.com/2yw8nujd"><img alt="Diagram Image Link" src="https://tinyurl.com/2yw8nujd" /></a><!--<img alt="Diagram Image Link" src="design/architecture/collection-subdomain-architectural-map.puml" />--></p>
+<p><a href="https://tinyurl.com/2b58yprh"><img alt="Diagram Image Link" src="https://tinyurl.com/2b58yprh" /></a><!--<img alt="Diagram Image Link" src="design/architecture/collection-subdomain-architectural-map.puml" />--></p>
 <p>The diagram highlights the communications that take place among the three microservices identified within the Collection Subdomain: <strong>Mission Microservice</strong>, <strong>Booking Microservice</strong> and <strong>Truck Microservice</strong>.</p>
 <p>The <strong>Mission Microservice</strong> relies on an underlying database that allows to store the history and exposes the functionalities to generate and manage missions.
 In particular, if the microservice wants to generate an extraordinary mission, it will display the list of pending requests in the system by communicating with the <strong>Booking Microservice</strong>.</p>
@@ -1488,15 +1488,18 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <p>The <strong>Mission Microservice</strong> then needs to communicate with the <strong>Truck Microservice</strong> to find out which trucks are available to take charge of the new mission and also to assign the mission that will be carried out by the truck.</p>
 <p>The <strong>Truck Microservice</strong> takes care of the interaction with the digital twin which will propagate the information also to the physical asset.</p>
 <h2 id="design-architecture-architectural-map-complaint-subdomain">Complaint Subdomain</h2>
-<p><a href="https://tinyurl.com/2jrg3dqm"><img alt="Diagram Image Link" src="https://tinyurl.com/2jrg3dqm" /></a><!--<img alt="Diagram Image Link" src="design/architecture/complaint-subdomain-architectural-map.puml" />--></p>
+<p><a href="https://tinyurl.com/2355gnes"><img alt="Diagram Image Link" src="https://tinyurl.com/2355gnes" /></a><!--<img alt="Diagram Image Link" src="design/architecture/complaint-subdomain-architectural-map.puml" />--></p>
 <p>This subdomain is represented with a single microservice that allows to expose an interface to the database that deals with complaints storage.</p>
 <p>The <strong>Complaint Microservice</strong> takes care of complaints management, exposing methods that implement operations such as creating, deleting, modifying and selecting the information contained in the storage.</p>
 <h2 id="design-architecture-architectural-map-user-subdomain">User Subdomain</h2>
-<p><a href="https://tinyurl.com/2ok86gh3"><img alt="Diagram Image Link" src="https://tinyurl.com/2ok86gh3" /></a><!--<img alt="Diagram Image Link" src="design/architecture/user-subdomain-architectural-map.puml" />--></p>
+<p><a href="https://tinyurl.com/2brhnxoo"><img alt="Diagram Image Link" src="https://tinyurl.com/2brhnxoo" /></a><!--<img alt="Diagram Image Link" src="design/architecture/user-subdomain-architectural-map.puml" />--></p>
 <p>The <strong>User Subdomain</strong> is represented with a microservice that takes care of exhibiting two main functionalities: <em>Account Management</em> and <em>Smart Card Management</em>.</p>
 <p>The <em>Account Management functionality</em> is used to manage and store the information of system users, both on manager side and customer side. The authentication is mandatory to all the users that want to make requests for extraordinary waste collection and for managers that want to observe the system's operation.</p>
 <p>The <em>Smart Card Management functionality</em> is necessary to let system operators generate new cards. They will be given to citizens in order to use them to open dumpsters.</p>
-<p>The <strong>User Subdomain</strong> will then interact with the database that will store this information.</p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
+<p>The <strong>User Subdomain</strong> will then interact with the database that will store this information.</p>
+<h2 id="design-architecture-architectural-map-subdomains-interactions">Subdomains Interactions</h2>
+<p>The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.</p>
+<p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
 <p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers 
 and information technologies' workers. This set of techniques respond to interdependencies between software development and
 relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
