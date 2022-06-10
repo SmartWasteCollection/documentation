@@ -1,0 +1,29 @@
+@startuml
+!include ../../metamodels/architecture.iuml
+left to right direction
+
+subdomain "Disposal Subdomain" {
+    service "Dumpster Microservice" as dumpster
+}
+
+subdomain "Collection Subdomain" {
+    service "Mission Microservice" as mission
+    service "Truck Microservice" as truck
+    service "Booking Microservice" as booking
+}
+
+subdomain "Complaint Subdomain" {
+    service "Complaint Microservice" as complaint
+}
+
+subdomain "User Subdomain" {
+    service "Authentication Microservice" as authn
+}
+
+bi_interact(dumpster, mission, up)
+interact(dumpster, complaint, left)
+interact(truck, complaint)
+interact(complaint, authn)
+interact(dumpster, authn)
+interact(booking, authn)
+@enduml

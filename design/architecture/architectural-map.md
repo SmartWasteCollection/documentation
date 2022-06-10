@@ -52,3 +52,9 @@ The _Account Management functionality_ is used to manage and store the informati
 The _Smart Card Management functionality_ is necessary to let system operators generate new cards. They will be given to citizens in order to use them to open dumpsters.
 
 The **User Subdomain** will then interact with the database that will store this information.
+
+## Subdomains Interactions
+
+The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.
+
+<!--![Diagram Image Link](./global-architectural-map.puml)-->
