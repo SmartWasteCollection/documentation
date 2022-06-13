@@ -31,7 +31,7 @@ Regarding extraordinary waste collection, the main actors are citizens and truck
 
 The dashboard can be used by managers to observe dumpsters, 'at home' collection requests, the real-time position of trucks, disposal points and complaints. Moreover, it can be used by citizens to observe dumpsters and their personal 'at home' collection requests.
 
-[![Diagram Image Link](https://tinyurl.com/y24dwrnp)](https://tinyurl.com/y24dwrnp)<!--![Diagram Image Link](./dashboard-use-cases.pm.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2bej7le8)](https://tinyurl.com/2bej7le8)<!--![Diagram Image Link](./dashboard-use-cases.pm.puml)-->
 
 ## Complaints Management
 

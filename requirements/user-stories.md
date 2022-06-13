@@ -7,6 +7,8 @@ The following user stories describe the requirements of the required system.
 
 > ... *I want to* observe the list of complaints received from citizens and dumpsters *so that* I can fix possible issues.
 
+> ... *I want to* observe the list of active missions *so that* I can check the real time status of waste collection.
+
 > ... *I want to* manage collection points, adding, removing and moving dumpsters or their location *so that* I can handle changes in cities. 
 
 > ... *I want to* observe collection points and dumpsters' status *so that* I can check whether the system is working or not.  

@@ -13,6 +13,9 @@ scenarios "Dashboard" {
     uses(m, requests, left)
     uses(c, requests)
 
+    usecase "Visualize active missions" as missions
+    uses(m, missions, left)
+
     usecase "Visualize complaints" as complaints
     uses(m, complaints, left)
 
