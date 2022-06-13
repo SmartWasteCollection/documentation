@@ -77,14 +77,18 @@ The **goal** that unites all the requirements is the optimization of waste colle
     4.2.1 Check trucks' real time position
     
     4.2.2 Check trucks' occupied volume
+
+    4.3 Check missions
+
+    4.3.1 Check active missions
     
-    4.3 Check complaints
+    4.4 Check complaints
     
-    4.3.1 Show list of complaints
+    4.4.1 Show list of complaints
     
-    4.4 Register new citizens
+    4.5 Register new citizens
     
-    4.4.1 Creation of a new smart-card
+    4.5.1 Creation of a new smart-card
 
 The following diagram shows a visual representation of the requirements.
 
