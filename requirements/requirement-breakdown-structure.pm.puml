@@ -53,6 +53,9 @@ function(Display trucks'\nreal time status)
 feature(Display trucks'\nposition)
 feature(Display trucks'\ncarried waste)
 
+function(Display missions)
+feature(Display active missions)
+
 function(Display complaints)
 feature(Display list of complaints)
 
