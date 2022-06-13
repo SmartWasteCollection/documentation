@@ -384,6 +384,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="requirements/requirements.html" class="md-nav__link">
+        Requirement Breakdown Structure
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -713,6 +727,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#requirements-requirements" class="md-nav__link">
+    6. Requirement Breakdown Structure
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -727,7 +748,7 @@
       
         <li class="md-nav__item">
   <a href="#devops-devops" class="md-nav__link">
-    6. DevOps Techniques
+    7. DevOps Techniques
   </a>
   
 </li>
@@ -820,6 +841,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#requirements-requirements" class="md-nav__link">
+    6. Requirement Breakdown Structure
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -834,7 +862,7 @@
       
         <li class="md-nav__item">
   <a href="#devops-devops" class="md-nav__link">
-    6. DevOps Techniques
+    7. DevOps Techniques
   </a>
   
 </li>
@@ -1332,7 +1360,62 @@ draft of the requirements. </p>
 <p><a href="https://tinyurl.com/y24dwrnp"><img alt="Diagram Image Link" src="https://tinyurl.com/y24dwrnp" /></a><!--<img alt="Diagram Image Link" src="requirements/dashboard-use-cases.pm.puml" />--></p>
 <h2 id="requirements-use-cases-complaints-management">Complaints Management</h2>
 <p>Citizens and truck drivers can submit complaints. Complaints can be also submitted by dumpsters when they detect a problem. On the other hand, managers can monitor complaints.</p>
-<p><a href="https://tinyurl.com/y2b9beuh"><img alt="Diagram Image Link" src="https://tinyurl.com/y2b9beuh" /></a><!--<img alt="Diagram Image Link" src="requirements/complaints-use-cases.pm.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Requirements</h1>
+<p><a href="https://tinyurl.com/y2b9beuh"><img alt="Diagram Image Link" src="https://tinyurl.com/y2b9beuh" /></a><!--<img alt="Diagram Image Link" src="requirements/complaints-use-cases.pm.puml" />--></p></section><section class="print-page" id="requirements-requirements"><h1 id="requirements-requirements-requirement-breakdown-structure">Requirement Breakdown Structure</h1>
+<p>The team focused on use cases and user stories to identify and formalize the requirements, building a <em>Requirement Breakdown Structure</em>.</p>
+<p>The <strong>goal</strong> that unites all the requirements is the optimization of waste collection. At the second level, the goal generates <strong>requirements</strong> (*). Then, structure presents <strong>functions</strong> (*.*) that describe the higher-level functionalities of each requirement. Each function splits up into many <strong>features</strong> (*.*.*) that explain specific details.</p>
+<h3 id="requirements-requirements-optimize-waste-collection">Optimize Waste Collection</h3>
+<ol>
+<li>
+<p><strong>Dumpster Infrastructure</strong></p>
+<p>1.1 Open dumpsters with smart-cards</p>
+<p>1.1.1 Authenticate smart-cards</p>
+<p>1.1.2 Open and close dumpsters</p>
+<p>1.2 Collect and share data</p>
+<p>1.2.1 Update occupied volume</p>
+<p>1.2.2 Store information about citizens' disposals</p>
+<p>1.2.3 Raise issues</p>
+</li>
+<li>
+<p><strong>Citizen App</strong></p>
+<p>2.1 Check dumpsters' status</p>
+<p>2.1.1 Graphic user interface with dumpsters inside collection points</p>
+<p>2.1.2 Check dumpsters' availability</p>
+<p>2.1.3 Check dumpsters' occupied volume</p>
+<p>2.2 Extraordinary waste collection booking</p>
+<p>2.2.3 Create request</p>
+<p>2.3 Raise issues</p>
+<p>2.3.1 Write a complaint</p>
+<p>2.3.2 Send a complaint</p>
+</li>
+<li>
+<p><strong>Trucks Routing</strong></p>
+<p>3.1 Plan ordinary waste collection missions</p>
+<p>3.1.1 Send "full-dumpster" notification</p>
+<p>3.1.2 Find "full dumpsters" in the neighborhood</p>
+<p>3.1.3 Compute best route</p>
+<p>3.1.4 Track trucks' real time position</p>
+<p>3.2 Plan extraordinary waste collection missions</p>
+<p>3.2.1 Notification of extraordinary mission requests</p>
+<p>3.2.2 Group missions by extraordinary type of waste</p>
+<p>3.2.3 Compute best route</p>
+<p>3.2.4 Track trucks' real time position</p>
+</li>
+<li>
+<p><strong>Admin Dashboard</strong></p>
+<p>4.1 Check collection points' status</p>
+<p>4.1.1 Check dumpsters' availability</p>
+<p>4.1.2 Check dumpsters' occupied volume</p>
+<p>4.2 Check trucks' real time status</p>
+<p>4.2.1 Check trucks' real time position</p>
+<p>4.2.2 Check trucks' occupied volume</p>
+<p>4.3 Check complaints</p>
+<p>4.3.1 Show list of complaints</p>
+<p>4.4 Register new citizens</p>
+<p>4.4.1 Creation of a new smart-card</p>
+</li>
+</ol>
+<p>The following diagram shows a visual representation of the requirements.</p>
+<p><a href="https://tinyurl.com/2yzrqom8"><img alt="Diagram Image Link" src="https://tinyurl.com/2yzrqom8" /></a><!--<img alt="Diagram Image Link" src="requirements/requirement-breakdown-structure.pm.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Requirements</h1>
                         <h1 class='nav-section-title' id='section-design'>
                             Design <a class='headerlink' href='#section-design' title='Permanent link'>↵</a>
                         </h1>
