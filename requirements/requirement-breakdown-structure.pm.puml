@@ -1,0 +1,68 @@
+@startwbs
+!include ../metamodels/requirement-breakdown.iuml
+
+goal(Optimize Waste Collection)
+
+'Dumpster Infrastructure
+requirement(Dumpster infrastructure)
+
+function(Open dumpsters\nwith smart-cards)
+feature(Authenticate citizen)
+feature(Open and close\ndumpsters)
+
+function(Collect and share data)
+feature(Update occupied volume)
+feature(Store information about\ncitizens' disposals)
+feature(Notify issues)
+
+'Citizen App
+requirement(Citizen app)
+function(Check dumpsters'\nstatus)
+feature(Display dumpsters\non graphic interface)
+feature(Check dumpsters'\navailability)
+feature(Check dumpster's\noccupied volume)
+
+function(Book extraordinary\nwaste disposal)
+feature(Create a waste\ndisposal request)
+
+function(Notify issues)
+feature(Write a complaint)
+feature(Send complaint)
+
+'Trucks Routing
+requirement(Trucks routing)
+function(Plan ordinary waste\ndisposal missions)
+feature(Notify when a\ndumpster is full)
+feature(Look for other dumpsters to\ncollect near the full one)
+feature(Calculate best route)
+feature(Track trucks'\nreal time position)
+
+function(Plan extraordinary waste\ndisposal missions)
+feature(Notify when a request\nis submitted)
+feature(Group missions\nby type of waste)
+feature(Calculate best route)
+feature(Track trucks'\nreal time position)
+
+'Admin Dashboard
+requirement(Admin dashboard)
+function(Display collection\npoints' status)
+feature(Display dumpsters'\navailability)
+feature(Display dumpsters'\noccupied volume)
+
+function(Display trucks'\nreal time status)
+feature(Display trucks'\nposition)
+feature(Display trucks'\ncarried waste)
+
+function(Display complaints)
+feature(Display list of complaints)
+
+function(Register new citizens)
+feature(Create smart-cards\nfor new citizens)
+
+legend left
+    Blue = Goal
+    Green = Requirements
+    Yellow = Functions
+    Grey = Features
+endlegend
+@endwbs
