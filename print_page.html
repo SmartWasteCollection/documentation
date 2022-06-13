@@ -1586,39 +1586,71 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <h2 id="design-architecture-architectural-map-subdomains-interactions">Subdomains Interactions</h2>
 <p>The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.</p>
 <p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
-<p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers 
-and information technologies' workers. This set of techniques respond to interdependencies between software development and
-relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
-<p>The following paragraphs describe which DevOps techniques have been used in the making of the system, focusing on the 
-advantages that each procedure has brought.</p>
+<p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers and information technologies' workers. 
+This set of techniques respond to interdependencies between software development and relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
+<p>The following paragraphs describe which DevOps techniques have been used in the making of the system, focusing on the advantages that each procedure has brought.</p>
 <h2 id="devops-devops-dvcs-strategy">DVCS Strategy</h2>
 <h3 id="devops-devops-workflow">Workflow</h3>
-<p>A GitHub <a href="https://github.com/SmartWasteCollection">organization</a> was associated to the entire project. In this way, every aspect of the project could be handled in a specific repository inside the organization. Moreover, under the perspective of developing a system based on microservices, this model could help the team to better identify the components of the project. </p>
-<p>The team agreed on working with the Git Flow workflow inside the implementation repositories. Before merging code on the <code>main/master</code> branch, feature branches need to be approved by other team members using the pull-request GitHub's service. In the lightweight repositories, such as the <a href="https://github.com/SmartWasteCollection/documentation">documentation one</a>, the team chose not to use this complex mechanism. </p>
+<p>A GitHub organization named <a href="https://github.com/SmartWasteCollection">SmartWasteCollection</a> was associated to the entire project. 
+In this way, every aspect of the project could be handled in a specific repository inside the organization.
+Moreover, under the perspective of developing a system based on microservices, this model could help the team to better identify the components of the project. </p>
+<p>The team agreed on working with <code>Git Flow workflow</code> inside the implementation repositories, adapting it following the specific needs. 
+This approach requires that before merging code on the <code>main/master</code> branch, feature branches need to be approved by other team members using the pull-request GitHub's service. In the "lightweight" repositories, such as the <a href="https://github.com/SmartWasteCollection/documentation">documentation</a> one, the team chose not to use this complex mechanism. </p>
+<p>All the feature branches will follow a common structure based on the following template:
+<div class="highlight"><pre><span></span><code>feature/&lt;committer-initial-name-letter&gt;&lt;committer-initial-surname-letter&gt;-&lt;feature-name&gt;
+</code></pre></div></p>
 <h3 id="devops-devops-conventional-commit">Conventional Commit</h3>
-<p>The team worked with the <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional-commit</a> convention. This strategy provides an easy set of rules for creating an explicit commit history. The team agreed on an extension of the standard convention, using the following set of commit types:</p>
+<p>The team worked with the <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional-commit</a> convention. 
+This strategy provides an easy set of rules for creating an explicit commit history and allows to automatically define the number of versions released.</p>
+<p>The team agreed on an extension of the standard convention, using the following set of commit types:</p>
 <ul>
 <li><strong>feat</strong>: identifies a feature, increasing the minor version number.</li>
-<li><strong>feat!</strong>: identifies a breaking change feature, increasing the major version number.</li>
+<li><strong>feat!</strong>: identifies a <strong>breaking change</strong> feature, increasing the major version number.</li>
 <li><strong>fix</strong>: identifies a patch change, increasing the patch version number.</li>
 <li><strong>chore</strong>: identifies a minor change that doesn't affect the overall system's behaviour. </li>
 <li><strong>docs</strong>: identifies an update to the documentation.</li>
 <li><strong>ci</strong>: identifies changes in the repository's workflow definition.</li>
 </ul>
+<h3 id="devops-devops-versioning">Versioning</h3>
+<p>Following the conventional commit standard, the version number is defined in the format <code>vX.Y.Z</code> where:
+- <code>X</code> indicates the <strong>major version</strong> and is incremented when a braking change occurs
+- <code>Y</code> indicates a <strong>minor version</strong> and is incremented every time a new feature is introduced in the system 
+- <code>Z</code> indicates a <strong>patch version</strong> where typically errors are fixed and those changes do not modify the system APIs.</p>
+<p>The other commit types defined in addition to those of conventional commit standard do not change the version number and are only used to identify the extent of the change within the code inside the repository.</p>
 <h3 id="devops-devops-commit-lint-check">Commit Lint Check</h3>
+<p>To ensure that developers follow the conventional commit standard, commit linting techniques are used within the repositories.
+These techniques allow you to check the validity of the messages made to the various commits before they are actually traced, in order to have a clean and traceable remote repository.
+If the linter encounters a validation error, the commit won't be published and an error is returned to the developer which summarizes what problems are present within its commit message.</p>
+<p>Validation occurs by checking that a commit type is specified at the beginning of the commit message and possibly a parenthesis, suitably open and closed, which contains a summary description of what is the feature on which changes are being made. The commit type must be followed by a colon before continuing with a brief description of the extent of the changes made.</p>
+<p>It was possible to configure commit linting within an npm project thanks to the <code>@commitlint/config-conventional</code> plugin.
+This plugin allows to import the rules that must be respected within a commit message in order to follow the conventional-commit standard and extend them appropriately, if necessary.
+These rules can then be used thanks to the <code>husky</code> plugin, which allows you to define <code>git hooks</code> that will run a script that executes the commit linter before ending the actual submission of the commit.</p>
+<p>Within a gradle project it is possible to use the plugin <code>org.danilopianini.git-sensitive-semantic-versioning</code> which allows to check the commit messages correctness before their submission.</p>
 <h2 id="devops-devops-continuous-integration">Continuous Integration</h2>
 <h3 id="devops-devops-github-actions">GitHub Actions</h3>
-<p>The team decided to use the GitHub Actions service. The team developed the following set of GitHub Actions for the project:</p>
+<p>The team decided to use the <code>GitHub Actions</code> service. The team developed the following set of GitHub Actions for the project:</p>
 <ul>
 <li><a href="https://github.com/anitvam/conventionalcommit-semantic-releasing">conventionalcommit-semantic-releasing</a>: performs automatic releases of the project following the conventional-commit convention for version numbers.</li>
 <li><a href="https://github.com/alessandro-marcantoni/puml-markdown">puml-markdown</a>: embeds PlantUML code into markdown files.</li>
 <li><a href="https://github.com/SimoneRomagnoli/copy-files-action">copy-files-action</a>: copies files with names that match a specific pattern into another repository.</li>
 </ul>
 <h3 id="devops-devops-code-quality-control">Code Quality Control</h3>
+<p>A control on the quality of the code takes place thanks to the use of <code>Git Flow</code>, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the <code>main/master</code> branch.
+It is a task of the other developers to check that the proposed features are actually working, written in an understandable and clean way and that the appropriate comments are present.</p>
+<!-- TODO: utilizzeremo qualche plugin di controllo automatico sulla formattazione del codice? Se si, descriverlo qui. -->
+
 <h3 id="devops-devops-tests">Tests</h3>
+<!-- TODO -->
+
 <h3 id="devops-devops-automatic-dependency-update">Automatic Dependency Update</h3>
+<!-- TODO -->
+
 <h2 id="devops-devops-continuous-delivery">Continuous Delivery</h2>
 <h3 id="devops-devops-semantic-versioning-and-releasing">Semantic Versioning and Releasing</h3>
+<p>Thanks to the use of <a href="https://github.com/anitvam/conventionalcommit-semantic-releasing">conventionalcommit-semantic-releasing</a> action it was possible to automate all the versioning and releasing work. 
+In particular, the action automatically calculates if a new version release is needed based on the committed commits in the <code>main/master</code> branch. If there is a commit that triggers a new version release (major, minor or patch) then the action creates the new tag, adding the appropriate version number to the one previously released, and then will create the GitHub Release with the reference of the last commit pushed on <code>master</code> branch.</p>
+<p>If it's needed to attach some assets into the release that is generated, then the action allows to define a folder called <code>/assets</code> and all of its contents will be included in the GitHub Release.</p>
+<p>If not needed within the repository, the folder can be deleted with a continuous integration task once the execution of the action is finished, in this way the repository could stay clean.</p>
 <h2 id="devops-devops-licenses">Licenses</h2>
 <p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section></div>
 
