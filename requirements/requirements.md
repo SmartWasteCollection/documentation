@@ -10,71 +10,85 @@ The **goal** that unites all the requirements is the optimization of waste colle
 
 1. Open dumpsters with smart-cards
 
-    1. Authenticate smart-cards
-    2. Open and close dumpsters
+    1.1 Authenticate smart-cards
+
+    1.2 Open and close dumpsters
     
 2. Collect and share data
 
-    1. Update occupied volume
-    2. Store information about citizens' disposals
-    3. Raise issues
+    2.1 Update occupied volume
+
+    2.2 Store information about citizens' disposals
+
+    2.3 Raise issues
 
 ### **Citizen App**
 
 1. Check dumpsters' status
 
-    1. Graphic user interface with dumpsters inside collection points
-    2. Check dumpsters' availability
-    3. Check dumpsters' occupied volume
+    1.1 Graphic user interface with dumpsters inside collection points
+
+    1.2 Check dumpsters' availability
+
+    1.3 Check dumpsters' occupied volume
     
 2. Extraordinary waste collection booking
 
-    3. Create request
+   2.3 Create request
     
 3. Raise issues
 
-    1. Write a complaint
-    2. Send a complaint
+    3.1 Write a complaint
+
+    3.2 Send a complaint
 
 ### **Trucks Routing**
 
 1. Plan ordinary waste collection missions
 
-    1. Send "full-dumpster" notification
-    2. Find "full dumpsters" in the neighborhood
-    3. Compute best route
-    4. Track trucks' real time position
+    1.1 Send "full-dumpster" notification
+
+    1.2 Find "full dumpsters" in the neighborhood
+    
+    1.3 Compute best route
+
+    1.4 Track trucks' real time position
     
 2. Plan extraordinary waste collection missions
 
-    1. Notification of extraordinary mission requests
-    2. Group missions by extraordinary type of waste
-    3. Compute best route
-    4. Track trucks' real time position
+    2.1 Notification of extraordinary mission requests
+
+    2.2 Group missions by extraordinary type of waste
+
+    2.3 Compute best route
+
+    2.4 Track trucks' real time position
 
 ### **Admin Dashboard**
 
 1. Check collection points' status
 
-    1. Check dumpsters' availability
-    2. Check dumpsters' occupied volume
+    1.1 Check dumpsters' availability
+
+    1.2 Check dumpsters' occupied volume
     
 2. Check trucks' real time status
 
-    1. Check trucks' real time position
-    2. Check trucks' occupied volume
+    2.1 Check trucks' real time position
+
+    2.2 Check trucks' occupied volume
 
 3. Check missions
 
-    1. Check active missions
+    3.1 Check active missions
     
 4. Check complaints
 
-    1. Show list of complaints
+    4.1 Show list of complaints
     
 5. Register new citizens
 
-    1. Creation of a new smart-card
+    5.1 Creation of a new smart-card
 
 The following diagram shows a visual representation of the requirements.
 
