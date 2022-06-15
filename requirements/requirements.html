@@ -424,6 +424,40 @@
     Optimize Waste Collection
   </a>
   
+    <nav class="md-nav" aria-label="Optimize Waste Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dumpster-infrastructure" class="md-nav__link">
+    Dumpster Infrastructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citizen-app" class="md-nav__link">
+    Citizen App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trucks-routing" class="md-nav__link">
+    Trucks Routing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin-dashboard" class="md-nav__link">
+    Admin Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -719,6 +753,40 @@
     Optimize Waste Collection
   </a>
   
+    <nav class="md-nav" aria-label="Optimize Waste Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dumpster-infrastructure" class="md-nav__link">
+    Dumpster Infrastructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#citizen-app" class="md-nav__link">
+    Citizen App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trucks-routing" class="md-nav__link">
+    Trucks Routing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin-dashboard" class="md-nav__link">
+    Admin Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -743,50 +811,62 @@
 <h1 id="requirement-breakdown-structure">Requirement Breakdown Structure</h1>
 <p>The team focused on use cases and user stories to identify and formalize the requirements, building a <em>Requirement Breakdown Structure</em>.</p>
 <p>The <strong>goal</strong> that unites all the requirements is the optimization of waste collection. At the second level, the goal generates <strong>requirements</strong> (*). Then, structure presents <strong>functions</strong> (*.*) that describe the higher-level functionalities of each requirement. Each function splits up into many <strong>features</strong> (*.*.*) that explain specific details.</p>
-<h3 id="optimize-waste-collection">Optimize Waste Collection</h3>
+<h2 id="optimize-waste-collection">Optimize Waste Collection</h2>
+<h3 id="dumpster-infrastructure"><strong>Dumpster Infrastructure</strong></h3>
 <ol>
 <li>
-<p><strong>Dumpster Infrastructure</strong></p>
-<p>1.1 Open dumpsters with smart-cards</p>
+<p>Open dumpsters with smart-cards</p>
 <ol>
 <li>Authenticate smart-cards</li>
 <li>Open and close dumpsters</li>
 </ol>
-<p>1.2 Collect and share data</p>
+</li>
+<li>
+<p>Collect and share data</p>
 <ol>
 <li>Update occupied volume</li>
 <li>Store information about citizens' disposals</li>
 <li>Raise issues</li>
 </ol>
 </li>
+</ol>
+<h3 id="citizen-app"><strong>Citizen App</strong></h3>
+<ol>
 <li>
-<p><strong>Citizen App</strong></p>
-<p>2.1 Check dumpsters' status</p>
+<p>Check dumpsters' status</p>
 <ol>
 <li>Graphic user interface with dumpsters inside collection points</li>
 <li>Check dumpsters' availability</li>
 <li>Check dumpsters' occupied volume</li>
 </ol>
-<p>2.2 Extraordinary waste collection booking</p>
+</li>
+<li>
+<p>Extraordinary waste collection booking</p>
 <ol start="3">
 <li>Create request</li>
 </ol>
-<p>2.3 Raise issues</p>
+</li>
+<li>
+<p>Raise issues</p>
 <ol>
 <li>Write a complaint</li>
 <li>Send a complaint</li>
 </ol>
 </li>
+</ol>
+<h3 id="trucks-routing"><strong>Trucks Routing</strong></h3>
+<ol>
 <li>
-<p><strong>Trucks Routing</strong></p>
-<p>3.1 Plan ordinary waste collection missions</p>
+<p>Plan ordinary waste collection missions</p>
 <ol>
 <li>Send "full-dumpster" notification</li>
 <li>Find "full dumpsters" in the neighborhood</li>
 <li>Compute best route</li>
 <li>Track trucks' real time position</li>
 </ol>
-<p>3.2 Plan extraordinary waste collection missions</p>
+</li>
+<li>
+<p>Plan extraordinary waste collection missions</p>
 <ol>
 <li>Notification of extraordinary mission requests</li>
 <li>Group missions by extraordinary type of waste</li>
@@ -794,27 +874,37 @@
 <li>Track trucks' real time position</li>
 </ol>
 </li>
+</ol>
+<h3 id="admin-dashboard"><strong>Admin Dashboard</strong></h3>
+<ol>
 <li>
-<p><strong>Admin Dashboard</strong></p>
-<p>4.1 Check collection points' status</p>
+<p>Check collection points' status</p>
 <ol>
 <li>Check dumpsters' availability</li>
 <li>Check dumpsters' occupied volume</li>
 </ol>
-<p>4.2 Check trucks' real time status</p>
+</li>
+<li>
+<p>Check trucks' real time status</p>
 <ol>
 <li>Check trucks' real time position</li>
 <li>Check trucks' occupied volume</li>
 </ol>
-<p>4.3 Check missions</p>
+</li>
+<li>
+<p>Check missions</p>
 <ol>
 <li>Check active missions</li>
 </ol>
-<p>4.4 Check complaints</p>
+</li>
+<li>
+<p>Check complaints</p>
 <ol>
 <li>Show list of complaints</li>
 </ol>
-<p>4.5 Register new citizens</p>
+</li>
+<li>
+<p>Register new citizens</p>
 <ol>
 <li>Creation of a new smart-card</li>
 </ol>
@@ -828,11 +918,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 15, 2022 12:47:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 15, 2022 12:53:46</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 15, 2022 12:47:47</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 15, 2022 12:53:46</span>
       
     
   </small>
