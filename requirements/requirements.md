@@ -9,8 +9,8 @@ The **goal** that unites all the requirements is the optimization of waste colle
 1. **Dumpster Infrastructure**
 
     1.1 Open dumpsters with smart-cards
-    
-    1.1.1 Authenticate smart-cards
+
+        1.1.1 Authenticate smart-cards
     
     1.1.2 Open and close dumpsters
     
@@ -22,7 +22,7 @@ The **goal** that unites all the requirements is the optimization of waste colle
     
     1.2.3 Raise issues
 
-2. **Citizen App**
+3. **Citizen App**
 
     2.1 Check dumpsters' status
     
@@ -42,7 +42,7 @@ The **goal** that unites all the requirements is the optimization of waste colle
     
     2.3.2 Send a complaint
 
-3. **Trucks Routing**
+4. **Trucks Routing**
 
     3.1 Plan ordinary waste collection missions
     
@@ -64,7 +64,7 @@ The **goal** that unites all the requirements is the optimization of waste colle
     
     3.2.4 Track trucks' real time position
 
-4. **Admin Dashboard**
+5. **Admin Dashboard**
 
     4.1 Check collection points' status
     
