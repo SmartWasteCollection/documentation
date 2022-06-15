@@ -54,7 +54,7 @@ The **goal** that unites all the requirements is the optimization of waste colle
 
 4. **Admin Dashboard**
 
-   4.1 Check collection points' status
+    4.1 Check collection points' status
 
     1. Check dumpsters' availability
     2. Check dumpsters' occupied volume
