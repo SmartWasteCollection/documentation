@@ -34,7 +34,7 @@ The **goal** that unites all the requirements is the optimization of waste colle
     
 2. Extraordinary waste collection booking
 
-   2.3 Create request
+    2.3 Create request
     
 3. Raise issues
 
