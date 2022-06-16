@@ -839,6 +839,11 @@
 <td align="center"><a href="#waste">Waste</a>, <a href="#waste">Ordinary Waste</a></td>
 </tr>
 <tr>
+<td align="center"><strong>Paper</strong></td>
+<td align="center">Ordinary waste composed by paper.</td>
+<td align="center"><a href="#waste">Waste</a>, <a href="#waste">Ordinary Waste</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Organic</strong></td>
 <td align="center">Ordinary waste that is compostable over time.</td>
 <td align="center"><a href="#waste">Waste</a>, <a href="#waste">Ordinary Waste</a></td>
@@ -936,6 +941,11 @@
 <td align="center"><a href="#dumpster">Dumpster</a>, <a href="#dumpster">Dumpster Feature</a></td>
 </tr>
 <tr>
+<td align="center"><strong>Availability</strong></td>
+<td align="center">Feature that states that the dumpster is working and its occupied volume percentage is under 95% of its capacity.</td>
+<td align="center"><a href="#dumpster">Dumpster</a>, <a href="#dumpster">Dumpster Feature</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Occupied Volume</strong></td>
 <td align="center">The amount of waste (in liters) that a single dumpster is currently storing.</td>
 <td align="center"><a href="#dumpster">Dumpster</a>, <a href="#dumpster">Dumpster Feature</a></td>
@@ -977,6 +987,11 @@
 <td align="center">The current position of a garbage truck.</td>
 <td align="center"><a href="#truck">Garbage Truck</a></td>
 </tr>
+<tr>
+<td align="center"><strong>Availability</strong></td>
+<td align="center">Feature that states whether the truck is busy in a mission.</td>
+<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#collection">Mission</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="collection">Collection</h2>
@@ -1016,8 +1031,18 @@
 </tr>
 <tr>
 <td align="center"><strong>Mission</strong></td>
-<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste.</td>
-<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#waste">Ordinary Waste</a>, <a href="#collection">Collection Point</a></td>
+<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste. Each mission consists of several mission steps.</td>
+<td align="center"><a href="#truck">Garbage Truck</a>, <a href="#waste">Ordinary Waste</a>, <a href="#collection">Collection Point</a>, <a href="#collection">Mission Step</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Mission Generation</strong></td>
+<td align="center">The creation of a mission optimized for the best route that collects a set of dumpsters.</td>
+<td align="center"><a href="#dumpster">Dumpster</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Mission Step</strong></td>
+<td align="center">A phase of a mission corresponding to the collection of a dumpster.</td>
+<td align="center"><a href="#collection">Mission</a>, <a href="#dumpster">Dumpster</a></td>
 </tr>
 <tr>
 <td align="center"><strong>"At Home" Mission</strong></td>
@@ -1052,9 +1077,19 @@
 </thead>
 <tbody>
 <tr>
+<td align="center"><strong>User</strong></td>
+<td align="center">A person who uses the system. It can be a citizen or a manager</td>
+<td align="center"><a href="#citizen">Citizen</a>, <a href="#citizen">Manager</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Citizen</strong></td>
 <td align="center">An inhabitant of a residential area.</td>
 <td align="center"><a href="#collection">Residential Area</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Manager</strong></td>
+<td align="center">A system administrator.</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center"><strong>Smart Card</strong></td>
@@ -1066,6 +1101,26 @@
 <td align="center">A message that notifies an issue. It may be sent by citizens, truck drivers and dumpsters themselves.</td>
 <td align="center"><a href="#citizen">Citizen</a>, <a href="#truck">Truck Driver</a>, <a href="#dumpster">Dumpster</a></td>
 </tr>
+<tr>
+<td align="center"><strong>"At Home" Collection Request</strong></td>
+<td align="center">The request sent by a citizen to book an "At Home" collection.</td>
+<td align="center"><a href="#waste">Extraordinary Waste</a>, <a href="#citizen">Citizen</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Booking</strong></td>
+<td align="center">An "At Home" collection request scheduled appointment.</td>
+<td align="center"><a href="#citizen">Citizen</a>, <a href="#collection">"At Home" Collection Request</a>, <a href="#collection">"At Home" Collection</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Account</strong></td>
+<td align="center">The digital identity associated to a user</td>
+<td align="center"><a href="#citizen">User</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Authenticate</strong></td>
+<td align="center">The action of verifying a user's identity. It occurs when a citizen uses his smart card to open a dumpster or when a user accesses to the dashboard.</td>
+<td align="center"><a href="#citizen">User</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -1074,11 +1129,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 13:13:30</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 13:13:30</span>
       
     
   </small>

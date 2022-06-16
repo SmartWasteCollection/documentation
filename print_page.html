@@ -1079,6 +1079,11 @@ draft of the requirements. </p>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-waste">Ordinary Waste</a></td>
 </tr>
 <tr>
+<td align="center"><strong>Paper</strong></td>
+<td align="center">Ordinary waste composed by paper.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-waste">Ordinary Waste</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Organic</strong></td>
 <td align="center">Ordinary waste that is compostable over time.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-waste">Ordinary Waste</a></td>
@@ -1176,6 +1181,11 @@ draft of the requirements. </p>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster Feature</a></td>
 </tr>
 <tr>
+<td align="center"><strong>Availability</strong></td>
+<td align="center">Feature that states that the dumpster is working and its occupied volume percentage is under 95% of its capacity.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster Feature</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Occupied Volume</strong></td>
 <td align="center">The amount of waste (in liters) that a single dumpster is currently storing.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster Feature</a></td>
@@ -1217,6 +1227,11 @@ draft of the requirements. </p>
 <td align="center">The current position of a garbage truck.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a></td>
 </tr>
+<tr>
+<td align="center"><strong>Availability</strong></td>
+<td align="center">Feature that states whether the truck is busy in a mission.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-collection">Mission</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="domain-analysis-ubiquitous-language-collection">Collection</h2>
@@ -1256,8 +1271,18 @@ draft of the requirements. </p>
 </tr>
 <tr>
 <td align="center"><strong>Mission</strong></td>
-<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-waste">Ordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-collection">Collection Point</a></td>
+<td align="center">The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste. Each mission consists of several mission steps.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-truck">Garbage Truck</a>, <a href="#domain-analysis-ubiquitous-language-waste">Ordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-collection">Collection Point</a>, <a href="#domain-analysis-ubiquitous-language-collection">Mission Step</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Mission Generation</strong></td>
+<td align="center">The creation of a mission optimized for the best route that collects a set of dumpsters.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Mission Step</strong></td>
+<td align="center">A phase of a mission corresponding to the collection of a dumpster.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Mission</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
 </tr>
 <tr>
 <td align="center"><strong>"At Home" Mission</strong></td>
@@ -1292,9 +1317,19 @@ draft of the requirements. </p>
 </thead>
 <tbody>
 <tr>
+<td align="center"><strong>User</strong></td>
+<td align="center">A person who uses the system. It can be a citizen or a manager</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Manager</a></td>
+</tr>
+<tr>
 <td align="center"><strong>Citizen</strong></td>
 <td align="center">An inhabitant of a residential area.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-collection">Residential Area</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Manager</strong></td>
+<td align="center">A system administrator.</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center"><strong>Smart Card</strong></td>
@@ -1305,6 +1340,26 @@ draft of the requirements. </p>
 <td align="center"><strong>Complaint</strong></td>
 <td align="center">A message that notifies an issue. It may be sent by citizens, truck drivers and dumpsters themselves.</td>
 <td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-truck">Truck Driver</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
+</tr>
+<tr>
+<td align="center"><strong>"At Home" Collection Request</strong></td>
+<td align="center">The request sent by a citizen to book an "At Home" collection.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Booking</strong></td>
+<td align="center">An "At Home" collection request scheduled appointment.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection Request</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Account</strong></td>
+<td align="center">The digital identity associated to a user</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">User</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Authenticate</strong></td>
+<td align="center">The action of verifying a user's identity. It occurs when a citizen uses his smart card to open a dumpster or when a user accesses to the dashboard.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">User</a></td>
 </tr>
 </tbody>
 </table></section><h1 class='nav-section-title-end'>Ended: Domain Analysis</h1>
