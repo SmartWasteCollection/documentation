@@ -12,7 +12,7 @@ The *Mission Aggregate* deals with the following events:
 
 * **Mission Step Event**: received when a truck leaves a collection point.
 * **Mission Request Event**: received when a dumpster's occupied volume exceeds its threshold.
-* **Ordinary Mission Event**: ???
+* **Ordinary Mission Event**: generated daily by the *Mission Manager Service* or upon **Mission Request Event** by dumpster.
 * **Extraordinary Mission Event**: generated daily by the *Mission Manager Service*.
 
 ## Domain Invariants

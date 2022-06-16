@@ -13,7 +13,7 @@ The *Collection Point Aggregate* is very important as it contains information ab
 The *Dumpster Aggregate* deals with the following events:
 
 * **Citizen Disposal Event**: generated when a citizen disposes of some waste.
-* **Dumpster Volume Update Event**: generated when the volume sensor detects a disposal.
+* **Dumpster Volume Update Event**: generated when the volume sensor detects a disposal or a collection.
 * **Dumpster Availability Update Event**: generated when the dumpster becomes available or unavailable.
 * **Opening Event**: generated when the dumpster is opened.
 * **Closure Event**: generated when the dumpster is closed.
@@ -25,10 +25,10 @@ The *Dumpster Aggregate* deals with the following events:
 
 ## Domain Invariants
 
-* *TIMEOUT* = 30 seconds.
-* *OCCUPIED_VOLUME_THRESHOLD* = 75%.
-* *occupiedVolume < capacity*.
-* *Citizen Disposal Events* are accepted *iff isAvailable == true*.
-* *Opening Events* are accepted *iff isAvailable == true*.
-* *isAvailable = (isWorking == true && occupiedVolumePercentage < 95%)*.
+* ```TIMEOUT = 30 seconds```.
+* ```OCCUPIED_VOLUME_THRESHOLD = 75%```.
+* ```occupiedVolume < capacity```.
+* *Citizen Disposal Events* are accepted *iff*  ```isAvailable```.
+* *Opening Events* are accepted *iff* ```isAvailable```.
+* ```isAvailable = isWorking && occupiedVolumePercentage < 95%```.
 * *TypesOfWaste* are mapped to one and one only *Color*, and vice versa.

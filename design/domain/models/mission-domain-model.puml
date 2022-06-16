@@ -27,9 +27,14 @@ aggregate "Mission Aggregate" {
         + wasteName: WasteName
     }
 
-    class(WasteName, Enum) {
-        UNSORTED, PLASTICS/ALUMINIUM, ORGANIC, GLASS, PAPER,
-        TWIGS, WASTE_OIL, IRON, ELECTRONICS, CLOTHES, OTHER
+    class(OrdinaryWasteName, Enum) {
+        UNSORTED, PLASTICS/ALUMINIUM,
+        ORGANIC, GLASS, PAPER,
+    }
+
+    class(ExtraordinaryWasteName, Enum) {
+        TWIGS, WASTE_OIL, IRON,
+        ELECTRONICS, CLOTHES, OTHER
     }
 
     class(TypeOfMission, Enum) {
@@ -38,9 +43,10 @@ aggregate "Mission Aggregate" {
 
     association(Mission, TypeOfWaste)
     association(Mission, TypeOfMission)
-    association(TypeOfWaste, WasteName)
-    association(Mission, MissionStep)
-    association(MissionStep, Position)
+    association(TypeOfWaste, OrdinaryWasteName)
+    association(TypeOfWaste, ExtraordinaryWasteName)
+    association(Mission, MissionStep, left)
+    association(MissionStep, Position, down)
 
 }
 

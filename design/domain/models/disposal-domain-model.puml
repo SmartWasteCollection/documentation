@@ -39,7 +39,7 @@ aggregate "Dumpster Aggregate" {
     }
 
     class(TypeOfOrdinaryWaste, ValueObject) {
-        + wasteName: WasteName
+        + wasteName: OrdinaryWasteName
         + color: Color
     }
 
@@ -57,7 +57,7 @@ aggregate "Dumpster Aggregate" {
         BLUE, BROWN
     }
 
-    class(WasteName, Enum) {
+    class(OrdinaryWasteName, Enum) {
         UNSORTED, PLASTICS/ALUMINIUM,
         ORGANIC, GLASS, PAPER
     }
@@ -67,7 +67,7 @@ aggregate "Dumpster Aggregate" {
     association(TypeOfDumpster, Size)
     association(Size, Dimension)
     association(TypeOfDumpster, TypeOfOrdinaryWaste, left)
-    association(TypeOfOrdinaryWaste, WasteName)
+    association(TypeOfOrdinaryWaste, OrdinaryWasteName)
     association(TypeOfOrdinaryWaste, Color)
 }
 
