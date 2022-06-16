@@ -13,7 +13,8 @@ feature(Open and close\ndumpsters)
 function(Collect and share data)
 feature(Update occupied volume)
 feature(Store information about\ncitizens' disposals)
-feature(Notify issues)
+feature(Send "full-dumpster" notification)
+feature(Raise complaints)
 
 'Citizen App
 requirement(Citizen app)
@@ -23,31 +24,30 @@ feature(Check dumpsters'\navailability)
 feature(Check dumpster's\noccupied volume)
 
 function(Book extraordinary\nwaste disposal)
-feature(Create a waste\ndisposal request)
+feature(Create a request)
+feature(Check requests' status)
 
-function(Notify issues)
+function(Raise complaints)
 feature(Write a complaint)
 feature(Send complaint)
 
-'Trucks Routing
-requirement(Trucks routing)
+'Mission Management
+requirement(Mission Management)
 function(Plan ordinary waste\ndisposal missions)
-feature(Notify when a\ndumpster is full)
 feature(Look for other dumpsters to\ncollect near the full one)
 feature(Calculate best route)
-feature(Track trucks'\nreal time position)
 
 function(Plan extraordinary waste\ndisposal missions)
-feature(Notify when a request\nis submitted)
-feature(Group missions\nby type of waste)
+feature(Observe extraordinary \nmission requests)
 feature(Calculate best route)
-feature(Track trucks'\nreal time position)
 
 'Admin Dashboard
 requirement(Admin dashboard)
 function(Display collection\npoints' status)
 feature(Display dumpsters'\navailability)
 feature(Display dumpsters'\noccupied volume)
+feature(Display dumpsters' type)
+feature(Display collected type of waste)
 
 function(Display trucks'\nreal time status)
 feature(Display trucks'\nposition)
@@ -58,6 +58,7 @@ feature(Display active missions)
 
 function(Display complaints)
 feature(Display list of complaints)
+feature(Check complaint's details)
 
 function(Register new citizens)
 feature(Create smart-cards\nfor new citizens)

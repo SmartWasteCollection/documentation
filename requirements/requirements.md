@@ -20,7 +20,10 @@ The **goal** that unites all the requirements is the optimization of waste colle
 
     2.2 Store information about citizens' disposals
 
-    2.3 Raise issues
+    2.3 Send "full-dumpster" notification
+
+    2.4 Raise complaints
+
 
 ### **Citizen App**
 
@@ -34,35 +37,29 @@ The **goal** that unites all the requirements is the optimization of waste colle
     
 2. Extraordinary waste collection booking
 
-    2.3 Create request
+    2.1 Create request
+
+    2.2 Check requests' status
     
-3. Raise issues
+3. Raise complaints
 
     3.1 Write a complaint
 
     3.2 Send a complaint
 
-### **Trucks Routing**
+### **Mission Management**
 
 1. Plan ordinary waste collection missions
 
-    1.1 Send "full-dumpster" notification
-
-    1.2 Find "full dumpsters" in the neighborhood
+    1.1 Find "full dumpsters" in the neighborhood
     
-    1.3 Compute best route
-
-    1.4 Track trucks' real time position
+    1.2 Compute best route
     
 2. Plan extraordinary waste collection missions
 
-    2.1 Notification of extraordinary mission requests
+    2.1 Observe extraordinary mission requests
 
-    2.2 Group missions by extraordinary type of waste
-
-    2.3 Compute best route
-
-    2.4 Track trucks' real time position
+    2.2 Compute best route
 
 ### **Admin Dashboard**
 
@@ -71,6 +68,10 @@ The **goal** that unites all the requirements is the optimization of waste colle
     1.1 Check dumpsters' availability
 
     1.2 Check dumpsters' occupied volume
+
+    1.3 Check dumpsters' type
+
+    1.4 Check collected type of waste
     
 2. Check trucks' real time status
 
@@ -86,10 +87,12 @@ The **goal** that unites all the requirements is the optimization of waste colle
 
     4.1 Show list of complaints
     
-5. Register new citizens
+    4.2 Check complaint's details
+    
+6. Register new citizens
 
     5.1 Creation of a new smart-card
 
 The following diagram shows a visual representation of the requirements.
 
-<!--![Diagram Image Link](./requirement-breakdown-structure.pm.puml)-->
+<!--![Diagram Image Link](./requirement-breakdown-structure.puml)-->
