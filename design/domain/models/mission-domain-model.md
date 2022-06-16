@@ -4,7 +4,7 @@
 
 The following diagram shows the mission's aggregate. It is the only aggregate identified in the mission context.
 
-[![Diagram Image Link](https://tinyurl.com/2xwgbmtg)](https://tinyurl.com/2xwgbmtg)<!--![Diagram Image Link](./mission-domain-model.puml)-->
+[![Diagram Image Link](https://tinyurl.com/22mj4now)](https://tinyurl.com/22mj4now)<!--![Diagram Image Link](./mission-domain-model.puml)-->
 
 ## Domain Events
 
@@ -12,7 +12,7 @@ The *Mission Aggregate* deals with the following events:
 
 * **Mission Step Event**: received when a truck leaves a collection point.
 * **Mission Request Event**: received when a dumpster's occupied volume exceeds its threshold.
-* **Ordinary Mission Event**: ???
+* **Ordinary Mission Event**: generated daily by the *Mission Manager Service* or upon **Mission Request Event** by dumpster.
 * **Extraordinary Mission Event**: generated daily by the *Mission Manager Service*.
 
 ## Domain Invariants

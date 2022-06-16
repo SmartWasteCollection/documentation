@@ -782,13 +782,13 @@
 <li><strong>Mission Request Event</strong>: received when a dumpster's occupied volume exceeds its threshold.</li>
 <li><strong>Position Update Event</strong>: generated when the GPS sensor detects a new position.</li>
 <li><strong>Truck Volume Update Event</strong>: generated when the truck empties a dumpster.</li>
-<li><strong>Truck Availability Update Event</strong>:</li>
+<li><strong>Truck Availability Update Event</strong>: generated when a truck starts or ends a mission.</li>
 <li><strong>Mission Step Event</strong>: generated when the truck leaves a collection point.</li>
 </ul>
 <h2 id="domain-invariants">Domain Invariants</h2>
 <ul>
-<li>occupiedVolume &lt; capacity.</li>
-<li><em>Mission Request Event</em> are accepted <em>iff isInMission == false</em>.</li>
+<li><code>occupiedVolume &lt; capacity</code>.</li>
+<li><em>Mission Request Event</em> are accepted <em>iff</em> <code>!isInMission</code>.</li>
 </ul>
 
   <hr>
@@ -796,11 +796,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
     
   </small>

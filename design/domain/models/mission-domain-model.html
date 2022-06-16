@@ -775,13 +775,13 @@
 <h1 id="mission-domain-model">Mission Domain Model</h1>
 <h2 id="model-diagram">Model Diagram</h2>
 <p>The following diagram shows the mission's aggregate. It is the only aggregate identified in the mission context.</p>
-<p><a href="https://tinyurl.com/2xwgbmtg"><img alt="Diagram Image Link" src="https://tinyurl.com/2xwgbmtg" /></a><!--<img alt="Diagram Image Link" src="./mission-domain-model.puml" />--></p>
+<p><a href="https://tinyurl.com/22mj4now"><img alt="Diagram Image Link" src="https://tinyurl.com/22mj4now" /></a><!--<img alt="Diagram Image Link" src="./mission-domain-model.puml" />--></p>
 <h2 id="domain-events">Domain Events</h2>
 <p>The <em>Mission Aggregate</em> deals with the following events:</p>
 <ul>
 <li><strong>Mission Step Event</strong>: received when a truck leaves a collection point.</li>
 <li><strong>Mission Request Event</strong>: received when a dumpster's occupied volume exceeds its threshold.</li>
-<li><strong>Ordinary Mission Event</strong>: ???</li>
+<li><strong>Ordinary Mission Event</strong>: generated daily by the <em>Mission Manager Service</em> or upon <strong>Mission Request Event</strong> by dumpster.</li>
 <li><strong>Extraordinary Mission Event</strong>: generated daily by the <em>Mission Manager Service</em>.</li>
 </ul>
 <h2 id="domain-invariants">Domain Invariants</h2>
@@ -797,11 +797,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
     
   </small>

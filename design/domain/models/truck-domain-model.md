@@ -13,10 +13,10 @@ The *Truck Aggregate* deals with the following events:
 * **Mission Request Event**: received when a dumpster's occupied volume exceeds its threshold.
 * **Position Update Event**: generated when the GPS sensor detects a new position.
 * **Truck Volume Update Event**: generated when the truck empties a dumpster.
-* **Truck Availability Update Event**:
+* **Truck Availability Update Event**: generated when a truck starts or ends a mission.
 * **Mission Step Event**: generated when the truck leaves a collection point.
 
 ## Domain Invariants
 
-* occupiedVolume < capacity.
-* *Mission Request Event* are accepted *iff isInMission == false*.
+* ```occupiedVolume < capacity```.
+* *Mission Request Event* are accepted *iff* ```!isInMission```.

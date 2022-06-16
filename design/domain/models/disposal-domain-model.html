@@ -789,13 +789,13 @@
 <h1 id="disposal-domain-model">Disposal Domain Model</h1>
 <h2 id="model-diagram">Model Diagram</h2>
 <p>The following diagram shows the aggregates of the disposal subdomain.</p>
-<p><a href="https://tinyurl.com/24ruz2pk"><img alt="Diagram Image Link" src="https://tinyurl.com/24ruz2pk" /></a><!--<img alt="Diagram Image Link" src="./disposal-domain-model.puml" />--></p>
+<p><a href="https://tinyurl.com/22ex6n89"><img alt="Diagram Image Link" src="https://tinyurl.com/22ex6n89" /></a><!--<img alt="Diagram Image Link" src="./disposal-domain-model.puml" />--></p>
 <p>The <em>Collection Point Aggregate</em> is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.</p>
 <h2 id="domain-events">Domain Events</h2>
 <p>The <em>Dumpster Aggregate</em> deals with the following events:</p>
 <ul>
 <li><strong>Citizen Disposal Event</strong>: generated when a citizen disposes of some waste.</li>
-<li><strong>Dumpster Volume Update Event</strong>: generated when the volume sensor detects a disposal.</li>
+<li><strong>Dumpster Volume Update Event</strong>: generated when the volume sensor detects a disposal or a collection.</li>
 <li><strong>Dumpster Availability Update Event</strong>: generated when the dumpster becomes available or unavailable.</li>
 <li><strong>Opening Event</strong>: generated when the dumpster is opened.</li>
 <li><strong>Closure Event</strong>: generated when the dumpster is closed.</li>
@@ -807,12 +807,12 @@
 </ul>
 <h2 id="domain-invariants">Domain Invariants</h2>
 <ul>
-<li><em>TIMEOUT</em> = 30 seconds.</li>
-<li><em>OCCUPIED_VOLUME_THRESHOLD</em> = 75%.</li>
-<li><em>occupiedVolume &lt; capacity</em>.</li>
-<li><em>Citizen Disposal Events</em> are accepted <em>iff isAvailable == true</em>.</li>
-<li><em>Opening Events</em> are accepted <em>iff isAvailable == true</em>.</li>
-<li><em>isAvailable = (isWorking == true &amp;&amp; occupiedVolumePercentage &lt; 95%)</em>.</li>
+<li><code>TIMEOUT = 30 seconds</code>.</li>
+<li><code>OCCUPIED_VOLUME_THRESHOLD = 75%</code>.</li>
+<li><code>occupiedVolume &lt; capacity</code>.</li>
+<li><em>Citizen Disposal Events</em> are accepted <em>iff</em>  <code>isAvailable</code>.</li>
+<li><em>Opening Events</em> are accepted <em>iff</em> <code>isAvailable</code>.</li>
+<li><code>isAvailable = isWorking &amp;&amp; occupiedVolumePercentage &lt; 95%</code>.</li>
 <li><em>TypesOfWaste</em> are mapped to one and one only <em>Color</em>, and vice versa.</li>
 </ul>
 
@@ -821,11 +821,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:17:36</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 16, 2022 12:24:19</span>
       
     
   </small>
