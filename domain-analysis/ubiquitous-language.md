@@ -10,6 +10,7 @@ The tables below represent the ubiquitous language derived from domain analysis.
 |    **Extraordinary Waste**    | Set of types of waste that are difficult to collect. This may be due to their dimension or composition. | [Waste](#waste), [Type of Waste](#waste), [Collect](#collection) |
 |      **Unsorted Waste**       |                                 Ordinary waste that is not recyclable.                                  |            [Waste](#waste), [Ordinary Waste](#waste)             |
 |     **Plastic/Aluminium**     |                            Ordinary waste composed by plastic or aluminium.                             |            [Waste](#waste), [Ordinary Waste](#waste)             |
+|     **Paper**                 |                            Ordinary waste composed by paper.                                            |            [Waste](#waste), [Ordinary Waste](#waste)             |
 |          **Organic**          |                              Ordinary waste that is compostable over time.                              |            [Waste](#waste), [Ordinary Waste](#waste)             |
 |           **Glass**           |                                    Ordinary waste composed by glass.                                    |            [Waste](#waste), [Ordinary Waste](#waste)             |
 |           **Twigs**           |                    Extraordinary waste composed by pruning of trees or other bushes.                    |          [Waste](#waste), [Extraordinary Waste](#waste)          |
@@ -31,6 +32,7 @@ The tables below represent the ubiquitous language derived from domain analysis.
 |      **Color**       |                 Feature of dumpsters that shows the type of waste they collect.                  |                [Dumpster](#dumpster), [Dumpster Feature](#dumpster)                 |
 |     **Opening**      | It defines the way dumpsters are opened. This can be done either using a foot lever or by hands. |                [Dumpster](#dumpster), [Dumpster Feature](#dumpster)                 |
 |     **Capacity**     |            The maximum amount of waste (in liters) that a single dumpster can store.             |                [Dumpster](#dumpster), [Dumpster Feature](#dumpster)                 |
+|   **Availability**   |            Feature that states that the dumpster is working and its occupied volume percentage is under 95% of its capacity.            |                [Dumpster](#dumpster), [Dumpster Feature](#dumpster)                 |
 | **Occupied Volume**  |           The amount of waste (in liters) that a single dumpster is currently storing.           |                [Dumpster](#dumpster), [Dumpster Feature](#dumpster)                 |
 
 ## Truck
@@ -41,6 +43,7 @@ The tables below represent the ubiquitous language derived from domain analysis.
 |    **Capacity**     |        The total amount of waste (in liters) that a garbage truck can store.        |                [Waste](#waste), [Garbage Truck](#truck)                |
 | **Occupied Volume** |     The amount of waste (in liters) that a garbage truck is currently storing.      |                [Waste](#waste), [Garbage Truck](#truck)                |
 |    **Position**     |                      The current position of a garbage truck.                       |                        [Garbage Truck](#truck)                         |
+|   **Availability**  |                 Feature that states whether the truck is busy in a mission.         |                      [Garbage Truck](#truck), [Mission](#collection)   |
 
 ## Collection
 |           Term           |                                                            Description                                                            |                                          Associations                                           |
@@ -50,7 +53,9 @@ The tables below represent the ubiquitous language derived from domain analysis.
 |   **Collection Point**   |                                           The group of dumpsters in a residential area.                                           |                     [Dumpster](#dumpster), [Residential Area](#collection)                      |
 |       **Province**       |                     A geopolitical area a country is divided into. Each province has its own disposal point.                      |                                  [Disposal Point](#collection)                                  |
 |   **Residential Area**   |                          A partition of a province. Each residential area has its own collection point.                           |                    [Province](#collection), [Collection Point](#collection)                     |
-|       **Mission**        |   The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste.   |       [Garbage Truck](#truck), [Ordinary Waste](#waste), [Collection Point](#collection)        |
+|       **Mission**        |   The trip that a garbage truck performs stopping at multiple collection points and collecting a single ordinary type of waste. Each mission consists of several mission steps.   |       [Garbage Truck](#truck), [Ordinary Waste](#waste), [Collection Point](#collection), [Mission Step](#collection)       |
+|  **Mission Generation**  |   The creation of a mission optimized for the best route that collects a set of dumpsters.                             |         [Dumpster](#dumpster)        |
+|       **Mission Step**   |   A phase of a mission corresponding to the collection of a dumpster.                                                             |       [Mission](#collection), [Dumpster](#dumpster)        |
 |  **"At Home" Mission**   | The trip that a garbage truck performs stopping at multiple citizens' houses and collecting a single extraordinary type of waste. |     [Garbage Truck](#truck), [Extraordinary Waste](#waste), [Collection Point](#collection)     |
 |     **Mission Area**     |                                The set of residential areas covered by a garbage truck's mission.                                 |        [Residential Area](#collection), [Garbage Truck](#truck), [Mission](#collection)         |
 |    **Disposal Point**    |    A set of buildings with many disposal chains used for waste disposal. Garbage trucks start and finish their missions here.     | [Disposal Chain](#collection), [Waste](#waste), [Garbage Truck](#truck), [Mission](#collection) |
@@ -59,7 +64,13 @@ The tables below represent the ubiquitous language derived from domain analysis.
 ## Citizen
 |      Term      |                                              Description                                               |                            Associations                            |
 |:--------------:|:------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
+|  **User**   |                                  A person who uses the system. It can be a citizen or a manager           |                  [Citizen](#citizen), [Manager](#citizen)                   |
 |  **Citizen**   |                                  An inhabitant of a residential area.                                  |                  [Residential Area](#collection)                   |
+|  **Manager**   |                                  A system administrator.                                               |                                  |
 | **Smart Card** |           A plastic card with a built-in microprocessor. It will be used to open dumpsters.            |                       [Dumpster](#dumpster)                        |
 | **Complaint**  | A message that notifies an issue. It may be sent by citizens, truck drivers and dumpsters themselves.  | [Citizen](#citizen), [Truck Driver](#truck), [Dumpster](#dumpster) |
+| **"At Home" Collection Request** |               The request sent by a citizen to book an "At Home" collection.         |       [Extraordinary Waste](#waste), [Citizen](#citizen)           |
+|   **Booking**  | An "At Home" collection request scheduled appointment.  | [Citizen](#citizen), ["At Home" Collection Request](#collection), ["At Home" Collection](#collection) |
+|   **Account**  | The digital identity associated to a user  | [User](#citizen) |
+|   **Authenticate**  | The action of verifying a user's identity. It occurs when a citizen uses his smart card to open a dumpster or when a user accesses to the dashboard. | [User](#citizen) |
 
