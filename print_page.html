@@ -608,6 +608,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="design/architecture/service-architecture.html" class="md-nav__link">
+        Service Architecture
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1663,7 +1677,16 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <p>The <strong>User Subdomain</strong> will then interact with the database that will store this information.</p>
 <h2 id="design-architecture-architectural-map-subdomains-interactions">Subdomains Interactions</h2>
 <p>The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.</p>
-<p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
+<p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><section class="print-page" id="design-architecture-service-architecture"><h1 id="design-architecture-service-architecture-service-architecture">Service Architecture</h1>
+<p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the different existing theories present.</p>
+<h2 id="design-architecture-service-architecture-entities-layer-domain">Entities Layer (<em>Domain</em>)</h2>
+<p>At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects, should be completely unaware of what is happening outside, and should interact with each other describing the domain just by themselves. For instance, a group of entities can be represented by <em>Aggregates</em>, <em>Value Objects</em> and <em>Entities</em> identified in the <em>Model Driven Design</em>. </p>
+<h2 id="design-architecture-service-architecture-use-cases-layer-application">Use Cases Layer (<em>Application</em>)</h2>
+<p>This layer is the bridge between the domain and the outside world. It should provide a series of possible interactions that should be used from outside, and they should be the only way to access the domain. Use cases should be independent one from the other. In most of the cases, use cases involve communications with a persistence layer: in order to avoid the insertion of an external interface in this layer, we decided to provide a behavior encapsulated into a <em>manager</em>. The <em>managers</em> inside this layer are interfaces completely unaware of the particular instance of persistence. They just provide the <em>API</em> to interact with the domain. In outer layers, a link to persistence is granted by proper inheritors (for instance, a <em>DatabaseManager</em> inheriting all the <em>API</em> and connecting to a database).</p>
+<h2 id="design-architecture-service-architecture-adapters-layer-presentation">Adapters Layer (<em>Presentation</em>)</h2>
+<p>The adapters layer grants validity to the communication among outer and inner layers. For instance, it can contain modules that allow to serialize and deserialize elements, achieving interoperability.</p>
+<h2 id="design-architecture-service-architecture-drivers-layer-frameworks">Drivers Layer (<em>Frameworks</em>)</h2>
+<p>The outermost layer manages all the external frameworks and drivers (persistence on databases, digital twins communication, etc.).</p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
 <p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers and information technologies' workers. 
 This set of techniques respond to interdependencies between software development and relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
 <p>The following paragraphs describe which DevOps techniques have been used in the making of the system, focusing on the advantages that each procedure has brought.</p>
