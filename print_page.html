@@ -1065,7 +1065,7 @@ draft of the requirements. </p>
 <tr>
 <td align="center"><strong>Waste</strong></td>
 <td align="center">Unwanted matter of material of any type, that citizens want to get rid of.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Type of Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Type of Waste</a>, <a href="#domain-analysis-ubiquitous-language-user">Citizen</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Type of Waste</strong></td>
@@ -1075,7 +1075,7 @@ draft of the requirements. </p>
 <tr>
 <td align="center"><strong>Ordinary Waste</strong></td>
 <td align="center">Set of types of waste that are daily produced by citizens.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-waste">Type of Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Waste</a>, <a href="#domain-analysis-ubiquitous-language-waste">Type of Waste</a>, <a href="#domain-analysis-ubiquitous-language-user">Citizen</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Extraordinary Waste</strong></td>
@@ -1266,7 +1266,7 @@ draft of the requirements. </p>
 <tr>
 <td align="center"><strong>"At Home" Collection</strong></td>
 <td align="center">The service that the company is willing to offer to collect extraordinary waste at citizens' houses.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-user">Citizen</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Collection Point</strong></td>
@@ -1320,7 +1320,7 @@ draft of the requirements. </p>
 </tr>
 </tbody>
 </table>
-<h2 id="domain-analysis-ubiquitous-language-citizen">Citizen</h2>
+<h2 id="domain-analysis-ubiquitous-language-user">User</h2>
 <table>
 <thead>
 <tr>
@@ -1333,7 +1333,7 @@ draft of the requirements. </p>
 <tr>
 <td align="center"><strong>User</strong></td>
 <td align="center">A person who uses the system. It can be a citizen or a manager</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Manager</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-user">Manager</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Citizen</strong></td>
@@ -1353,27 +1353,32 @@ draft of the requirements. </p>
 <tr>
 <td align="center"><strong>Complaint</strong></td>
 <td align="center">A message that notifies an issue. It may be sent by citizens, truck drivers and dumpsters themselves.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-truck">Truck Driver</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-truck">Truck Driver</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a></td>
 </tr>
 <tr>
 <td align="center"><strong>"At Home" Collection Request</strong></td>
 <td align="center">The request sent by a citizen to book an "At Home" collection.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-waste">Extraordinary Waste</a>, <a href="#domain-analysis-ubiquitous-language-user">Citizen</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Booking</strong></td>
 <td align="center">An "At Home" collection request scheduled appointment.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection Request</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">Citizen</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection Request</a>, <a href="#domain-analysis-ubiquitous-language-collection">"At Home" Collection</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Account</strong></td>
 <td align="center">The digital identity associated to a user</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">User</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">User</a></td>
 </tr>
 <tr>
 <td align="center"><strong>Authenticate</strong></td>
 <td align="center">The action of verifying a user's identity. It occurs when a citizen uses his smart card to open a dumpster or when a user accesses to the dashboard.</td>
-<td align="center"><a href="#domain-analysis-ubiquitous-language-citizen">User</a></td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">User</a>, <a href="#domain-analysis-ubiquitous-language-user">Smart Card</a>, <a href="#domain-analysis-ubiquitous-language-dumpster">Dumpster</a>, <a href="#domain-analysis-ubiquitous-language-user">Dashboard</a></td>
+</tr>
+<tr>
+<td align="center"><strong>Dashboard</strong></td>
+<td align="center">A graphic interface used by a user.</td>
+<td align="center"><a href="#domain-analysis-ubiquitous-language-user">User</a></td>
 </tr>
 </tbody>
 </table></section><h1 class='nav-section-title-end'>Ended: Domain Analysis</h1>
@@ -1658,7 +1663,7 @@ draft of the requirements. </p>
 <p>The <strong>Dumpster Microservice</strong> is the abstraction that covers all the identified bounded contexts in this subdomain. In fact, the microservice presents peculiar functionalities for each bounded context such as <em>Dumpster Control</em>, <em>Disposal Point Management</em> and <em>Collection Point Management</em>. </p>
 <p>The <strong>Dumpster Microservice</strong> communicates with the digital twin of each dumpster in order to propagate the information to the concerned physical assets.</p>
 <h2 id="design-architecture-architectural-map-collection-subdomain">Collection Subdomain</h2>
-<p><a href="https://tinyurl.com/2b58yprh"><img alt="Diagram Image Link" src="https://tinyurl.com/2b58yprh" /></a><!--<img alt="Diagram Image Link" src="design/architecture/collection-subdomain-architectural-map.puml" />--></p>
+<p><a href="https://tinyurl.com/2mlq6ogb"><img alt="Diagram Image Link" src="https://tinyurl.com/2mlq6ogb" /></a><!--<img alt="Diagram Image Link" src="design/architecture/collection-subdomain-architectural-map.puml" />--></p>
 <p>The diagram highlights the communications that take place among the three microservices identified within the Collection Subdomain: <strong>Mission Microservice</strong>, <strong>Booking Microservice</strong> and <strong>Truck Microservice</strong>.</p>
 <p>The <strong>Mission Microservice</strong> relies on an underlying database that allows to store the history and exposes the functionalities to generate and manage missions.
 In particular, if the microservice wants to generate an extraordinary mission, it will display the list of pending requests in the system by communicating with the <strong>Booking Microservice</strong>.</p>
@@ -1728,7 +1733,7 @@ If the linter encounters a validation error, the commit won't be published and a
 <p>It was possible to configure commit linting within an <code>npm</code> project thanks to the <code>@commitlint/config-conventional</code> plugin.
 This plugin allows to import the rules that must be respected within a commit message in order to follow the conventional-commit standard and extend them appropriately, if necessary.
 These rules can then be used thanks to the <code>husky</code> plugin, which allows you to define <code>git hooks</code> that will run a script that executes the commit linter before ending the actual submission of the commit.</p>
-<p>Within a gradle project it is possible to use the plugin <code>org.danilopianini.git-sensitive-semantic-versioning</code> which allows to check the commit messages correctness before their submission.</p>
+<p>Within a gradle project it is possible to use the plugin <a href="https://github.com/DanySK/gradle-pre-commit-git-hooks">org.danilopianini.gradle-pre-commit-git-hooks</a> which allows to check the commit messages correctness before their submission.</p>
 <h2 id="devops-devops-continuous-integration">Continuous Integration</h2>
 <h3 id="devops-devops-github-actions">GitHub Actions</h3>
 <p>The team decided to use the <code>GitHub Actions</code> service. The team developed the following set of GitHub Actions for the project:</p>
@@ -1737,17 +1742,35 @@ These rules can then be used thanks to the <code>husky</code> plugin, which allo
 <li><a href="https://github.com/alessandro-marcantoni/puml-markdown">puml-markdown</a>: embeds PlantUML code into markdown files.</li>
 <li><a href="https://github.com/SimoneRomagnoli/copy-files-action">copy-files-action</a>: copies files with names that match a specific pattern into another repository.</li>
 </ul>
+<p>Moreover, the team used a bunch of other actions to perform tasks. Some of these are:</p>
+<ul>
+<li><a href="https://github.com/ldeluigi/markdown-docs">markdown-docs</a>: to deploy this <code>GitHub Pages</code> report from markdown files.</li>
+<li><a href="https://github.com/Azure/login">azure-login</a>: to log in to <code>Azure</code> services and perform tests.</li>
+<li><a href="https://github.com/codecov/codecov-action">codecov-action</a>: to push coverage reports to <a href="https://codecov.io">CodeCov</a>.</li>
+<li><a href="https://github.com/docker/login-action">login-action</a>: to log in to the <code>GitHub Packages Container Registry</code>.</li>
+</ul>
 <h3 id="devops-devops-code-quality-control">Code Quality Control</h3>
 <p>A control on the quality of the code takes place thanks to the use of <code>Git Flow</code>, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the <code>main/master</code> branch.
 It is a task of the other developers to check that the proposed features are actually working, written in an understandable and clean way and that the appropriate comments are present.</p>
-<!-- TODO: utilizzeremo qualche plugin di controllo automatico sulla formattazione del codice? Se si, descriverlo qui. -->
-
+<p>Moreover, in the <a href="#devops-devops-commit-lint-check">pre-commit hooks</a> a code linter was included:</p>
+<ul>
+<li><code>KtLinter</code> for <em>Gradle</em> projects;</li>
+<li><code>ESLint</code> for <em>npm</em> projects.</li>
+</ul>
 <h3 id="devops-devops-tests">Tests</h3>
-<!-- TODO -->
-
+<p>The team used:</p>
+<ul>
+<li><a href="https://kotest.io/">kotest</a>, for testing <em>Gradle</em> projects;</li>
+<li><a href="https://mochajs.org/">mocha</a>, for testing <em>npm</em> projects.</li>
+</ul>
+<p>The team produced coverage reports with the following plugins:</p>
+<ul>
+<li><a href="https://github.com/jacoco/jacoco">jacoco</a>, for <em>Gradle</em> projects;</li>
+<li><a href="https://istanbul.js.org/">istanbul.js</a>, for <em>npm</em> projects.</li>
+</ul>
+<p>All coverage reports are published to <a href="https://app.codecov.io/gh/SmartWasteCollection">codecov.io/SmartWasteCollection</a>.</p>
 <h3 id="devops-devops-automatic-dependency-update">Automatic Dependency Update</h3>
-<!-- TODO -->
-
+<p>The team agreed on using <a href="https://github.com/renovatebot/renovate">renovate</a> for automatic dependencies updates.</p>
 <h2 id="devops-devops-continuous-delivery">Continuous Delivery</h2>
 <h3 id="devops-devops-semantic-versioning-and-releasing">Semantic Versioning and Releasing</h3>
 <p>Thanks to the use of <a href="https://github.com/anitvam/conventionalcommit-semantic-releasing">conventionalcommit-semantic-releasing</a> action it was possible to automate all the versioning and releasing work. 

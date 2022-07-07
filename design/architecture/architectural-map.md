@@ -20,7 +20,7 @@ The **Dumpster Microservice** communicates with the digital twin of each dumpste
 
 ## Collection Subdomain
 
-[![Diagram Image Link](https://tinyurl.com/2b58yprh)](https://tinyurl.com/2b58yprh)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2mlq6ogb)](https://tinyurl.com/2mlq6ogb)<!--![Diagram Image Link](./collection-subdomain-architectural-map.puml)-->
 
 The diagram highlights the communications that take place among the three microservices identified within the Collection Subdomain: **Mission Microservice**, **Booking Microservice** and **Truck Microservice**.
 
