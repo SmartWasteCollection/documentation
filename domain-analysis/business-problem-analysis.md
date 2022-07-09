@@ -38,6 +38,7 @@ In this section we have interviewed the company's manager with the aim of improv
 
 5. **What are the main characteristics of the dumpsters?**
 > The features of a dumpster are:
+>
 > - size: volume of waste it can contain (measured in liters)
 > - color: indicates the type of waste that it contains
 > - opening: it can be either through a foot lever or by hands.
