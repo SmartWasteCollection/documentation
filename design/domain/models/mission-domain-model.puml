@@ -14,13 +14,8 @@ aggregate "Mission Aggregate" {
     }
 
     class(MissionStep, Entity) {
-        + position: Position
+        + stepId: string
         + isCompleted: boolean
-    }
-
-    class(Position, ValueObject) {
-        + latitude: long
-        + longitude: long
     }
 
     class(TypeOfWaste, ValueObject) {
@@ -46,7 +41,6 @@ aggregate "Mission Aggregate" {
     association(TypeOfWaste, OrdinaryWasteName)
     association(TypeOfWaste, ExtraordinaryWasteName)
     association(Mission, MissionStep, left)
-    association(MissionStep, Position, down)
 
 }
 
