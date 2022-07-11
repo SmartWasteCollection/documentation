@@ -17,7 +17,7 @@ Despite the initial part of knowledge crunching, throughout the implementation t
 These have been added right away to the ubiquitous language in order to avoid further misunderstandings.
 
 During the first part of the implementation stage the team decided how to conduct the project from a _DevOps_ point of view.
-The definition of pipelines that included tests and general code quality assurance allowed to automatically check that only "correct" code is deployed to production.
+The definition of pipelines that included tests and general code quality assurance allowed to automatically check that only "correct" code is deployed to the development environment.
 This was the first time that the team tried to fully exploit GitHub Actions and, even thought the implementation process is not yet over, the members have already understood their potential.
 
 In conclusion, the team is satisfied with the job done and with the knowledge acquired from the project and the course.
