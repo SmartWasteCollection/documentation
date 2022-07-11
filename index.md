@@ -15,7 +15,7 @@ At each collection point there are several **dumpsters** for each **waste type**
 People can go to collection points, open a dumpster manually and dispose of the **waste**. A single garbage truck collects a specific type of waste from various collection points.
 
 There are also **extraordinary waste** types that are not collected at collection points.
-Instead, them must be brought directly to disposal points by citizens.
+Instead, they must be brought directly to disposal points by citizens.
 
 The optimization we want to make to the infrastructure is to collect waste from collection points only when necessary, avoiding wasted garbage trucks missions.
 
