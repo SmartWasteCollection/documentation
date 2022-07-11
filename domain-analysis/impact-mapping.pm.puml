@@ -17,7 +17,7 @@ actor("Trucks")
     impact("Ad-hoc routes\n(call by need)")
         deliverable("Routing system")
     impact("Notify issues")
-        deliverable("Mobile application")
+        deliverable("Web application")
 
 actor("Citizens")
     impact("Open dumpsters with smart card")
@@ -25,7 +25,7 @@ actor("Citizens")
     impact("Extraordinary waste\nat-home collection")
         deliverable("Extraordinary waste\nbooking application")
     impact("Notify complaints")
-        deliverable("Mobile application")
+        deliverable("Web application")
 
 legend left
     Level 1 = Goal

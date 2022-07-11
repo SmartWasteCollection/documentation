@@ -11,9 +11,11 @@ Ordinary waste management is divided into two parts:
 
 ### Ordinary Waste Disposal
 
-Regarding ordinary waste collection, the main actors are citizens, trucks and dumpsters. In this scenario, trucks and truck drivers play the same role.
+Regarding ordinary waste disposal, the main actors are citizens and dumpsters.
 
 <!--![Diagram Image Link](./ordinary-disposal-use-cases.pm.puml)-->
+
+Citizens can dispose of waste inside dumpsters only if they use their smart card to make the opening request. Once the citizen has made the deposit, the dumpster will update its occupied volume and perform the automatic closure, which will occur after a predetermined amount of time.
 
 ### Ordinary Waste Collection
 
@@ -21,11 +23,20 @@ Regarding ordinary waste collection, the main actors are trucks and dumpsters. I
 
 <!--![Diagram Image Link](./ordinary-collection-use-cases.pm.puml)-->
 
+During its mission, a garbage truck shares its current location with the system and updates the mission status.
+At each step of the mission, the truck will update its current occupied volume and the emptied dumpster will do the same.
+
+A mission is generated because at least one dumpster has sent a _full dumpster_ notification.
+
 ## Extraordinary Waste Management
 
 Regarding extraordinary waste collection, the main actors are citizens and trucks. In this scenario, trucks and truck drivers play the same role.
 
 <!--![Diagram Image Link](./extraordinary-management-use-cases.pm.puml)-->
+
+A mission for extraordinary waste collection begins when at least one booking has been made by citizens.
+
+The system will take care of generating an adequate mission that allows to optimize the garbage truck capacity and satisfy as many collection requests as possible.
 
 ## Dashboard
 

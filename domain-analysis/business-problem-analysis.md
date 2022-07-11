@@ -71,7 +71,7 @@ In this section we have interviewed the company's manager with the aim of improv
 > The waste is brought to the disposal point of that province.
 
 11. **So, do garbage trucks collect waste from every collection point of a province?**
-> No, each garbage truck is assigned a mission, and therefore a mission area. A mission area is made up of a set of residential areas that are physically close to one another.
+> No, each garbage truck is assigned to a mission, and therefore to a mission area. A mission area is made up of a set of residential areas that are physically close to one another.
 
 12. **How are disposal points distributed in the territory?**
 > There is a disposal point in every province. Each disposal point gathers waste from the collection points of that province. A province is further divided into residential areas where a single collection point is located. The residential areas are sized in a suitable way so that each one can cover the same amount of people.
