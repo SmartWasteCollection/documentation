@@ -6,7 +6,7 @@ The team agreed on building each microservice with a **Clean Architecture** (fro
 
 ## Entities Layer (_Domain_)
 
-At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects should be completely unaware of what is happening outside, and should interact with each other describing the domain just by themselves. For instance, a group of entities can be represented by _Aggregates_, _Value Objects_ and _Entities_ identified in the _Model Driven Design_. 
+At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects should be completely unaware of what is happening outside and decoupled from the technologies and libraries used.
  
 ## Use Cases Layer (_Application_)
 
