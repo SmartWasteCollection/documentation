@@ -110,7 +110,7 @@ If not needed within the repository, the folder can be deleted with a continuous
 ### Containerization
 Every microservice is containerized using [Docker](https://www.docker.com/).
 The containers that connect to _Azure Platform_ include a configuration script that makes it possible to authenticate to the service.
-On the other hand, the ones that connect to a database need to be provided with a connection string trough environment variables.
+On the other hand, the ones that connect to a database need to be provided with a connection string through environment variables.
 In order be able to run the containers without specifying any secret, the images are built with the required configuration to perform the login to _Azure Platform_.
 We are aware of the fact that this choice is not fully safe from a security point of view, though we made it because we want to provide self-contained containers.
 When the system is deployed in production this detail will be fixed.
