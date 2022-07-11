@@ -48,53 +48,53 @@ If the linter encounters a validation error, the commit won't be published and a
 
 Validation occurs by checking that a commit type is specified at the beginning of the commit message and possibly a parenthesis, suitably open and closed, which contains a summary description of what is the feature on which changes are being made. The commit type must be followed by a colon before continuing with a brief description of the extent of the changes made.
 
-It was possible to configure commit linting within an `npm` project thanks to the `@commitlint/config-conventional` plugin.
+It was possible to configure commit linting within an `npm` project thanks to the [`@commitlint/config-conventional`](https://www.npmjs.com/package/@commitlint/config-conventional) plugin.
 This plugin allows to import the rules that must be respected within a commit message in order to follow the conventional-commit standard and extend them appropriately, if necessary.
 These rules can then be used thanks to the `husky` plugin, which allows you to define `git hooks` that will run a script that executes the commit linter before ending the actual submission of the commit.
 
-Within a gradle project it is possible to use the plugin [org.danilopianini.gradle-pre-commit-git-hooks](https://github.com/DanySK/gradle-pre-commit-git-hooks) which allows to check the commit messages correctness before their submission.
+Within a gradle project it is possible to use the plugin [`org.danilopianini.gradle-pre-commit-git-hooks`](https://github.com/DanySK/gradle-pre-commit-git-hooks) which allows to check the commit messages correctness before their submission.
 
 ## Continuous Integration
 ### GitHub Actions
 The team decided to use the `GitHub Actions` service. The team developed the following set of GitHub Actions for the project:
 
-* [conventionalcommit-semantic-releasing](https://github.com/anitvam/conventionalcommit-semantic-releasing): performs automatic releases of the project following the conventional-commit convention for version numbers.
-* [puml-markdown](https://github.com/alessandro-marcantoni/puml-markdown): embeds PlantUML code into markdown files.
-* [copy-files-action](https://github.com/SimoneRomagnoli/copy-files-action): copies files with names that match a specific pattern into another repository.
+* [`conventionalcommit-semantic-releasing`](https://github.com/anitvam/conventionalcommit-semantic-releasing): performs automatic releases of the project following the conventional-commit convention for version numbers.
+* [`puml-markdown`](https://github.com/alessandro-marcantoni/puml-markdown): embeds PlantUML code into markdown files.
+* [`copy-files-action`](https://github.com/SimoneRomagnoli/copy-files-action): copies files with names that match a specific pattern into another repository.
 
 Moreover, the team used a bunch of other actions to perform tasks. Some of these are:
 
-* [markdown-docs](https://github.com/ldeluigi/markdown-docs): to deploy this `GitHub Pages` report from markdown files.
-* [azure-login](https://github.com/Azure/login): to log in to `Azure` services and perform tests.
-* [codecov-action](https://github.com/codecov/codecov-action): to push coverage reports to [CodeCov](https://codecov.io).
-* [login-action](https://github.com/docker/login-action): to log in to the `GitHub Packages Container Registry`.
+* [`markdown-docs`](https://github.com/ldeluigi/markdown-docs): to deploy this **GitHub Pages** report from markdown files.
+* [`azure-login`](https://github.com/Azure/login): to log in to **Azure** services and perform tests.
+* [`codecov-action`](https://github.com/codecov/codecov-action): to push coverage reports to [CodeCov](https://codecov.io).
+* [`login-action`](https://github.com/docker/login-action): to log in to the **GitHub Packages Container Registry**.
 
 ### Code Quality Control
 A control on the quality of the code takes place thanks to the use of `Git Flow`, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the `main/master` branch.
-It is a task of the other developers to check that the proposed features are actually working, written in an understandable and clean way and that the appropriate comments are present.
+It is a task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.
 
 Moreover, in the [pre-commit hooks](#commit-lint-check) a code linter was included:
 
-* `KtLinter` for _Gradle_ projects;
-* `ESLint` for _npm_ projects.
+* [`ktlint`](https://ktlint.github.io/#getting-started) for _Gradle_ projects;
+* [`ESLint`](https://eslint.org/) for _npm_ projects.
 
 ### Tests
 
 The team used:
 
-* [kotest](https://kotest.io/), for testing _Gradle_ projects;
-* [mocha](https://mochajs.org/), for testing _npm_ projects.
+* [`kotest`](https://kotest.io/), for testing _Gradle_ projects;
+* [`mocha`](https://mochajs.org/), for testing _npm_ projects.
 
 The team produced coverage reports with the following plugins:
 
-* [jacoco](https://github.com/jacoco/jacoco), for _Gradle_ projects;
-* [istanbul.js](https://istanbul.js.org/), for _npm_ projects.
+* [`jacoco`](https://github.com/jacoco/jacoco), for _Gradle_ projects;
+* [`istanbul.js`](https://istanbul.js.org/), for _npm_ projects.
 
 All coverage reports are published to [codecov.io/SmartWasteCollection](https://app.codecov.io/gh/SmartWasteCollection).
 
 ### Automatic Dependency Update
 
-The team agreed on using [renovate](https://github.com/renovatebot/renovate) for automatic dependencies updates.
+The team agreed on using [`renovate`](https://github.com/renovatebot/renovate) for automatic dependencies updates.
 
 ## Continuous Delivery
 
