@@ -74,4 +74,3 @@ The tables below represent the ubiquitous language derived from domain analysis.
 |           **Account**            |                                                      The digital identity associated to a user                                                       |                                           [User](#user)                                            |
 |         **Authenticate**         | The action of verifying a user's identity. It occurs when a citizen uses his smart card to open a dumpster or when a user accesses to the dashboard. |           [User](#user), [Smart Card](#user), [Dumpster](#dumpster), [Dashboard](#user)            |
 |          **Dashboard**           |                                                         A graphic interface used by a user.                                                          |                                           [User](#user)                                            |
-
