@@ -75,6 +75,9 @@ Moreover, the team used a bunch of other actions to perform tasks. Some of these
 * [`codecov-action`](https://github.com/codecov/codecov-action): to push coverage reports to [CodeCov](https://codecov.io).
 * [`login-action`](https://github.com/docker/login-action): to log in to the **GitHub Packages Container Registry**.
 
+Each repository has two active workflows, one for the Continuous Integration (CI) and another one for the Continuous Delivery (CD). The first one automatically executes build and test while the second one creates a release using the `conventionalcommit-semantic-releasing` action and then uploads a Docker image to the _GitHub Packages Container Registry_.
+The CD workflow has been suitably configured to run only if the CI has completed successfully.
+
 ### Code Quality Control
 A control on the quality of the code takes place thanks to the use of `Git Flow`, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the `main/master` branch.
 It is the task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.
