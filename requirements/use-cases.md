@@ -1,6 +1,6 @@
 # Use Cases
 
-The following use cases diagrams describes the behavior of the system.
+The following use cases diagrams describe the behavior of the system.
 
 ## Ordinary Waste Management
 
