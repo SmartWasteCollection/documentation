@@ -1064,6 +1064,8 @@ These rules can then be used thanks to the <code>husky</code> plugin, which allo
 <li><a href="https://github.com/codecov/codecov-action"><code>codecov-action</code></a>: to push coverage reports to <a href="https://codecov.io">CodeCov</a>.</li>
 <li><a href="https://github.com/docker/login-action"><code>login-action</code></a>: to log in to the <strong>GitHub Packages Container Registry</strong>.</li>
 </ul>
+<p>Each repository has two active workflows, one for the Continuous Integration (CI) and another one for the Continuous Delivery (CD). The first one automatically executes build and test while the second one creates a release using the <code>conventionalcommit-semantic-releasing</code> action and then uploads a Docker image to the <em>GitHub Packages Container Registry</em>.
+The CD workflow has been suitably configured to run only if the CI has completed successfully.</p>
 <h3 id="code-quality-control">Code Quality Control</h3>
 <p>A control on the quality of the code takes place thanks to the use of <code>Git Flow</code>, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the <code>main/master</code> branch.
 It is the task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.</p>
@@ -1109,11 +1111,11 @@ In order to grant the correctness and quality of the published images, this work
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 13:09:44</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 13:41:32</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 13:09:44</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 13:41:32</span>
       
     
   </small>
