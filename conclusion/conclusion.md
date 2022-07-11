@@ -9,7 +9,6 @@ In fact, even though the team members worked on different components of the syst
 Moreover, the definition of subdomains and bounded contexts allowed designing correct size microservices.
 Indeed, they have a well-defined goal and a coherent set of functionalities.
 Also, the classification of the subdomains as _core_, _supporting_ or _generic_ made it easier to assign priorities regarding the implementation of the components of the system.
-For instance, the _authentication microservice_, that is part of the _user subdomain_, has not yet been implemented in order to focus on the most important ones.
 
 Finally, the decision to adopt a _clean architecture_ for the implementation of the microservices allowed building software that is more resilient.
 In fact, the business logic is not influenced by the specific technologies, so it will most likely not change in the future.
