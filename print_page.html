@@ -1567,11 +1567,11 @@ At each step of the mission, the truck will update its current occupied volume a
 <p>This core subdomain manages the logic of all the components that make it possible to dispose of waste.</p>
 <h3 id="design-domain-bounded-contexts-dumpsters-monitoring-control-context">Dumpster's Monitoring &amp; Control Context</h3>
 <blockquote>
-<p>It allows to continuously monitor and store information about the dumpster's state. For instance, it provides the position, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.</p>
+<p>It allows to continuously monitor and store information about the dumpster's state. For instance, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.</p>
 </blockquote>
 <h3 id="design-domain-bounded-contexts-collection-point-management-context">Collection Point Management Context</h3>
 <blockquote>
-<p>It is responsible for updating information about collection point's state, such as the insertion of a new dumpster and other functionalities. Moreover, it allows to access all the information about the collection point's state.</p>
+<p>It is responsible for updating information about collection point's state, such as the insertion of a new dumpster and other functionalities. Moreover, it allows to access all the information about the collection point's state and its position.</p>
 </blockquote>
 <h3 id="design-domain-bounded-contexts-disposal-point-context">Disposal Point Context</h3>
 <blockquote>
@@ -1601,19 +1601,19 @@ At each step of the mission, the truck will update its current occupied volume a
 </blockquote>
 <h2 id="design-domain-bounded-contexts-user-subdomain">User Subdomain</h2>
 <p><em>Generic Subdomain</em></p>
-<p>This generic subdomain contains the logic that manages all the entities that use the system.</p>
+<p>This generic subdomain contains the logic that manages all the entities that need to use system's functionalities.</p>
 <h3 id="design-domain-bounded-contexts-smart-card-context">Smart Card Context</h3>
 <blockquote>
 <p>It is the context that allows to create smart cards and to authenticate them.</p>
 </blockquote>
 <h3 id="design-domain-bounded-contexts-authentication-context">Authentication Context</h3>
 <blockquote>
-<p>It is responsible for authenticating citizens and managers.</p>
+<p>It is responsible for citizens' and managers' authentication.</p>
 </blockquote></section><section class="print-page" id="design-domain-context-mapping"><h1 id="design-domain-context-mapping-context-mapping">Context Mapping</h1>
 <p>The following context mapping diagram represents relationships among subdomains and bounded contexts. The identified relationships are:</p>
 <ul>
-<li>partnership, a common symmetric relationship between two bounded contexts;</li>
-<li>upstream-downstream, an asymmetric relationship between two bounded contexts, where the downstream context adapts to the upstream one.</li>
+<li><strong>partnership</strong>, a common symmetric relationship between two bounded contexts;</li>
+<li><strong>upstream-downstream</strong>, an asymmetric relationship between two bounded contexts, where the downstream context adapts to the upstream one.</li>
 </ul>
 <p><a href="https://tinyurl.com/2kfnchhm"><img alt="Diagram Image Link" src="https://tinyurl.com/2kfnchhm" /></a><!--<img alt="Diagram Image Link" src="design/domain/context-mapping.puml" />--></p></section>
                         <h3 class='nav-section-title' id='section-domain-models'>
@@ -1720,12 +1720,12 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <h2 id="design-architecture-architectural-map-subdomains-interactions">Subdomains Interactions</h2>
 <p>The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.</p>
 <p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><section class="print-page" id="design-architecture-service-architecture"><h1 id="design-architecture-service-architecture-service-architecture">Service Architecture</h1>
-<p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the different existing theories present.</p>
+<p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the literature presents.</p>
 <p><img alt="Clean Architecture" src="design/architecture/clean.png" /></p>
 <h2 id="design-architecture-service-architecture-entities-layer-domain">Entities Layer (<em>Domain</em>)</h2>
-<p>At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects, should be completely unaware of what is happening outside, and should interact with each other describing the domain just by themselves. For instance, a group of entities can be represented by <em>Aggregates</em>, <em>Value Objects</em> and <em>Entities</em> identified in the <em>Model Driven Design</em>. </p>
+<p>At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects should be completely unaware of what is happening outside and decoupled from the technologies and libraries used.</p>
 <h2 id="design-architecture-service-architecture-use-cases-layer-application">Use Cases Layer (<em>Application</em>)</h2>
-<p>This layer is the bridge between the domain and the outside world. It should provide a series of possible interactions that should be used from outside, and they should be the only way to access the domain. Use cases should be independent one from the other. In most of the cases, use cases involve communications with a persistence layer: in order to avoid the insertion of an external interface in this layer, we decided to provide a behavior encapsulated into a <em>manager</em>. The <em>managers</em> inside this layer are interfaces completely unaware of the particular instance of persistence. They just provide the <em>API</em> to interact with the domain. In outer layers, a link to persistence is granted by proper inheritors (for instance, a <em>DatabaseManager</em> inheriting all the <em>API</em> and connecting to a database).</p>
+<p>This layer is the bridge between the domain and the outside world. It describes a series of possible interactions that can be used from outside, and it should be the only way to access the domain. Use cases should be independent one from the other. In most of the cases, use cases involve communications with a persistence layer: in order to avoid the insertion of external libraries in this layer, we decided to provide a behavior encapsulated into a <em>manager</em>. The <em>managers</em> inside this layer are interfaces completely unaware of the particular instance of persistence. They just provide the <em>API</em> to interact with the domain. In outer layers, a link to persistence is granted by proper implementations of manager's interface (for instance, a <em>DatabaseManager</em> inheriting all the manager's <em>APIs</em> and connecting to a database).</p>
 <p><a href="https://tinyurl.com/2j25dvuq"><img alt="Diagram Image Link" src="https://tinyurl.com/2j25dvuq" /></a><!--<img alt="Diagram Image Link" src="design/architecture/clean.puml" />--></p>
 <h2 id="design-architecture-service-architecture-adapters-layer-presentation">Adapters Layer (<em>Presentation</em>)</h2>
 <p>The adapters layer grants validity to the communication among outer and inner layers. For instance, it can contain modules that allow to serialize and deserialize elements, achieving interoperability.</p>
@@ -1755,6 +1755,7 @@ This strategy provides an easy set of rules for creating an explicit commit hist
 <li><strong>chore</strong>: identifies a minor change that doesn't affect the overall system's behaviour. </li>
 <li><strong>docs</strong>: identifies an update to the documentation.</li>
 <li><strong>ci</strong>: identifies changes in the repository's workflow definition.</li>
+<li><strong>deps</strong>: identifies the update of a library dependency</li>
 </ul>
 <h3 id="devops-devops-versioning">Versioning</h3>
 <p>Following the conventional commit standard, the version number is defined in the format <code>vX.Y.Z</code> where:</p>
@@ -1769,47 +1770,47 @@ This strategy provides an easy set of rules for creating an explicit commit hist
 These techniques allow you to check the validity of the messages made to the various commits before they are actually traced, in order to have a clean and traceable remote repository.
 If the linter encounters a validation error, the commit won't be published and an error is returned to the developer which summarizes what problems are present within its commit message.</p>
 <p>Validation occurs by checking that a commit type is specified at the beginning of the commit message and possibly a parenthesis, suitably open and closed, which contains a summary description of what is the feature on which changes are being made. The commit type must be followed by a colon before continuing with a brief description of the extent of the changes made.</p>
-<p>It was possible to configure commit linting within an <code>npm</code> project thanks to the <code>@commitlint/config-conventional</code> plugin.
+<p>It was possible to configure commit linting within an <code>npm</code> project thanks to the <a href="https://www.npmjs.com/package/@commitlint/config-conventional"><code>@commitlint/config-conventional</code></a> plugin.
 This plugin allows to import the rules that must be respected within a commit message in order to follow the conventional-commit standard and extend them appropriately, if necessary.
 These rules can then be used thanks to the <code>husky</code> plugin, which allows you to define <code>git hooks</code> that will run a script that executes the commit linter before ending the actual submission of the commit.</p>
-<p>Within a gradle project it is possible to use the plugin <a href="https://github.com/DanySK/gradle-pre-commit-git-hooks">org.danilopianini.gradle-pre-commit-git-hooks</a> which allows to check the commit messages correctness before their submission.</p>
+<p>Within a gradle project it is possible to use the plugin <a href="https://github.com/DanySK/gradle-pre-commit-git-hooks"><code>org.danilopianini.gradle-pre-commit-git-hooks</code></a> which allows to check the commit messages correctness before their submission.</p>
 <h2 id="devops-devops-continuous-integration">Continuous Integration</h2>
 <h3 id="devops-devops-github-actions">GitHub Actions</h3>
 <p>The team decided to use the <code>GitHub Actions</code> service. The team developed the following set of GitHub Actions for the project:</p>
 <ul>
-<li><a href="https://github.com/anitvam/conventionalcommit-semantic-releasing">conventionalcommit-semantic-releasing</a>: performs automatic releases of the project following the conventional-commit convention for version numbers.</li>
-<li><a href="https://github.com/alessandro-marcantoni/puml-markdown">puml-markdown</a>: embeds PlantUML code into markdown files.</li>
-<li><a href="https://github.com/SimoneRomagnoli/copy-files-action">copy-files-action</a>: copies files with names that match a specific pattern into another repository.</li>
+<li><a href="https://github.com/anitvam/conventionalcommit-semantic-releasing"><code>conventionalcommit-semantic-releasing</code></a>: performs automatic releases of the project following the conventional-commit convention for version numbers.</li>
+<li><a href="https://github.com/alessandro-marcantoni/puml-markdown"><code>puml-markdown</code></a>: embeds PlantUML code into markdown files.</li>
+<li><a href="https://github.com/SimoneRomagnoli/copy-files-action"><code>copy-files-action</code></a>: copies files with names that match a specific pattern into another repository.</li>
 </ul>
 <p>Moreover, the team used a bunch of other actions to perform tasks. Some of these are:</p>
 <ul>
-<li><a href="https://github.com/ldeluigi/markdown-docs">markdown-docs</a>: to deploy this <code>GitHub Pages</code> report from markdown files.</li>
-<li><a href="https://github.com/Azure/login">azure-login</a>: to log in to <code>Azure</code> services and perform tests.</li>
-<li><a href="https://github.com/codecov/codecov-action">codecov-action</a>: to push coverage reports to <a href="https://codecov.io">CodeCov</a>.</li>
-<li><a href="https://github.com/docker/login-action">login-action</a>: to log in to the <code>GitHub Packages Container Registry</code>.</li>
+<li><a href="https://github.com/ldeluigi/markdown-docs"><code>markdown-docs</code></a>: to deploy this <strong>GitHub Pages</strong> report from markdown files.</li>
+<li><a href="https://github.com/Azure/login"><code>azure-login</code></a>: to log in to <strong>Azure</strong> services and perform tests.</li>
+<li><a href="https://github.com/codecov/codecov-action"><code>codecov-action</code></a>: to push coverage reports to <a href="https://codecov.io">CodeCov</a>.</li>
+<li><a href="https://github.com/docker/login-action"><code>login-action</code></a>: to log in to the <strong>GitHub Packages Container Registry</strong>.</li>
 </ul>
 <h3 id="devops-devops-code-quality-control">Code Quality Control</h3>
 <p>A control on the quality of the code takes place thanks to the use of <code>Git Flow</code>, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the <code>main/master</code> branch.
-It is a task of the other developers to check that the proposed features are actually working, written in an understandable and clean way and that the appropriate comments are present.</p>
+It is the task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.</p>
 <p>Moreover, in the <a href="#devops-devops-commit-lint-check">pre-commit hooks</a> a code linter was included:</p>
 <ul>
-<li><code>KtLinter</code> for <em>Gradle</em> projects;</li>
-<li><code>ESLint</code> for <em>npm</em> projects.</li>
+<li><a href="https://ktlint.github.io/#getting-started"><code>ktlint</code></a> for <em>Gradle</em> projects;</li>
+<li><a href="https://eslint.org/"><code>ESLint</code></a> for <em>npm</em> projects.</li>
 </ul>
 <h3 id="devops-devops-tests">Tests</h3>
 <p>The team used:</p>
 <ul>
-<li><a href="https://kotest.io/">kotest</a>, for testing <em>Gradle</em> projects;</li>
-<li><a href="https://mochajs.org/">mocha</a>, for testing <em>npm</em> projects.</li>
+<li><a href="https://kotest.io/"><code>kotest</code></a>, for testing <em>Gradle</em> projects;</li>
+<li><a href="https://mochajs.org/"><code>mocha</code></a>, for testing <em>npm</em> projects.</li>
 </ul>
 <p>The team produced coverage reports with the following plugins:</p>
 <ul>
-<li><a href="https://github.com/jacoco/jacoco">jacoco</a>, for <em>Gradle</em> projects;</li>
-<li><a href="https://istanbul.js.org/">istanbul.js</a>, for <em>npm</em> projects.</li>
+<li><a href="https://github.com/jacoco/jacoco"><code>jacoco</code></a>, for <em>Gradle</em> projects;</li>
+<li><a href="https://istanbul.js.org/"><code>istanbul.js</code></a>, for <em>npm</em> projects.</li>
 </ul>
 <p>All coverage reports are published to <a href="https://app.codecov.io/gh/SmartWasteCollection">codecov.io/SmartWasteCollection</a>.</p>
 <h3 id="devops-devops-automatic-dependency-update">Automatic Dependency Update</h3>
-<p>The team agreed on using <a href="https://github.com/renovatebot/renovate">renovate</a> for automatic dependencies updates.</p>
+<p>The team agreed on using <a href="https://github.com/renovatebot/renovate"><code>renovate</code></a> for automatic dependencies updates.</p>
 <h2 id="devops-devops-continuous-delivery">Continuous Delivery</h2>
 <h3 id="devops-devops-semantic-versioning-and-releasing">Semantic Versioning and Releasing</h3>
 <p>Thanks to the use of <a href="https://github.com/anitvam/conventionalcommit-semantic-releasing">conventionalcommit-semantic-releasing</a> action it was possible to automate all the versioning and releasing work. 

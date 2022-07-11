@@ -814,12 +814,12 @@
 
 
 <h1 id="service-architecture">Service Architecture</h1>
-<p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the different existing theories present.</p>
+<p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the literature presents.</p>
 <p><img alt="Clean Architecture" src="clean.png" /></p>
 <h2 id="entities-layer-domain">Entities Layer (<em>Domain</em>)</h2>
-<p>At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects, should be completely unaware of what is happening outside, and should interact with each other describing the domain just by themselves. For instance, a group of entities can be represented by <em>Aggregates</em>, <em>Value Objects</em> and <em>Entities</em> identified in the <em>Model Driven Design</em>. </p>
+<p>At the center of a microservice, the principal elements that shall remain untouched are domain entities and rules. These aspects should be completely unaware of what is happening outside and decoupled from the technologies and libraries used.</p>
 <h2 id="use-cases-layer-application">Use Cases Layer (<em>Application</em>)</h2>
-<p>This layer is the bridge between the domain and the outside world. It should provide a series of possible interactions that should be used from outside, and they should be the only way to access the domain. Use cases should be independent one from the other. In most of the cases, use cases involve communications with a persistence layer: in order to avoid the insertion of an external interface in this layer, we decided to provide a behavior encapsulated into a <em>manager</em>. The <em>managers</em> inside this layer are interfaces completely unaware of the particular instance of persistence. They just provide the <em>API</em> to interact with the domain. In outer layers, a link to persistence is granted by proper inheritors (for instance, a <em>DatabaseManager</em> inheriting all the <em>API</em> and connecting to a database).</p>
+<p>This layer is the bridge between the domain and the outside world. It describes a series of possible interactions that can be used from outside, and it should be the only way to access the domain. Use cases should be independent one from the other. In most of the cases, use cases involve communications with a persistence layer: in order to avoid the insertion of external libraries in this layer, we decided to provide a behavior encapsulated into a <em>manager</em>. The <em>managers</em> inside this layer are interfaces completely unaware of the particular instance of persistence. They just provide the <em>API</em> to interact with the domain. In outer layers, a link to persistence is granted by proper implementations of manager's interface (for instance, a <em>DatabaseManager</em> inheriting all the manager's <em>APIs</em> and connecting to a database).</p>
 <p><a href="https://tinyurl.com/2j25dvuq"><img alt="Diagram Image Link" src="https://tinyurl.com/2j25dvuq" /></a><!--<img alt="Diagram Image Link" src="./clean.puml" />--></p>
 <h2 id="adapters-layer-presentation">Adapters Layer (<em>Presentation</em>)</h2>
 <p>The adapters layer grants validity to the communication among outer and inner layers. For instance, it can contain modules that allow to serialize and deserialize elements, achieving interoperability.</p>
@@ -831,11 +831,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:45:39</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:06</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:45:39</span>
       
     
   </small>

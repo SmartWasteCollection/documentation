@@ -10,11 +10,11 @@ This core subdomain manages the logic of all the components that make it possibl
 
 ### Dumpster's Monitoring & Control Context
 
-> It allows to continuously monitor and store information about the dumpster's state. For instance, it provides the position, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.
+> It allows to continuously monitor and store information about the dumpster's state. For instance, the availability, the occupied volume, the stored type of waste and other useful information. Moreover, it also allows to remotely invoke operations on dumpsters, such as opening and closing them.
 
 ### Collection Point Management Context
 
-> It is responsible for updating information about collection point's state, such as the insertion of a new dumpster and other functionalities. Moreover, it allows to access all the information about the collection point's state.
+> It is responsible for updating information about collection point's state, such as the insertion of a new dumpster and other functionalities. Moreover, it allows to access all the information about the collection point's state and its position.
 
 ### Disposal Point Context
 
@@ -48,12 +48,11 @@ This supporting subdomain provides the functionalities that make it possible to 
 
 > It provides functionalities to notify issues, read and manage them.
 
-
 ## User Subdomain
 
 *Generic Subdomain*
 
-This generic subdomain contains the logic that manages all the entities that use the system.
+This generic subdomain contains the logic that manages all the entities that need to use system's functionalities.
 
 ### Smart Card Context
 
@@ -61,4 +60,4 @@ This generic subdomain contains the logic that manages all the entities that use
 
 ### Authentication Context
 
-> It is responsible for authenticating citizens and managers.
+> It is responsible for citizens' and managers' authentication.
