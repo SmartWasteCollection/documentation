@@ -1849,6 +1849,15 @@ It is the task of the other developers to check that the proposed features are a
 In particular, the action automatically calculates if a new version release is needed based on the committed commits in the <code>main/master</code> branch. If there is a commit that triggers a new version release (major, minor or patch) then the action creates the new tag, adding the appropriate version number to the one previously released, and then will create the GitHub Release with the reference of the last commit pushed on <code>main/master</code> branch.</p>
 <p>If it's needed to attach some assets into the release that is generated, then the action allows to define a folder called <code>/assets</code> and all of its contents will be included in the GitHub Release.</p>
 <p>If not needed within the repository, the folder can be deleted with a continuous integration task once the execution of the action is finished, in this way the repository could stay clean.</p>
+<h3 id="devops-devops-containerization">Containerization</h3>
+<p>Every microservice is containerized using <a href="https://www.docker.com/">Docker</a>.
+The containers that connect to <em>Azure Platform</em> include a configuration script that makes it possible to authenticate to the service.
+On the other hand, the ones that connect to a database need to be provided with a connection string through environment variables.
+In order be able to run the containers without specifying any secret, the images are built with the required configuration to perform the login to <em>Azure Platform</em>.
+We are aware of the fact that this choice is not fully safe from a security point of view, though we made it because we want to provide self-contained containers.
+When the system is deployed in production this detail will be fixed.</p>
+<p>The images are build through a <em>Github Action</em> workflow which also logins to the <em>Github Packages</em> service and publishes them exploiting <a href="https://github.com/docker/login-action"><code>login-action</code></a>.
+In order to grant the correctness and quality of the published images, this workflow is executed only if the <em>Build and Test</em> workflow is successful.</p>
 <h2 id="devops-devops-licenses">Licenses</h2>
 <p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section><section class="print-page" id="implementation-implementation"><h1 id="implementation-implementation-implementation">Implementation</h1>
 <p>Thanks to the <em>Domain Driven Design</em> carried on during the initial phase of the project, the team was able to conduct the implementation of the system's components concurrently.
