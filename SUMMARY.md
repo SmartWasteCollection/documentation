@@ -2,6 +2,6 @@
 * [Domain Analysis](domain-analysis/)
 * [Requirements](requirements/)
 * [Design](design/)
-* [DevOps Techniques](devops/devops.md)
 * [Implementation](implementation/implementation.md)
+* [DevOps Techniques](devops/devops.md)
 * [Conclusion](conclusion/conclusion.md)
