@@ -643,8 +643,8 @@
   
   
     <li class="md-nav__item">
-      <a href="devops/devops.html" class="md-nav__link">
-        DevOps Techniques
+      <a href="implementation/implementation.html" class="md-nav__link">
+        Implementation
       </a>
     </li>
   
@@ -658,8 +658,8 @@
   
   
     <li class="md-nav__item">
-      <a href="implementation/implementation.html" class="md-nav__link">
-        Implementation
+      <a href="devops/devops.html" class="md-nav__link">
+        DevOps Techniques
       </a>
     </li>
   
@@ -791,15 +791,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#devops-devops" class="md-nav__link">
-    7. DevOps Techniques
+  <a href="#implementation-implementation" class="md-nav__link">
+    7. Implementation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-implementation" class="md-nav__link">
-    8. Implementation
+  <a href="#devops-devops" class="md-nav__link">
+    8. DevOps Techniques
   </a>
   
 </li>
@@ -919,15 +919,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#devops-devops" class="md-nav__link">
-    7. DevOps Techniques
+  <a href="#implementation-implementation" class="md-nav__link">
+    7. Implementation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-implementation" class="md-nav__link">
-    8. Implementation
+  <a href="#devops-devops" class="md-nav__link">
+    8. DevOps Techniques
   </a>
   
 </li>
@@ -1759,7 +1759,19 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <h2 id="design-architecture-service-architecture-adapters-layer-presentation">Adapters Layer (<em>Presentation</em>)</h2>
 <p>The adapters layer grants validity to the communication among outer and inner layers. For instance, it can contain modules that allow to serialize and deserialize elements, achieving interoperability.</p>
 <h2 id="design-architecture-service-architecture-drivers-layer-frameworks">Drivers Layer (<em>Frameworks</em>)</h2>
-<p>The outermost layer manages all the external frameworks and drivers (persistence on databases, digital twins communication, etc.).</p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
+<p>The outermost layer manages all the external frameworks and drivers (persistence on databases, digital twins communication, etc.).</p></section><h1 class='nav-section-title-end'>Ended: Architectural Design</h1><h1 class='nav-section-title-end'>Ended: Design</h1><section class="print-page" id="implementation-implementation"><h1 id="implementation-implementation-implementation">Implementation</h1>
+<p>Thanks to the <em>Domain Driven Design</em> carried on during the initial phase of the project, the team was able to conduct the implementation of the system's components concurrently.
+Before starting with the development the workload was equally divided among the members so that everyone could focus on a specific part of the domain and fully explore it.
+In order to let the other members know how the own implementation was being made, <em>Git flow</em> was very helpful because, before merging the code to the main branch, every developer had to make a pull request and request for other members' approval.</p>
+<p>The communication among microservices happens by means of REST APIs exposed by each of them.
+The <a href="https://github.com/SmartWasteCollection/dumpster-microservice"><code>dumpster-microservice</code></a>, <a href="https://github.com/SmartWasteCollection/truck-microservice"><code>truck-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/mission-microservice"><code>mission-microservice</code></a> allow the management of the corresponding digital twins through the <em>Azure Platform</em> exposing CRUD APIs.
+On the other hand, the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/complaint-microservice"><code>complaint-microservice</code></a>, expose routes to execute CRUD operations on a <em>MongoDB Cluster</em> instance.
+Finally, a mocked version of the dashboard was implemented using the <em>Vue</em> framework and it is hosted on <em><a href="https://smartwastecollection.github.io/dashboard/">Github Pages</a></em>. The <a href="https://github.com/SmartWasteCollection/dashboard"><code>dashboard</code></a> allows visualizing the position of collection points and trucks on a map and their properties.</p>
+<p>The main language used was <em>Kotlin</em>, although the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> was written in <em>Javascript</em>.
+For the microservices written in <em>Kotlin</em>, <em>Spring</em> was used to create the web services, <em>Azure Digital Twins Core</em> to interact with <em>Azure Platform</em> and manage the digital twins, and <em>KMongo</em> to connect and operate with <em>MongoDB</em> databases.
+For the <em>Javascript</em> microservice <em>Node.js</em> was used to provide an execution environment, <em>Express</em> to create a web service and <em>Mongoose</em> to connect and operate with <em>MongoDB</em> databases.</p>
+<p>At this stage of the implementation, that is not yet over, each microservice has been implemented and tested on its own. Nevertheless, the integration among microservices has not yet been tested, but the team expects that this process will be straightforward thanks to the initial domain model analysis.
+Thus, the last part of the implementation will concern the integration of the microservices and the development of the shadowing among physical assets and digital twins.</p></section><section class="print-page" id="devops-devops"><h1 id="devops-devops-devops-techniques">DevOps Techniques</h1>
 <p>DevOps engineering is a software development methodology that aims at communication and collaboration among developers and information technologies' workers. 
 This set of techniques respond to interdependencies between software development and relative <em>IT</em> operations, allowing a faster and more efficient organization of software products and services.</p>
 <p>The following paragraphs describe which DevOps techniques have been used in the making of the system, focusing on the advantages that each procedure has brought.</p>
@@ -1859,19 +1871,7 @@ When the system is deployed in production this detail will be fixed.</p>
 <p>The images are build through a <em>Github Action</em> workflow which also logins to the <em>Github Packages</em> service and publishes them exploiting <a href="https://github.com/docker/login-action"><code>login-action</code></a>.
 In order to grant the correctness and quality of the published images, this workflow is executed only if the <em>Build and Test</em> workflow is successful.</p>
 <h2 id="devops-devops-licenses">Licenses</h2>
-<p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section><section class="print-page" id="implementation-implementation"><h1 id="implementation-implementation-implementation">Implementation</h1>
-<p>Thanks to the <em>Domain Driven Design</em> carried on during the initial phase of the project, the team was able to conduct the implementation of the system's components concurrently.
-Before starting with the development the workload was equally divided among the members so that everyone could focus on a specific part of the domain and fully explore it.
-In order to let the other members know how the own implementation was being made, <em>Git flow</em> was very helpful because, before merging the code to the main branch, every developer had to make a pull request and request for other members' approval.</p>
-<p>The communication among microservices happens by means of REST APIs exposed by each of them.
-The <a href="https://github.com/SmartWasteCollection/dumpster-microservice"><code>dumpster-microservice</code></a>, <a href="https://github.com/SmartWasteCollection/truck-microservice"><code>truck-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/mission-microservice"><code>mission-microservice</code></a> allow the management of the corresponding digital twins through the <em>Azure Platform</em> exposing CRUD APIs.
-On the other hand, the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/complaint-microservice"><code>complaint-microservice</code></a>, expose routes to execute CRUD operations on a <em>MongoDB Cluster</em> instance.
-Finally, a mocked version of the dashboard was implemented using the <em>Vue</em> framework and it is hosted on <em><a href="https://smartwastecollection.github.io/dashboard/">Github Pages</a></em>. The <a href="https://github.com/SmartWasteCollection/dashboard"><code>dashboard</code></a> allows visualizing the position of collection points and trucks on a map and their properties.</p>
-<p>The main language used was <em>Kotlin</em>, although the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> was written in <em>Javascript</em>.
-For the microservices written in <em>Kotlin</em>, <em>Spring</em> was used to create the web services, <em>Azure Digital Twins Core</em> to interact with <em>Azure Platform</em> and manage the digital twins, and <em>KMongo</em> to connect and operate with <em>MongoDB</em> databases.
-For the <em>Javascript</em> microservice <em>Node.js</em> was used to provide an execution environment, <em>Express</em> to create a web service and <em>Mongoose</em> to connect and operate with <em>MongoDB</em> databases.</p>
-<p>At this stage of the implementation, that is not yet over, each microservice has been implemented and tested on its own. Nevertheless, the integration among microservices has not yet been tested, but the team expects that this process will be straightforward thanks to the initial domain model analysis.
-Thus, the last part of the implementation will concern the integration of the microservices and the development of the shadowing among physical assets and digital twins.</p></section><section class="print-page" id="conclusion-conclusion"><h1 id="conclusion-conclusion-conclusion">Conclusion</h1>
+<p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section><section class="print-page" id="conclusion-conclusion"><h1 id="conclusion-conclusion-conclusion">Conclusion</h1>
 <p>The team is satisfied with the way the Domain Driven Design approach has been carried on. 
 During the first part of the project the team members gathered to conduct knowledge crunching sessions. 
 These latter allowed the team to reach a uniform knowledge about the domain.
