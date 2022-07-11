@@ -52,7 +52,7 @@ This supporting subdomain provides the functionalities that make it possible to 
 
 *Generic Subdomain*
 
-This generic subdomain contains the logic that manages all the entities that needs to use system's functionalities.
+This generic subdomain contains the logic that manages all the entities that need to use system's functionalities.
 
 ### Smart Card Context
 
