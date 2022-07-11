@@ -107,5 +107,16 @@ If it's needed to attach some assets into the release that is generated, then th
 
 If not needed within the repository, the folder can be deleted with a continuous integration task once the execution of the action is finished, in this way the repository could stay clean.
 
+### Containerization
+Every microservice is containerized using [Docker](https://www.docker.com/).
+The containers that connect to _Azure Platform_ include a configuration script that makes it possible to authenticate to the service.
+On the other hand, the ones that connect to a database need to be provided with a connection string trough environment variables.
+In order be able to run the containers without specifying any secret, the images are built with the required configuration to perform the login to _Azure Platform_.
+We are aware of the fact that this choice is not fully safe from a security point of view, though we made it because we want to provide self-contained containers.
+When the system is deployed in production this detail will be fixed.
+
+The images are build through a _Github Action_ workflow which also logins to the _Github Packages_ service and publishes them exploiting [`login-action`](https://github.com/docker/login-action).
+In order to grant the correctness and quality of the published images, this workflow is executed only if the _Build and Test_ workflow is successful.
+
 ## Licenses
 Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.
