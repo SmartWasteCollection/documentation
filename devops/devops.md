@@ -31,6 +31,7 @@ The team agreed on an extension of the standard convention, using the following 
 * **chore**: identifies a minor change that doesn't affect the overall system's behaviour. 
 * **docs**: identifies an update to the documentation.
 * **ci**: identifies changes in the repository's workflow definition.
+* **deps**: identifies the update of a library dependency
 
 ### Versioning
 Following the conventional commit standard, the version number is defined in the format `vX.Y.Z` where:
