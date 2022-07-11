@@ -19,6 +19,10 @@ All the feature branches will follow a common structure based on the following t
 feature/<committer-initial-name-letter><committer-initial-surname-letter>-<feature-name>
 ```
 
+The adopted policy for branching strategy inside the organization's repositories is:
+- **rebase** on the feature branches to make them updated with `develop` and `main` changes.
+- **merge** the pull requests for `develop` and `main` with the new features introduced by developers.
+
 ### Conventional Commit
 The team worked with the [conventional-commit](https://www.conventionalcommits.org/en/v1.0.0/) convention. 
 This strategy provides an easy set of rules for creating an explicit commit history and allows to automatically define the number of versions released.
