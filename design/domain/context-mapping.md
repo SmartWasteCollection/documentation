@@ -5,4 +5,4 @@ The following context mapping diagram represents relationships among subdomains 
 * **partnership**, a common symmetric relationship between two bounded contexts;
 * **upstream-downstream**, an asymmetric relationship between two bounded contexts, where the downstream context adapts to the upstream one.
 
-[![Diagram Image Link](https://tinyurl.com/2kfnchhm)](https://tinyurl.com/2kfnchhm)<!--![Diagram Image Link](./context-mapping.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2fsrergv)](https://tinyurl.com/2fsrergv)<!--![Diagram Image Link](./context-mapping.puml)-->

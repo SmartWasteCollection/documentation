@@ -57,4 +57,4 @@ The **User Subdomain** will then interact with the database that will store this
 
 The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.
 
-[![Diagram Image Link](https://tinyurl.com/23pozz24)](https://tinyurl.com/23pozz24)<!--![Diagram Image Link](./global-architectural-map.puml)-->
+[![Diagram Image Link](https://tinyurl.com/2flw37a6)](https://tinyurl.com/2flw37a6)<!--![Diagram Image Link](./global-architectural-map.puml)-->

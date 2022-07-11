@@ -13,7 +13,7 @@
     
     
       
-        <title>Conclusion - SmartWasteCollection/documentation</title>
+        <title>Implementation - SmartWasteCollection/documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#conclusion" class="md-skip">
+        <a href="#implementation" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conclusion
+              Implementation
             
           </span>
         </div>
@@ -650,21 +650,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../implementation/implementation.html" class="md-nav__link">
-        Implementation
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -676,10 +661,25 @@
         
       
       
-      <a href="conclusion.html" class="md-nav__link md-nav__link--active">
-        Conclusion
+      <a href="implementation.html" class="md-nav__link md-nav__link--active">
+        Implementation
       </a>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/conclusion.html" class="md-nav__link">
+        Conclusion
+      </a>
     </li>
   
 
@@ -730,40 +730,36 @@
               
   
                 
-  <a href="https://github.com/SmartWasteCollection/documentation/edit/main/conclusion/conclusion.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/SmartWasteCollection/documentation/edit/main/implementation/implementation.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="conclusion">Conclusion</h1>
-<p>The team is satisfied with the way the Domain Driven Design approach has been carried on. 
-During the first part of the project the team members gathered to conduct knowledge crunching sessions. 
-These latter allowed the team to reach a uniform knowledge about the domain.
-This was fundamental for the further steps of the project.
-In fact, even though the team members worked on different components of the system, everyone was able to stay coherent and adhere to the project's goal.</p>
-<p>Moreover, the definition of subdomains and bounded contexts allowed designing correct size microservices.
-Indeed, they have a well-defined goal and a coherent set of functionalities.
-Also, the classification of the subdomains as <em>core</em>, <em>supporting</em> or <em>generic</em> made it easier to assign priorities regarding the implementation of the components of the system.</p>
-<p>Finally, the decision to adopt a <em>clean architecture</em> for the implementation of the microservices allowed building software that is more resilient.
-In fact, the business logic is not influenced by the specific technologies, so it will most likely not change in the future.</p>
-<p>Despite the initial part of knowledge crunching, throughout the implementation the team has felt the need to introduce new terms.
-These have been added right away to the ubiquitous language in order to avoid further misunderstandings.</p>
-<p>During the first part of the implementation stage the team decided how to conduct the project from a <em>DevOps</em> point of view.
-The definition of pipelines that included tests and general code quality assurance allowed to automatically check that only "correct" code is deployed to the development environment.
-This was the first time that the team tried to fully exploit GitHub Actions and, even thought the implementation process is not yet over, the members have already understood their potential.</p>
-<p>In conclusion, the team is satisfied with the job done and with the knowledge acquired from the project and the course.</p>
+<h1 id="implementation">Implementation</h1>
+<p>Thanks to the <em>Domain Driven Design</em> carried on during the initial phase of the project, the team was able to conduct the implementation of the system's components concurrently.
+Before starting with the development the workload was equally divided among the members so that everyone could focus on a specific part of the domain and fully explore it.
+In order to let the other members know how the own implementation was being made, <em>Git flow</em> was very helpful because, before merging the code to the main branch, every developer had to make a pull request and request for other members' approval.</p>
+<p>The communication among microservices happens by means of REST APIs exposed by each of them.
+The <a href="https://github.com/SmartWasteCollection/dumpster-microservice"><code>dumpster-microservice</code></a>, <a href="https://github.com/SmartWasteCollection/truck-microservice"><code>truck-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/mission-microservice"><code>mission-microservice</code></a> allow the management of the corresponding digital twins through the <em>Azure Platform</em> exposing CRUD APIs.
+On the other hand, the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/complaint-microservice"><code>complaint-microservice</code></a>, expose routes to execute CRUD operations on a <em>MongoDB Cluster</em> instance.
+Finally, a mocked version of the dashboard was implemented using the <em>Vue</em> framework and it is hosted on <em><a href="https://smartwastecollection.github.io/dashboard/">Github Pages</a></em>. The <a href="https://github.com/SmartWasteCollection/dashboard"><code>dashboard</code></a> allows visualizing the position of collection points and trucks on a map and their properties.</p>
+<p>The main language used was <em>Kotlin</em>, although the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> was written in <em>Javascript</em>.
+For the microservices written in <em>Kotlin</em>, <em>Spring</em> was used to create the web services, <em>Azure Digital Twins Core</em> to interact with <em>Azure Platform</em> and manage the digital twins, and <em>KMongo</em> to connect and operate with <em>MongoDB</em> databases.
+For the <em>Javascript</em> microservice <em>Node.js</em> was used to provide an execution environment, <em>Express</em> to create a web service and <em>Mongoose</em> to connect and operate with <em>MongoDB</em> databases.</p>
+<p>At this stage of the implementation, that is not yet over, each microservice has been implemented and tested on its own. Nevertheless, the integration among microservices has not yet been tested, but the team expects that this process will be straightforward thanks to the initial domain model analysis.
+Thus, the last part of the implementation will concern the integration of the microservices and the development of the shadowing among physical assets and digital twins.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 12:59:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 12:59:08</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 12:59:07</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 12:59:08</span>
       
     
   </small>
@@ -786,7 +782,7 @@ This was the first time that the team tried to fully exploit GitHub Actions and,
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../implementation/implementation.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Implementation" rel="prev">
+        <a href="../devops/devops.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevOps Techniques" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -795,11 +791,26 @@ This was the first time that the team tried to fully exploit GitHub Actions and,
               <span class="md-footer__direction">
                 Previous
               </span>
-              Implementation
+              DevOps Techniques
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../conclusion/conclusion.html" class="md-footer__link md-footer__link--next" aria-label="Next: Conclusion" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Conclusion
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

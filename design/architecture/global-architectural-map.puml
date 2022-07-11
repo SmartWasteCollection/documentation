@@ -20,7 +20,7 @@ subdomain "User Subdomain" {
     service "Authentication Microservice" as authn
 }
 
-bi_interact(dumpster, mission, up)
+interact(mission, dumpster)
 interact(dumpster, complaint, left)
 interact(truck, complaint)
 interact(complaint, authn)

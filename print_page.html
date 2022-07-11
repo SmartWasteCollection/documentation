@@ -658,6 +658,21 @@
   
   
     <li class="md-nav__item">
+      <a href="implementation/implementation.html" class="md-nav__link">
+        Implementation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="conclusion/conclusion.html" class="md-nav__link">
         Conclusion
       </a>
@@ -783,8 +798,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#implementation-implementation" class="md-nav__link">
+    8. Implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion-conclusion" class="md-nav__link">
-    8. Conclusion
+    9. Conclusion
   </a>
   
 </li>
@@ -904,8 +926,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#implementation-implementation" class="md-nav__link">
+    8. Implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion-conclusion" class="md-nav__link">
-    8. Conclusion
+    9. Conclusion
   </a>
   
 </li>
@@ -1615,7 +1644,7 @@ At each step of the mission, the truck will update its current occupied volume a
 <li><strong>partnership</strong>, a common symmetric relationship between two bounded contexts;</li>
 <li><strong>upstream-downstream</strong>, an asymmetric relationship between two bounded contexts, where the downstream context adapts to the upstream one.</li>
 </ul>
-<p><a href="https://tinyurl.com/2kfnchhm"><img alt="Diagram Image Link" src="https://tinyurl.com/2kfnchhm" /></a><!--<img alt="Diagram Image Link" src="design/domain/context-mapping.puml" />--></p></section>
+<p><a href="https://tinyurl.com/2fsrergv"><img alt="Diagram Image Link" src="https://tinyurl.com/2fsrergv" /></a><!--<img alt="Diagram Image Link" src="design/domain/context-mapping.puml" />--></p></section>
                         <h3 class='nav-section-title' id='section-domain-models'>
                             Domain Models <a class='headerlink' href='#section-domain-models' title='Permanent link'>↵</a>
                         </h3>
@@ -1623,7 +1652,7 @@ At each step of the mission, the truck will update its current occupied volume a
 <h2 id="design-domain-models-disposal-domain-model-model-diagram">Model Diagram</h2>
 <p>The following diagram shows the aggregates of the disposal subdomain.</p>
 <p><a href="https://tinyurl.com/22ex6n89"><img alt="Diagram Image Link" src="https://tinyurl.com/22ex6n89" /></a><!--<img alt="Diagram Image Link" src="design/domain/models/disposal-domain-model.puml" />--></p>
-<p>The <em>Collection Point Aggregate</em> is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.</p>
+<p>The <em>Collection Point Aggregate</em> is very important as it contains information about the dumpsters' position. Indeed, the dumpster is strictly correlated to the collection point it is contained into.</p>
 <h2 id="design-domain-models-disposal-domain-model-domain-events">Domain Events</h2>
 <p>The <em>Dumpster Aggregate</em> deals with the following events:</p>
 <ul>
@@ -1719,7 +1748,7 @@ In particular, if the microservice wants to generate an extraordinary mission, i
 <p>The <strong>User Subdomain</strong> will then interact with the database that will store this information.</p>
 <h2 id="design-architecture-architectural-map-subdomains-interactions">Subdomains Interactions</h2>
 <p>The following final diagram shows the interaction among microservices inside the identified subdomains. Further details inside each subdomain have been removed for a cleaner representation.</p>
-<p><a href="https://tinyurl.com/23pozz24"><img alt="Diagram Image Link" src="https://tinyurl.com/23pozz24" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><section class="print-page" id="design-architecture-service-architecture"><h1 id="design-architecture-service-architecture-service-architecture">Service Architecture</h1>
+<p><a href="https://tinyurl.com/2flw37a6"><img alt="Diagram Image Link" src="https://tinyurl.com/2flw37a6" /></a><!--<img alt="Diagram Image Link" src="design/architecture/global-architectural-map.puml" />--></p></section><section class="print-page" id="design-architecture-service-architecture"><h1 id="design-architecture-service-architecture-service-architecture">Service Architecture</h1>
 <p>The team agreed on building each microservice with a <strong>Clean Architecture</strong> (from now on referred as <em>CA</em>). Since there are many interpretations of what a <em>CA</em> is and what consequences it should bring, we portrayed our personal view, trying to stick with the principal layers that the literature presents.</p>
 <p><img alt="Clean Architecture" src="design/architecture/clean.png" /></p>
 <h2 id="design-architecture-service-architecture-entities-layer-domain">Entities Layer (<em>Domain</em>)</h2>
@@ -1821,7 +1850,19 @@ In particular, the action automatically calculates if a new version release is n
 <p>If it's needed to attach some assets into the release that is generated, then the action allows to define a folder called <code>/assets</code> and all of its contents will be included in the GitHub Release.</p>
 <p>If not needed within the repository, the folder can be deleted with a continuous integration task once the execution of the action is finished, in this way the repository could stay clean.</p>
 <h2 id="devops-devops-licenses">Licenses</h2>
-<p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section><section class="print-page" id="conclusion-conclusion"><h1 id="conclusion-conclusion-conclusion">Conclusion</h1>
+<p>Every repository in the organization is endowed with the MIT license. Therefore, the developed software is free and open-source.</p></section><section class="print-page" id="implementation-implementation"><h1 id="implementation-implementation-implementation">Implementation</h1>
+<p>Thanks to the <em>Domain Driven Design</em> carried on during the initial phase of the project, the team was able to conduct the implementation of the system's components concurrently.
+Before starting with the development the workload was equally divided among the members so that everyone could focus on a specific part of the domain and fully explore it.
+In order to let the other members know how the own implementation was being made, <em>Git flow</em> was very helpful because, before merging the code to the main branch, every developer had to make a pull request and request for other members' approval.</p>
+<p>The communication among microservices happens by means of REST APIs exposed by each of them.
+The <a href="https://github.com/SmartWasteCollection/dumpster-microservice"><code>dumpster-microservice</code></a>, <a href="https://github.com/SmartWasteCollection/truck-microservice"><code>truck-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/mission-microservice"><code>mission-microservice</code></a> allow the management of the corresponding digital twins through the <em>Azure Platform</em> exposing CRUD APIs.
+On the other hand, the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> and <a href="https://github.com/SmartWasteCollection/complaint-microservice"><code>complaint-microservice</code></a>, expose routes to execute CRUD operations on a <em>MongoDB Cluster</em> instance.
+Finally, a mocked version of the dashboard was implemented using the <em>Vue</em> framework and it is hosted on <em><a href="https://smartwastecollection.github.io/dashboard/">Github Pages</a></em>. The <a href="https://github.com/SmartWasteCollection/dashboard"><code>dashboard</code></a> allows visualizing the position of collection points and trucks on a map and their properties.</p>
+<p>The main language used was <em>Kotlin</em>, although the <a href="https://github.com/SmartWasteCollection/booking-microservice"><code>booking-microservice</code></a> was written in <em>Javascript</em>.
+For the microservices written in <em>Kotlin</em>, <em>Spring</em> was used to create the web services, <em>Azure Digital Twins Core</em> to interact with <em>Azure Platform</em> and manage the digital twins, and <em>KMongo</em> to connect and operate with <em>MongoDB</em> databases.
+For the <em>Javascript</em> microservice <em>Node.js</em> was used to provide an execution environment, <em>Express</em> to create a web service and <em>Mongoose</em> to connect and operate with <em>MongoDB</em> databases.</p>
+<p>At this stage of the implementation, that is not yet over, each microservice has been implemented and tested on its own. Nevertheless, the integration among microservices has not yet been tested, but the team expects that this process will be straightforward thanks to the initial domain model analysis.
+Thus, the last part of the implementation will concern the integration of the microservices and the development of the shadowing among physical assets and digital twins.</p></section><section class="print-page" id="conclusion-conclusion"><h1 id="conclusion-conclusion-conclusion">Conclusion</h1>
 <p>The team is satisfied with the way the Domain Driven Design approach has been carried on. 
 During the first part of the project the team members gathered to conduct knowledge crunching sessions. 
 These latter allowed the team to reach a uniform knowledge about the domain.
