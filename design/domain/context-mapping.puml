@@ -19,16 +19,17 @@ subdomain(User, user_subdomain) {
 }
 
 subdomain(Complaint, complaint_subdomain) {
-    context("Complaint", complaint)
+    context_supplier("Complaint", complaint)
 }
 
 generic_downstream(smartcard, dumpster, up)
-partnership(dumpster, mission, down)
+generic_downstream(mission, dumpster, up)
 generic_downstream(mission, truck, down)
 partnership(mission, booking, left)
 generic_downstream(mission, disposal_point)
 generic_downstream(booking, authn, right)
 generic_downstream(complaint, authn, up)
 generic_downstream(collection_point, dumpster, down)
+generic_downstream(dumpster, complaint)
 
 @enduml

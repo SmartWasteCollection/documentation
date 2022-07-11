@@ -6,7 +6,7 @@ The following diagram shows the aggregates of the disposal subdomain.
 
 <!--![Diagram Image Link](./disposal-domain-model.puml)-->
 
-The *Collection Point Aggregate* is very important as it contains information about the dumpsters' position. Indeed, the dumpster contains a reference to the collection points it is contained into.
+The *Collection Point Aggregate* is very important as it contains information about the dumpsters' position. Indeed, the dumpster is strictly correlated to the collection point it is contained into.
 
 ## Domain Events
 
