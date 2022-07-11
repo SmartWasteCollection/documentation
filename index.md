@@ -17,10 +17,9 @@ People can go to collection points, open a dumpster manually and dispose of the 
 There are also **extraordinary waste** types that are not collected at collection points.
 Instead, they must be brought directly to disposal points by citizens.
 
-The optimization we want to make to the infrastructure is to collect waste from collection points only when necessary, avoiding wasted garbage trucks missions.
+With this project the waste collection process will be optimized providing dumpsters with sensors in order to identify when they must be emptied. In this way, waste will be collected from collection points only when necessary.
 
-Dumpsters will be provided with sensors in order to identify when they must be emptied.
-These sensors will provide information about the state of the dumpster itself, not only about its remaining capacity.
+Even trucks are provided with sensors. These sensors allow to share information about entities' state.
 
 ### Members
 * Martina Baiardi, martina.baiardi4@studio.unibo.it
