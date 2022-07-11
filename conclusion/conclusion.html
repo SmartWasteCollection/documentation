@@ -13,7 +13,7 @@
     
     
       
-        <title>SUMMARY - SmartWasteCollection/documentation</title>
+        <title>Conclusion - SmartWasteCollection/documentation</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#conclusion" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SUMMARY
+              Conclusion
             
           </span>
         </div>
@@ -275,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="business-problem-analysis.html" class="md-nav__link">
+      <a href="../domain-analysis/business-problem-analysis.html" class="md-nav__link">
         Problem Analysis
       </a>
     </li>
@@ -289,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="impact-mapping.html" class="md-nav__link">
+      <a href="../domain-analysis/impact-mapping.html" class="md-nav__link">
         Impact Mapping
       </a>
     </li>
@@ -303,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ubiquitous-language.html" class="md-nav__link">
+      <a href="../domain-analysis/ubiquitous-language.html" class="md-nav__link">
         Ubiquitous Language
       </a>
     </li>
@@ -645,11 +650,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../conclusion/conclusion.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="conclusion.html" class="md-nav__link md-nav__link--active">
         Conclusion
       </a>
+      
     </li>
   
 
@@ -686,6 +701,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -698,26 +715,40 @@
               
   
                 
+  <a href="https://github.com/SmartWasteCollection/documentation/edit/main/conclusion/conclusion.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
-  <h1>SUMMARY</h1>
 
-<ul>
-<li><a href="business-problem-analysis.html">Problem Analysis</a></li>
-<li><a href="impact-mapping.html">Impact Mapping</a></li>
-<li><a href="ubiquitous-language.html">Ubiquitous Language</a></li>
-</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>The team is satisfied with the way the Domain Driven Design approach has been carried on. 
+During the first part of the project the team members gathered to conduct knowledge crunching sessions. 
+These latter allowed the team to reach a uniform knowledge about the domain.
+This was fundamental for the further steps of the project.
+In fact, even though the team members worked on different components of the system, everyone was able to stay coherent and adhere to the project's goal.</p>
+<p>Moreover, the definition of subdomains and bounded contexts allowed designing correct size microservices.
+Indeed, they have a well-defined goal and a coherent set of functionalities.
+Also, the classification of the subdomains as <em>core</em>, <em>supporting</em> or <em>generic</em> made it easier to assign priorities regarding the implementation of the components of the system.</p>
+<p>Finally, the decision to adopt a <em>clean architecture</em> for the implementation of the microservices allowed building software that is more resilient.
+In fact, the business logic is not influenced by the specific technologies, so it will most likely not change in the future.</p>
+<p>Despite the initial part of knowledge crunching, throughout the implementation the team has felt the need to introduce new terms.
+These have been added right away to the ubiquitous language in order to avoid further misunderstandings.</p>
+<p>During the first part of the implementation stage the team decided how to conduct the project from a <em>DevOps</em> point of view.
+The definition of pipelines that included tests and general code quality assurance allowed to automatically check that only "correct" code is deployed to the development environment.
+This was the first time that the team tried to fully exploit GitHub Actions and, even thought the implementation process is not yet over, the members have already understood their potential.</p>
+<p>In conclusion, the team is satisfied with the job done and with the knowledge acquired from the project and the course.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:06</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:07</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 11, 2022 09:26:06</span>
       
     
   </small>
@@ -735,6 +766,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../devops/devops.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevOps Techniques" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              DevOps Techniques
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
