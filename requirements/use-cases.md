@@ -11,7 +11,7 @@ Ordinary waste management is divided into two parts:
 
 ### Ordinary Waste Disposal
 
-Regarding ordinary waste collection, the main actors are citizens, trucks and dumpsters. In this scenario, trucks and truck drivers play the same role.
+Regarding ordinary waste disposal, the main actors are citizens and dumpsters.
 
 <!--![Diagram Image Link](./ordinary-disposal-use-cases.pm.puml)-->
 
