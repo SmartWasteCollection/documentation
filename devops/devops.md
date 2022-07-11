@@ -20,6 +20,7 @@ feature/<committer-initial-name-letter><committer-initial-surname-letter>-<featu
 ```
 
 The adopted policy for branching strategy inside the organization's repositories is:
+
 - **rebase** on the feature branches to make them updated with `develop` and `main` changes.
 - **merge** the pull requests for `develop` and `main` with the new features introduced by developers.
 
