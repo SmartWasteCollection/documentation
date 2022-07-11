@@ -72,7 +72,7 @@ Moreover, the team used a bunch of other actions to perform tasks. Some of these
 
 ### Code Quality Control
 A control on the quality of the code takes place thanks to the use of `Git Flow`, which allows the verification of the features introduced by a developer by all the other team members before they are merged into the `main/master` branch.
-It is a task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.
+It is the task of the other developers to check that the proposed features are actually working and written in an understandable and clean way.
 
 Moreover, in the [pre-commit hooks](#commit-lint-check) a code linter was included:
 
