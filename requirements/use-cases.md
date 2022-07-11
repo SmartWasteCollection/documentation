@@ -24,7 +24,7 @@ Regarding ordinary waste collection, the main actors are trucks and dumpsters. I
 <!--![Diagram Image Link](./ordinary-collection-use-cases.pm.puml)-->
 
 During its mission, a garbage truck shares its current location with the system and updates the mission status.
-At each step of the mission, the truck will update its current occupied volume and the emptied bin will do the same as well.
+At each step of the mission, the truck will update its current occupied volume and the emptied dumpster will do the same.
 
 A mission is generated because at least one dumpster of the system has made a _full dumpster_ notification.
 
