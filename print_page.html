@@ -1025,7 +1025,7 @@
 <li>
 <p><strong>So, do garbage trucks collect waste from every collection point of a province?</strong></p>
 <blockquote>
-<p>No, each garbage truck is assigned a mission, and therefore a mission area. A mission area is made up of a set of residential areas that are physically close to one another.</p>
+<p>No, each garbage truck is assigned to a mission, and therefore to a mission area. A mission area is made up of a set of residential areas that are physically close to one another.</p>
 </blockquote>
 </li>
 <li>
@@ -1048,11 +1048,11 @@
 </blockquote>
 </li>
 </ol></section><section class="print-page" id="domain-analysis-impact-mapping"><h1 id="domain-analysis-impact-mapping-impact-mapping">Impact Mapping</h1>
-<p>The following impact map has derived from the analysis of the business problem. It allows to underline the main aspects 
+<p>The following impact map was derived from the analysis of the business problem. It allows to underline the main aspects 
 of the problem, starting from the <strong>goal</strong> of the project. The goal is pursued by each <strong>actor</strong> in the system and the 
 diagram helps to identify which <strong>deliverables</strong> will have the greater <strong>impacts</strong>. In fact, it can be seen as a first 
 draft of the requirements. </p>
-<p><a href="https://tinyurl.com/y5to87d8"><img alt="Diagram Image Link" src="https://tinyurl.com/y5to87d8" /></a><!--<img alt="Diagram Image Link" src="domain-analysis/impact-mapping.pm.puml" />--></p></section><section class="print-page" id="domain-analysis-ubiquitous-language"><h1 id="domain-analysis-ubiquitous-language-ubiquitous-language">Ubiquitous Language</h1>
+<p><a href="https://tinyurl.com/2qa4n5n3"><img alt="Diagram Image Link" src="https://tinyurl.com/2qa4n5n3" /></a><!--<img alt="Diagram Image Link" src="domain-analysis/impact-mapping.pm.puml" />--></p></section><section class="print-page" id="domain-analysis-ubiquitous-language"><h1 id="domain-analysis-ubiquitous-language-ubiquitous-language">Ubiquitous Language</h1>
 <p>The tables below represent the ubiquitous language derived from domain analysis. Each table describes terms related to the same topic.</p>
 <h2 id="domain-analysis-ubiquitous-language-waste">Waste</h2>
 <table>
@@ -1424,14 +1424,20 @@ draft of the requirements. </p>
 <li><a href="#requirements-use-cases-ordinary-waste-collection">collection</a></li>
 </ul>
 <h3 id="requirements-use-cases-ordinary-waste-disposal">Ordinary Waste Disposal</h3>
-<p>Regarding ordinary waste collection, the main actors are citizens, trucks and dumpsters. In this scenario, trucks and truck drivers play the same role.</p>
+<p>Regarding ordinary waste disposal, the main actors are citizens and dumpsters.</p>
 <p><a href="https://tinyurl.com/yxaddo5t"><img alt="Diagram Image Link" src="https://tinyurl.com/yxaddo5t" /></a><!--<img alt="Diagram Image Link" src="requirements/ordinary-disposal-use-cases.pm.puml" />--></p>
+<p>Citizens can dispose of waste inside dumpsters only if they use their smart card to make the opening request. Once the citizen has made the deposit, the dumpster will update its occupied volume and perform the automatic closure, which will occur after a predetermined amount of time.</p>
 <h3 id="requirements-use-cases-ordinary-waste-collection">Ordinary Waste Collection</h3>
 <p>Regarding ordinary waste collection, the main actors are trucks and dumpsters. In this scenario, trucks and truck drivers play the same role.</p>
 <p><a href="https://tinyurl.com/y5zjqejp"><img alt="Diagram Image Link" src="https://tinyurl.com/y5zjqejp" /></a><!--<img alt="Diagram Image Link" src="requirements/ordinary-collection-use-cases.pm.puml" />--></p>
+<p>During its mission, a garbage truck shares its current location with the system and updates the mission status.
+At each step of the mission, the truck will update its current occupied volume and the emptied dumpster will do the same.</p>
+<p>A mission is generated because at least one dumpster has sent a <em>full dumpster</em> notification.</p>
 <h2 id="requirements-use-cases-extraordinary-waste-management">Extraordinary Waste Management</h2>
 <p>Regarding extraordinary waste collection, the main actors are citizens and trucks. In this scenario, trucks and truck drivers play the same role.</p>
 <p><a href="https://tinyurl.com/yxc4x4fr"><img alt="Diagram Image Link" src="https://tinyurl.com/yxc4x4fr" /></a><!--<img alt="Diagram Image Link" src="requirements/extraordinary-management-use-cases.pm.puml" />--></p>
+<p>A mission for extraordinary waste collection begins when at least one booking has been made by citizens.</p>
+<p>The system will take care of generating an adequate mission that allows to optimize the garbage truck capacity and satisfy as many collection requests as possible.</p>
 <h2 id="requirements-use-cases-dashboard">Dashboard</h2>
 <p>The dashboard can be used by managers to observe dumpsters, 'at home' collection requests, the real-time position of trucks, disposal points and complaints. Moreover, it can be used by citizens to observe dumpsters and their personal 'at home' collection requests.</p>
 <p><a href="https://tinyurl.com/2bej7le8"><img alt="Diagram Image Link" src="https://tinyurl.com/2bej7le8" /></a><!--<img alt="Diagram Image Link" src="requirements/dashboard-use-cases.pm.puml" />--></p>
