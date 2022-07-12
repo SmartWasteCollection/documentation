@@ -15,14 +15,14 @@ subdomain "Collection Subdomain" {
     }
 
     service "Booking Microservice" as booking {
-        functionality "Requests Management" as requests
+        functionality "Booking Management" as requests
     }
 
     thing "Physical Truck" as t_thing
 
     twin "Truck Digital Twin" as t_twin
 
-    database "Requests Database" as r_db
+    database "Booking Database" as r_db
 
     database "Missions Database" as m_db
     twin "Mission Digital Twin" as m_twin
