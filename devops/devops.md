@@ -119,9 +119,7 @@ If not needed within the repository, the folder can be deleted with a continuous
 Every microservice is containerized using [Docker](https://www.docker.com/).
 The containers that connect to _Azure Platform_ include a configuration script that makes it possible to authenticate to the service.
 On the other hand, the ones that connect to a database need to be provided with a connection string through environment variables.
-In order be able to run the containers without specifying any secret, the images are built with the required configuration to perform the login to _Azure Platform_.
-We are aware of the fact that this choice is not fully safe from a security point of view, though we made it because we want to provide self-contained containers.
-When the system is deployed in production this detail will be fixed.
+In order to be able to run the containers, they need three environment variables that contain the secrets needed to perform the login into the _Azure Digital Twin_ service. 
 
 The images are build through a _Github Action_ workflow which also logins to the _Github Packages_ service and publishes them exploiting [`login-action`](https://github.com/docker/login-action).
 In order to grant the correctness and quality of the published images, this workflow is executed only if the _Build and Test_ workflow is successful.
